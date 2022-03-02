@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(button);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -104,18 +104,18 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(4, 62);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 48);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Cüzdan";
-            this.button3.UseVisualStyleBackColor = false;
+            button.BackColor = System.Drawing.SystemColors.ScrollBar;
+            button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
+            button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button.Location = new System.Drawing.Point(4, 62);
+            button.Name = "button3";
+            button.Size = new System.Drawing.Size(156, 48);
+            button.TabIndex = 0;
+            button.Text = "Cüzdan";
+            button.UseVisualStyleBackColor = false;
             // 
             // button4
             // 

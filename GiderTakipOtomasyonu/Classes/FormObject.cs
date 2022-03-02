@@ -8,19 +8,25 @@ using System.Windows.Forms;
 
 //Make Short Variables Names
 using Point = System.Drawing.Point;
+using Size = System.Drawing.Size;
 
 namespace GiderTakipOtomasyonu.Classes.DerivedClasses
 {
     abstract class FormObject
     {
-        int id;
-        string name;
-        Point size;
-        Point location;
+        public int id;
+        public string name;
+        public Size size;
+        public Point location;
+
+        public abstract void assignSize(Size size);
+        public abstract void assignLocation(Point location);
+        public abstract void assignName(string name);
 
         public abstract void create();
         public abstract void update();
         public abstract void delete();
+        
 
     }
 }
