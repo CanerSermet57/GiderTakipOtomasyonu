@@ -10,42 +10,74 @@ namespace GiderTakipOtomasyonu.Classes.DerivedClasses
 {
     class FormButton : FormObject
     {
-        public FormButton()
+        //Singleton Pattern
+        private FormButton(Panel mainPanel)
         {
-
+            this.mainPanel = mainPanel;
         }
-        public Button button;
-
-        public override void create()
+        public Panel mainPanel;
+        private static FormButton instance;
+        public static FormButton giveInstance(Panel mainPanel)
         {
+            if (instance == null)
+            {
+                instance = new FormButton(mainPanel);
+            }
+            return instance;
+        }
+
+        public Button button;
+        List<Tuple<Button, string>> buttons = new List<Tuple<Button, string>>(); //hem butonu hemde ismini tutuyor
+
+        public override Object create(string name, Size size, Point location) 
+        {
+            if (!isNameUnique(name))
+            {
+                throw new Exception("Name NOT Unique");
+            }
+            button = new Button();
             button.Location = location;
             button.Name = name;
             button.Size = size;
-        }        
+
+            mainPanel.Controls.Add(button);
+            buttons.Add(Tuple.Create(button, name));
+            return button;
+        }
+
+        public override bool isNameUnique(string name)
+        {
+            foreach (var buton in buttons)
+            {
+                if (buton.Item2 == name)
+                {
+                    return false;
+                }                
+            }
+            return true;
+        }
 
         public override void update()
         {
             
         }
 
-        public override void delete()
+        public override void delete(string buttonname)
         {
-            //formControls[].Controls.Clear();
+            Button buttonToBeDelete = (Button) findByName(buttonname);
+            mainPanel.Controls.Remove(buttonToBeDelete);
         }
 
-        public override void assignSize(Size size)
+        public override Object findByName(string name)
         {
-            this.size = size;
-        }
-
-        public override void assignLocation(Point location)
-        {
-            this.location = location;
-        }
-
-        public override void assignName(string name)
-        {
-            this.name = name;
+            foreach (var buton in buttons)
+            {
+                if (buton.Item2 == name)
+                {
+                    return buton.Item1;
+                }
+            }
+            return null;
         }
     }
 }

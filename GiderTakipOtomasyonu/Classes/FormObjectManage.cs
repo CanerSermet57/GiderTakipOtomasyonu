@@ -5,32 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Point = System.Drawing.Point;
+using Size = System.Drawing.Size;
+
 namespace GiderTakipOtomasyonu.Classes
 {
     class FormObjectManage
     {
         //Singleton Pattern Start
-        private FormObjectManage()
+        private FormObjectManage(Panel mainPanel)
         {
+            this.mainPanel = mainPanel;
         }
+        public Panel mainPanel;
         private static FormObjectManage instance;
-        public static FormObjectManage giveInstance()
+        public static FormObjectManage giveInstance(Panel mainPanel)
         {
             if (instance == null)
             {
-                instance = new FormObjectManage();
+                instance = new FormObjectManage(mainPanel);
             }
             return instance;
         }
 
-
-        //Not Completed
-        Button createButton()
-        {
-            return null;
-        }
-
         
+        /*
+        public Button createButton(string name,Size size,Point location)
+        {            
+            
+        }      
+        */
+        
+
+
 
 
     }

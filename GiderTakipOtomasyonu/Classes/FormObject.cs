@@ -14,19 +14,11 @@ namespace GiderTakipOtomasyonu.Classes.DerivedClasses
 {
     abstract class FormObject
     {
-        public int id;
-        public string name;
-        public Size size;
-        public Point location;
-
-        public abstract void assignSize(Size size);
-        public abstract void assignLocation(Point location);
-        public abstract void assignName(string name);
-
-        public abstract void create();
+        public abstract Object create(string name, Size size, Point location);
         public abstract void update();
-        public abstract void delete();
-        
+        public abstract void delete(string name);
+        public abstract bool isNameUnique(string name);
+        public abstract Object findByName(string name);
 
     }
 }

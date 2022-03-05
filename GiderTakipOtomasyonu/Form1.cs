@@ -21,5 +21,15 @@ namespace GiderTakipOtomasyonu
         {
 
         }
+        Button b;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Classes.DerivedClasses.FormButton formManage = Classes.DerivedClasses.FormButton.giveInstance(panel1);
+            Button bt =(Button) formManage.create("test",new Size(50,50),new Point(200,200));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
