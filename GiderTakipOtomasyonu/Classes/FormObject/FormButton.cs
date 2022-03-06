@@ -39,11 +39,11 @@ namespace GiderTakipOtomasyonu.Classes.DerivedClasses
             button.Location = location;
             button.Name = name;
             button.Size = size;
-
             mainPanel.Controls.Add(button);
             buttons.Add(Tuple.Create(button, name));
             return button;
         }
+
 
         public override bool isNameUnique(string name)
         {

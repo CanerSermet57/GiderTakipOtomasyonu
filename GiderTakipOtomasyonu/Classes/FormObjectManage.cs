@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using Point = System.Drawing.Point;
-using Size = System.Drawing.Size;
+using System.Drawing;
 
 namespace GiderTakipOtomasyonu.Classes
 {

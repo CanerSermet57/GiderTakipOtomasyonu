@@ -19,6 +19,5 @@ namespace GiderTakipOtomasyonu.Classes.DerivedClasses
         public abstract void delete(string name);
         public abstract bool isNameUnique(string name);
         public abstract Object findByName(string name);
-
     }
 }

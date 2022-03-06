@@ -94,12 +94,13 @@ namespace GiderTakipOtomasyonu
             // 
             // buttonKayitOl
             // 
-            this.buttonKayitOl.Location = new System.Drawing.Point(243, 359);
+            this.buttonKayitOl.Location = new System.Drawing.Point(248, 398);
             this.buttonKayitOl.Name = "buttonKayitOl";
             this.buttonKayitOl.Size = new System.Drawing.Size(75, 23);
             this.buttonKayitOl.TabIndex = 6;
             this.buttonKayitOl.Text = "Kayit Ol";
             this.buttonKayitOl.UseVisualStyleBackColor = true;
+            this.buttonKayitOl.Click += new System.EventHandler(this.buttonKayitOl_Click);
             // 
             // KayitOl
             // 
