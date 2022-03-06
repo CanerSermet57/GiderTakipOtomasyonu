@@ -8,11 +8,11 @@ namespace GiderTakipOtomasyonu.Classes
 {
     class User
     {
-        public string id = null;
-        public string kullaniciAdi = null;
-        public string sifre = null;
-        public string email= null;
-        public string sirketAdi = null;
+        public string id = "";
+        public string kullaniciAdi = "";
+        public string sifre = "";
+        public string email= "";
+        public string sirketAdi = "";
 
     }
 }

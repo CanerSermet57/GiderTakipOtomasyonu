@@ -45,6 +45,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(187, 20);
             this.textBoxKullaniciAdi.TabIndex = 0;
             this.textBoxKullaniciAdi.Text = "Kullanici Adi";
+            this.textBoxKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKullaniciAdi_KeyPress);
             // 
             // textBoxSirketAdi
             // 
@@ -53,6 +54,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxSirketAdi.Size = new System.Drawing.Size(187, 20);
             this.textBoxSirketAdi.TabIndex = 1;
             this.textBoxSirketAdi.Text = "Sirket Adi";
+            this.textBoxSirketAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSirketAdi_KeyPress);
             // 
             // textBoxVergiDaireNo
             // 
@@ -61,6 +63,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxVergiDaireNo.Size = new System.Drawing.Size(187, 20);
             this.textBoxVergiDaireNo.TabIndex = 2;
             this.textBoxVergiDaireNo.Text = "Vergi Daire No";
+            this.textBoxVergiDaireNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxVergiDaireNo_KeyPress);
             // 
             // textBoxEpostaAdresi
             // 
@@ -69,6 +72,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxEpostaAdresi.Size = new System.Drawing.Size(187, 20);
             this.textBoxEpostaAdresi.TabIndex = 3;
             this.textBoxEpostaAdresi.Text = "E-posta Adresi";
+            this.textBoxEpostaAdresi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEpostaAdresi_KeyPress);
             // 
             // textBoxSifre
             // 
@@ -77,6 +81,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxSifre.Size = new System.Drawing.Size(187, 20);
             this.textBoxSifre.TabIndex = 4;
             this.textBoxSifre.Text = "Sifre";
+            this.textBoxSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifre_KeyPress);
             // 
             // textBoxSifreTekrar
             // 
@@ -85,6 +90,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxSifreTekrar.Size = new System.Drawing.Size(187, 20);
             this.textBoxSifreTekrar.TabIndex = 5;
             this.textBoxSifreTekrar.Text = "Sifre Tekrar";
+            this.textBoxSifreTekrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifreTekrar_KeyPress);
             // 
             // buttonKayitOl
             // 
