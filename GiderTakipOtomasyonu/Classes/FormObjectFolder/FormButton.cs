@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GiderTakipOtomasyonu.Classes.DerivedClasses
+namespace GiderTakipOtomasyonu
 {
     class FormButton : FormObject
     {
@@ -25,50 +25,36 @@ namespace GiderTakipOtomasyonu.Classes.DerivedClasses
             }
             return instance;
         }
-
         public Button button;
         List<Tuple<Button, string>> buttons = new List<Tuple<Button, string>>(); //hem butonu hemde ismini tutuyor
 
-        public override Object create(string name, Size size, Point location) 
+        public object create(string name, Size size, Point location,string text) 
         {
-            if (!isNameUnique(name))
-            {
-                throw new Exception("Name NOT Unique");
-            }
+            isNameUnique(name);
             button = new Button();
             button.Location = location;
             button.Name = name;
             button.Size = size;
+            button.Text = text;
+            button.UseVisualStyleBackColor = true;
             mainPanel.Controls.Add(button);
-            buttons.Add(Tuple.Create(button, name));
+            buttons.Add(Tuple.Create(button, name));            
             return button;
         }
 
 
-        public override bool isNameUnique(string name)
+        public override void isNameUnique(string name)
         {
             foreach (var buton in buttons)
             {
                 if (buton.Item2 == name)
                 {
-                    return false;
+                    throw new Exception("Name NOT Unique");
                 }                
             }
-            return true;
         }
 
-        public override void update()
-        {
-            
-        }
-
-        public override void delete(string buttonname)
-        {
-            Button buttonToBeDelete = (Button) findByName(buttonname);
-            mainPanel.Controls.Remove(buttonToBeDelete);
-        }
-
-        public override Object findByName(string name)
+        public override object findByName(string name)
         {
             foreach (var buton in buttons)
             {
@@ -79,5 +65,13 @@ namespace GiderTakipOtomasyonu.Classes.DerivedClasses
             }
             return null;
         }
+
+        public override void delete(string buttonname)
+        {
+            Button buttonToBeDelete = (Button) findByName(buttonname);
+            mainPanel.Controls.Remove(buttonToBeDelete);
+        }
+
+        
     }
 }

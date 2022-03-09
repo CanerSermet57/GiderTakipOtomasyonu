@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GiderTakipOtomasyonu.Classes;
 
 namespace GiderTakipOtomasyonu
 {
@@ -21,11 +22,24 @@ namespace GiderTakipOtomasyonu
         {
 
         }
-        Button b;
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            Classes.DerivedClasses.FormButton formButton = Classes.DerivedClasses.FormButton.giveInstance(panel1);
-            Button bt =(Button) formButton.create("test",new Size(50,50),new Point(200,200));
+            TempTest();
+        }
+
+        public void TempTest()
+        {
+            FormTextbox formButton = FormTextbox.giveInstance(panel1);
+            TextBox bt = (TextBox)formButton.create("test", new Size(50, 50), new Point(200, 200), "TEST");
+            try
+            {
+                TextBox bt2 = (TextBox)formButton.create("test", new Size(150, 50), new Point(300,100), "TEST2");
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
-    <Compile Include="Classes\FormObject\FormButton.cs" />
+    <Compile Include="Classes\FormObjectFolder\FormButton.cs" />
     <Compile Include="Classes\FormObject.cs" />
     <Compile Include="Classes\FormObjectManage.cs" />
+    <Compile Include="Classes\FormObjectFolder\FormTextbox.cs" />
     <Compile Include="Classes\FormTextController.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Form1.cs">
