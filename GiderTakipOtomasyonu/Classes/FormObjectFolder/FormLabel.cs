@@ -25,7 +25,7 @@ namespace GiderTakipOtomasyonu
             return instance;
         }
         public Label nesne;
-        List<Tuple<Label, string>> nesneler = new List<Tuple<Label, string>>(); //hem butonu hemde ismini tutuyor
+        List<Tuple<Label, string>> nesneler = new List<Tuple<Label, string>>();
 
 
         public object create(string name, Size size, Point location, string text)

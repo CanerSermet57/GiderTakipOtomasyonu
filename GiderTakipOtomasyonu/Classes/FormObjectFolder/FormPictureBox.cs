@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace GiderTakipOtomasyonu.Classes.FormObjectFolder
+namespace GiderTakipOtomasyonu
 {
     class FormPictureBox : FormObject
     {
@@ -25,17 +25,30 @@ namespace GiderTakipOtomasyonu.Classes.FormObjectFolder
             return instance;
         }
         public PictureBox nesne;
-        List<Tuple<PictureBox, string>> nesneler = new List<Tuple<PictureBox, string>>(); //hem butonu hemde ismini tutuyor
+        List<Tuple<PictureBox, string>> nesneler = new List<Tuple<PictureBox, string>>();
 
 
-        public object create(string name, Size size, Point location, string text)
+        public object create(string name, Size size, Point location, Image image,PictureBoxSizeMode sizeMode)
         {
             isNameUnique(name);
             nesne = new PictureBox();
             nesne.Location = location;
             nesne.Name = name;
             nesne.Size = size;
-            nesne.Text = text;
+            nesne.Image = image;
+            nesne.SizeMode = sizeMode;
+            mainPanel.Controls.Add(nesne);
+            nesneler.Add(Tuple.Create(nesne, name));
+            return nesne;
+        }
+        public object create(string name, Size size, Point location, Image image)
+        {
+            isNameUnique(name);
+            nesne = new PictureBox();
+            nesne.Location = location;
+            nesne.Name = name;
+            nesne.Size = size;
+            nesne.Image = image;
             mainPanel.Controls.Add(nesne);
             nesneler.Add(Tuple.Create(nesne, name));
             return nesne;

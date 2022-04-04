@@ -25,7 +25,7 @@ namespace GiderTakipOtomasyonu
             return instance;
         }
         public TextBox nesne;
-        List<Tuple<TextBox, string>> nesneler = new List<Tuple<TextBox, string>>(); //hem butonu hemde ismini tutuyor
+        List<Tuple<TextBox, string>> nesneler = new List<Tuple<TextBox, string>>();
 
 
         public object create(string name, Size size, Point location, string text)
