@@ -25,22 +25,28 @@ namespace GiderTakipOtomasyonu
         
         private void button2_Click(object sender, EventArgs e)
         {
-            TempTest();
+            exampleLabelCreate();
+            exampleTextBoxCreate();
+            exampleButtonCreate();
         }
 
-        public void TempTest()
+        public void exampleLabelCreate()
+        {
+            FormLabel formButton = FormLabel.giveInstance(panel1);
+            Label bt = (Label)formButton.create("test", new Size(50, 50), new Point(200, 200), "TEST");
+        }
+        public void exampleTextBoxCreate()
         {
             FormTextbox formButton = FormTextbox.giveInstance(panel1);
-            TextBox bt = (TextBox)formButton.create("test", new Size(50, 50), new Point(200, 200), "TEST");
-            try
-            {
-                TextBox bt2 = (TextBox)formButton.create("test", new Size(150, 50), new Point(300,100), "TEST2");
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message);
-            }
+            TextBox bt = (TextBox)formButton.create("test", new Size(50, 50), new Point(400, 200), "TEST");
         }
+        public void exampleButtonCreate()
+        {
+            FormButton formButton = FormButton.giveInstance(panel1);
+            Button bt = (Button)formButton.create("test", new Size(50, 50), new Point(600, 200), "TEST");
+        }
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {

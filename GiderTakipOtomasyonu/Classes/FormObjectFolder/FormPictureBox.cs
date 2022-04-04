@@ -1,66 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
-namespace GiderTakipOtomasyonu
+namespace GiderTakipOtomasyonu.Classes.FormObjectFolder
 {
-    class FormButton : FormObject
+    class FormPictureBox : FormObject
     {
-        //Singleton Pattern
-        private FormButton(Panel mainPanel)
+        private FormPictureBox(Panel mainPanel)
         {
             this.mainPanel = mainPanel;
         }
         public Panel mainPanel;
-        private static FormButton instance;
-        public static FormButton giveInstance(Panel mainPanel)
+        private static FormPictureBox instance;
+        public static FormPictureBox giveInstance(Panel mainPanel)
         {
             if (instance == null)
             {
-                instance = new FormButton(mainPanel);
+                instance = new FormPictureBox(mainPanel);
             }
             return instance;
         }
-        public Button nesne;
-        List<Tuple<Button, string>> nesneler = new List<Tuple<Button, string>>(); //hem butonu hemde ismini tutuyor
+        public PictureBox nesne;
+        List<Tuple<PictureBox, string>> nesneler = new List<Tuple<PictureBox, string>>(); //hem butonu hemde ismini tutuyor
 
-        public object create(string name, Size size, Point location,string text) 
+
+        public object create(string name, Size size, Point location, string text)
         {
             isNameUnique(name);
-            nesne = new Button();
+            nesne = new PictureBox();
             nesne.Location = location;
             nesne.Name = name;
             nesne.Size = size;
             nesne.Text = text;
-            nesne.UseVisualStyleBackColor = true;
             mainPanel.Controls.Add(nesne);
-            nesneler.Add(Tuple.Create(nesne, name));            
+            nesneler.Add(Tuple.Create(nesne, name));
             return nesne;
         }
 
 
         public override void isNameUnique(string name)
         {
-            foreach (var buton in nesneler)
+            foreach (var nesne in nesneler)
             {
-                if (buton.Item2 == name)
+                if (nesne.Item2 == name)
                 {
                     throw new Exception("Name NOT Unique");
-                }                
+                }
             }
         }
 
         public override object findByName(string name)
         {
-            foreach (var buton in nesneler)
+            foreach (var nesne in nesneler)
             {
-                if (buton.Item2 == name)
+                if (nesne.Item2 == name)
                 {
-                    return buton.Item1;
+                    return nesne.Item1;
                 }
             }
             return null;
@@ -68,10 +67,8 @@ namespace GiderTakipOtomasyonu
 
         public override void delete(string nesneadi)
         {
-            Button deletenesne = (Button) findByName(nesneadi);
+            PictureBox deletenesne = (PictureBox)findByName(nesneadi);
             mainPanel.Controls.Remove(deletenesne);
         }
-
-        
     }
 }

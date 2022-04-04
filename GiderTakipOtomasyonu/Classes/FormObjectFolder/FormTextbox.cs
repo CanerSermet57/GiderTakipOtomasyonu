@@ -24,31 +24,30 @@ namespace GiderTakipOtomasyonu
             }
             return instance;
         }
-        public TextBox textbox;
-        List<Tuple<TextBox, string>> textboxs = new List<Tuple<TextBox, string>>(); //hem butonu hemde ismini tutuyor
+        public TextBox nesne;
+        List<Tuple<TextBox, string>> nesneler = new List<Tuple<TextBox, string>>(); //hem butonu hemde ismini tutuyor
 
 
         public object create(string name, Size size, Point location, string text)
         {
             isNameUnique(name);
-            textbox = new TextBox();
-            textbox.Location = location;
-            textbox.Name = name;
-            textbox.Size = size;
-            textbox.Text = text;
-            mainPanel.Controls.Add(textbox);
-            textboxs.Add(Tuple.Create(textbox, name));
-            return textbox;
+            nesne = new TextBox();
+            nesne.Location = location;
+            nesne.Name = name;
+            nesne.Size = size;
+            nesne.Text = text;
+            mainPanel.Controls.Add(nesne);
+            nesneler.Add(Tuple.Create(nesne, name));
+            return nesne;
         }
 
 
         public override void isNameUnique(string name)
         {
-            foreach (var textbox in textboxs)
+            foreach (var nesne in nesneler)
             {
-                if (textbox.Item2 == name)
+                if (nesne.Item2 == name)
                 {
-                    MessageBox.Show("oh no");
                     throw new Exception("Name NOT Unique");
                 }
             }
@@ -56,20 +55,20 @@ namespace GiderTakipOtomasyonu
 
         public override object findByName(string name)
         {
-            foreach (var textbox in textboxs)
+            foreach (var nesne in nesneler)
             {
-                if (textbox.Item2 == name)
+                if (nesne.Item2 == name)
                 {
-                    return textbox.Item1;
+                    return nesne.Item1;
                 }
             }
             return null;
         }
 
-        public override void delete(string buttonname)
+        public override void delete(string nesneadi)
         {
-            TextBox textBoxToBeDelete = (TextBox)findByName(buttonname);
-            mainPanel.Controls.Remove(textBoxToBeDelete);
+            TextBox deletenesne = (TextBox)findByName(nesneadi);
+            mainPanel.Controls.Remove(deletenesne);
         }
     }
 }

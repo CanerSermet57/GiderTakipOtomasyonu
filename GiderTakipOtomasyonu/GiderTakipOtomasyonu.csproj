@@ -49,6 +49,8 @@
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\FormObjectFolder\FormButton.cs" />
     <Compile Include="Classes\FormObject.cs" />
+    <Compile Include="Classes\FormObjectFolder\FormLabel.cs" />
+    <Compile Include="Classes\FormObjectFolder\FormPictureBox.cs" />
     <Compile Include="Classes\FormObjectManage.cs" />
     <Compile Include="Classes\FormObjectFolder\FormTextbox.cs" />
     <Compile Include="Classes\FormTextController.cs" />
