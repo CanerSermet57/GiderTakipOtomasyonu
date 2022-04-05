@@ -34,6 +34,8 @@ namespace GiderTakipOtomasyonu
             examplePictureBoxCreate();
             exampleNumericUpDownCreate();
             exampleListBoxCreate();
+            exampleDateTimePickerCreate();
+            examplePanelCreate();
         }
 
         public void exampleLabelCreate()
@@ -69,6 +71,17 @@ namespace GiderTakipOtomasyonu
         {
             FormListBox formnesne = FormListBox.giveInstance(panel1);
             ListBox nesne = (ListBox)formnesne.create("test", new Size(150, 150), new Point(800, 400),(new string[] { "tEST", "Test" }));
+        }
+        public void exampleDateTimePickerCreate()
+        {
+            FormDateTimePicker formnesne = FormDateTimePicker.giveInstance(panel1);
+            DateTimePicker nesne = (DateTimePicker)formnesne.create("test", new Size(150, 150), new Point(100, 400), DateTime.Now);
+        }
+        public void examplePanelCreate()
+        {
+            FormPanel formnesne = FormPanel.giveInstance(panel1);
+            Panel nesne = (Panel)formnesne.create("test", new Size(150, 150), new Point(100, 400));
+            nesne.BackColor = Color.Blue;
         }
 
 
