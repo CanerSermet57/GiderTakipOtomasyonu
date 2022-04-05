@@ -50,6 +50,7 @@
     <Compile Include="Classes\FormObjectFolder\FormButton.cs" />
     <Compile Include="Classes\FormObject.cs" />
     <Compile Include="Classes\FormObjectFolder\FormLabel.cs" />
+    <Compile Include="Classes\FormObjectFolder\FormListBox.cs" />
     <Compile Include="Classes\FormObjectFolder\FormNumericUpDown.cs" />
     <Compile Include="Classes\FormObjectFolder\FormPictureBox.cs" />
     <Compile Include="Classes\FormObjectManage.cs" />

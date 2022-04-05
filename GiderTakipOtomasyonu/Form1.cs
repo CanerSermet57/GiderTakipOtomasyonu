@@ -21,16 +21,19 @@ namespace GiderTakipOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            FormButton formnesne = FormButton.giveInstance(panel1);
+            Button nesne = (Button)formnesne.create("TESTNESNE", new Size(150, 150), new Point(450, 200), "TEST NESNELERI OLUSTUR");
+            nesne.Click += exampleCreateObject;
         }
         
-        private void button2_Click(object sender, EventArgs e)
+        private void exampleCreateObject(object sender, EventArgs e)
         {
             exampleLabelCreate();
             exampleTextBoxCreate();
             exampleButtonCreate();
             examplePictureBoxCreate();
             exampleNumericUpDownCreate();
+            exampleListBoxCreate();
         }
 
         public void exampleLabelCreate()
@@ -61,6 +64,11 @@ namespace GiderTakipOtomasyonu
         {
             FormNumericUpDown formnesne = FormNumericUpDown.giveInstance(panel1);
             NumericUpDown nesne = (NumericUpDown)formnesne.create("test", new Size(50, 50), new Point(600, 400), 55);
+        }
+        public void exampleListBoxCreate()
+        {
+            FormListBox formnesne = FormListBox.giveInstance(panel1);
+            ListBox nesne = (ListBox)formnesne.create("test", new Size(150, 150), new Point(800, 400),(new string[] { "tEST", "Test" }));
         }
 
 
