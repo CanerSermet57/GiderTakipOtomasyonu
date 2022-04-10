@@ -15,6 +15,7 @@ namespace GiderTakipOtomasyonu
         {
             this.mainPanel = mainPanel;
         }
+
         public Panel mainPanel;
         private static FormButton instance;
         public static FormButton giveInstance(Panel mainPanel)

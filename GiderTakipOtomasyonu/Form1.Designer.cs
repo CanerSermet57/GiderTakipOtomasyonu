@@ -95,7 +95,7 @@
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(3, 602);
+            this.button13.Location = new System.Drawing.Point(5, 607);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(156, 48);
             this.button13.TabIndex = 0;
@@ -261,12 +261,13 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(4, 8);
+            this.button2.Location = new System.Drawing.Point(5, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 48);
             this.button2.TabIndex = 0;
             this.button2.Text = "Durum";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
