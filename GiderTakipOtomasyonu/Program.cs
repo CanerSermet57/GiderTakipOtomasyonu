@@ -16,10 +16,11 @@ namespace GiderTakipOtomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.InfrastructureForm());
+            Application.Run(new SifreSıfırlama());
             /*
-            Application.Run(new Form1());
-            Application.Run(new KayitOl());
+             * Application.Run(new Forms.InfrastructureForm());
+             * Application.Run(new Form1());
+             * Application.Run(new KayitOl());
             */
         }
     }
