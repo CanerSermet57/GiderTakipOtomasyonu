@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GiderTakipOtomasyonu;
+using System.Net.Mail;
+using System.Net;
 
 namespace GiderTakipOtomasyonu.Forms
 {
@@ -113,5 +115,6 @@ namespace GiderTakipOtomasyonu.Forms
         {
             MessageBox.Show(sender.ToString());
         }
-    }
+    }   
+
 }
