@@ -18,7 +18,7 @@ namespace GiderTakipOtomasyonu
         private string senderMail;
         private string senderPassword;
 
-        public MailMessage mailRecipientAdd(List<string> recipientList, MailMessage mail)
+        public MailMessage RecipientAddList(List<string> recipientList, MailMessage mail)
         {
             foreach (var item in recipientList)
             {
@@ -26,17 +26,22 @@ namespace GiderTakipOtomasyonu
             }
             return mail;
         }
-        public MailMessage mailSubjectAdd(string subject, MailMessage mail)
+        public MailMessage RecipientAdd(string recipientList, MailMessage mail)
+        {
+            mail.To.Add(recipientList);
+            return mail;
+        }
+        public MailMessage SubjectAdd(string subject, MailMessage mail)
         {
             mail.Subject = subject;
             return mail;
         }
-        public MailMessage mailBodyAdd(string body, MailMessage mail)
+        public MailMessage BodyAdd(string body, MailMessage mail)
         {
             mail.Body = body;
             return mail;
         }
-        public MailMessage mailAttachmentAdd(Attachment atach, MailMessage mail)
+        public MailMessage AttachmentAdd(Attachment atach, MailMessage mail)
         {
             mail.Attachments.Add(atach);
             return mail;
@@ -55,11 +60,11 @@ namespace GiderTakipOtomasyonu
         {
             Mail mail = new Mail(senderMail,senderPassword);
             MailMessage mailMessage = new MailMessage();
-            mailMessage = mail.mailBodyAdd("This Is EXAMPLE MAIL", mailMessage);
-            mailMessage = mail.mailSubjectAdd("Example MAIL", mailMessage);
+            mailMessage = mail.BodyAdd("This Is EXAMPLE MAIL", mailMessage);
+            mailMessage = mail.SubjectAdd("Example MAIL", mailMessage);
             List<string> RecipientList = new List<string>();
             RecipientList.Add(senderMail);
-            mailMessage = mail.mailRecipientAdd(RecipientList, mailMessage);
+            mailMessage = mail.RecipientAddList(RecipientList, mailMessage);
             mail.sendMail(mailMessage); //Dont forget to accept 3rd party send 
         }
 
