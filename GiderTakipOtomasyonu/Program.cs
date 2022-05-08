@@ -16,7 +16,7 @@ namespace GiderTakipOtomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SifreSıfırlama());
+            Application.Run(new Kisiler());
             /*
              * Application.Run(new Forms.InfrastructureForm());
              * Application.Run(new Form1());
