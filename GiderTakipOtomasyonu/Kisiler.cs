@@ -19,8 +19,10 @@ namespace GiderTakipOtomasyonu
 
         private void Kisiler_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DBTestListSix();
+            dataGridView2.DataSource = DBTestListSix();
         }
+
+        int datagridviewsecilenid = -1;
 
 
         public List<DBTest> DBTestListSix()
@@ -33,6 +35,21 @@ namespace GiderTakipOtomasyonu
             dbTestList.Add(DBTest.createinstance("Sophia", "4", "00", "ad1", "noinf"));
             dbTestList.Add(DBTest.createinstance("Clara", "5", "00", "ad1", "noinf"));
             return dbTestList;
+        }
+
+        private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            datagridviewsecilenid = e.RowIndex;
+            if (checkBox1.Checked)
+            {
+                textBox5.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                textBox1.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                textBox4.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+                richTextBox1.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
+            
         }
     }
 }
