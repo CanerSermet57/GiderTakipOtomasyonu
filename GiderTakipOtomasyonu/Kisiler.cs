@@ -19,15 +19,23 @@ namespace GiderTakipOtomasyonu
 
         private void Kisiler_Load(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = DBTestListSix();
+            source.DataSource = DBTestListSix();
+            dataGridView2.DataSource = source;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         int datagridviewsecilenid = -1;
+        List<DBTest> dbTestList = new List<DBTest>();
+        BindingSource source = new BindingSource();
 
 
         public List<DBTest> DBTestListSix()
-        {
-            List<DBTest> dbTestList = new List<DBTest>();
+        {            
             dbTestList.Add(DBTest.createinstance("Michael", "0", "00", "ad1", "noinf"));
             dbTestList.Add(DBTest.createinstance("Joana", "1", "00", "ad1", "noinf"));
             dbTestList.Add(DBTest.createinstance("Marbel", "2", "00", "ad1", "noinf"));
@@ -50,6 +58,40 @@ namespace GiderTakipOtomasyonu
                 richTextBox1.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
             
+        }
+
+        public void refreshdatagridview()
+        {
+            source.DataSource = dbTestList;
+            source.ResetBindings(false);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            
+            //MessageBox.Show(dbTestList.Count.ToString());
+            dbTestList.Add(DBTest.createinstance(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, richTextBox1.Text));
+            refreshdatagridview();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            dbTestList[Convert.ToInt32(textBox5.Text)].adi = textBox1.Text;
+            dbTestList[Convert.ToInt32(textBox5.Text)].tellNo = textBox2.Text;
+            dbTestList[Convert.ToInt32(textBox5.Text)].faksNo = textBox3.Text;
+            dbTestList[Convert.ToInt32(textBox5.Text)].adress = textBox4.Text;
+            dbTestList[Convert.ToInt32(textBox5.Text)].bilgi = richTextBox1.Text;
+            refreshdatagridview();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text != "")
+            {
+
+                dbTestList.RemoveAt(Convert.ToInt32(textBox5.Text));
+                refreshdatagridview();
+            }
         }
     }
 }
