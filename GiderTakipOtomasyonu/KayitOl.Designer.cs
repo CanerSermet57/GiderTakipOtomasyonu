@@ -36,6 +36,7 @@ namespace GiderTakipOtomasyonu
             this.textBoxSifre = new System.Windows.Forms.TextBox();
             this.textBoxSifreTekrar = new System.Windows.Forms.TextBox();
             this.buttonKayitOl = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxKullaniciAdi
@@ -94,7 +95,7 @@ namespace GiderTakipOtomasyonu
             // 
             // buttonKayitOl
             // 
-            this.buttonKayitOl.Location = new System.Drawing.Point(248, 398);
+            this.buttonKayitOl.Location = new System.Drawing.Point(192, 337);
             this.buttonKayitOl.Name = "buttonKayitOl";
             this.buttonKayitOl.Size = new System.Drawing.Size(75, 23);
             this.buttonKayitOl.TabIndex = 6;
@@ -102,9 +103,20 @@ namespace GiderTakipOtomasyonu
             this.buttonKayitOl.UseVisualStyleBackColor = true;
             this.buttonKayitOl.Click += new System.EventHandler(this.buttonKayitOl_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(304, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Sifre Sıfırla";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // KayitOl
             // 
             this.ClientSize = new System.Drawing.Size(584, 565);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonKayitOl);
             this.Controls.Add(this.textBoxSifreTekrar);
             this.Controls.Add(this.textBoxSifre);
@@ -129,5 +141,6 @@ namespace GiderTakipOtomasyonu
         private System.Windows.Forms.TextBox textBoxSifre;
         private System.Windows.Forms.TextBox textBoxSifreTekrar;
         private System.Windows.Forms.Button buttonKayitOl;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -19,6 +19,11 @@ namespace GiderTakipOtomasyonu
             InitializeComponent();
         }
 
+        private void FormClossing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
+        }
+
         private string randomPasswordResetKey = "";
         private bool SendingOrChecking = true;
 

@@ -55,14 +55,20 @@ namespace GiderTakipOtomasyonu
 
         private void buttonKayitOl_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
+                                                  
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SifreSıfırlama form = new SifreSıfırlama();
+            form.Show();
+            form.FormClosing += FormClossing;
+        }
 
+        private void FormClossing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
+        }
     }
 }
