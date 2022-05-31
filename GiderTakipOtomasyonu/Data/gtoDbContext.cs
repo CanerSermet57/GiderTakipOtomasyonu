@@ -12,7 +12,6 @@ namespace GiderTakipOtomasyonu.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=.; Database=GTODB; Integrated Security=yes");
-
         }
 
     }
