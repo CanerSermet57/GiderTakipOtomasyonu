@@ -69,15 +69,19 @@ namespace GiderTakipOtomasyonu
 
         private void button14_Click(object sender, EventArgs e)
         {
-         /*   
-            //MessageBox.Show(dbTestList.Count.ToString());
-            dbTestList.Add(DBTest.createinstance(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, richTextBox1.Text));
-            refreshdatagridview();
-            */
+            Forms.KisiEkle kisiEkleForm = new Forms.KisiEkle();
+            kisiEkleForm.ShowDialog();
+            /*   
+               //MessageBox.Show(dbTestList.Count.ToString());
+               dbTestList.Add(DBTest.createinstance(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, richTextBox1.Text));
+               refreshdatagridview();
+               */
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
+            Forms.KisiDuzenle kisiDuzenleForm = new Forms.KisiDuzenle();
+            kisiDuzenleForm.ShowDialog();
             /*
             dbTestList[Convert.ToInt32(textBox5.Text)].adi = textBox1.Text;
             dbTestList[Convert.ToInt32(textBox5.Text)].tellNo = textBox2.Text;

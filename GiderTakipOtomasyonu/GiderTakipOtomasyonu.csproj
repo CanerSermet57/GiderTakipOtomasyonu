@@ -192,6 +192,12 @@
     <Compile Include="Forms\InfrastructureForm.Designer.cs">
       <DependentUpon>InfrastructureForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiDuzenle.Designer.cs">
+      <DependentUpon>KisiDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KisiEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InfrastructureForm.resx">
       <DependentUpon>InfrastructureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiDuzenle.resx">
+      <DependentUpon>KisiDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiEkle.resx">
       <DependentUpon>KisiEkle.cs</DependentUpon>
