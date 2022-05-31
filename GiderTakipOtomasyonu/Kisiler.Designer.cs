@@ -97,24 +97,24 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView2.Location = new System.Drawing.Point(266, 71);
+            this.dataGridView2.Location = new System.Drawing.Point(266, 56);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1060, 484);
+            this.dataGridView2.Size = new System.Drawing.Size(1060, 499);
             this.dataGridView2.TabIndex = 11;
             this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
             // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button15.Location = new System.Drawing.Point(492, 12);
+            this.button15.Location = new System.Drawing.Point(686, 6);
             this.button15.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(206, 36);
+            this.button15.Size = new System.Drawing.Size(206, 44);
             this.button15.TabIndex = 0;
             this.button15.Text = "DUZENLE";
             this.button15.UseVisualStyleBackColor = true;
@@ -123,10 +123,10 @@
             // button16
             // 
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button16.Location = new System.Drawing.Point(706, 12);
+            this.button16.Location = new System.Drawing.Point(900, 6);
             this.button16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(206, 36);
+            this.button16.Size = new System.Drawing.Size(206, 44);
             this.button16.TabIndex = 0;
             this.button16.Text = "SIL";
             this.button16.UseVisualStyleBackColor = true;
@@ -135,10 +135,10 @@
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button14.Location = new System.Drawing.Point(278, 12);
+            this.button14.Location = new System.Drawing.Point(472, 6);
             this.button14.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(206, 36);
+            this.button14.Size = new System.Drawing.Size(206, 44);
             this.button14.TabIndex = 0;
             this.button14.Text = "EKLE";
             this.button14.UseVisualStyleBackColor = true;

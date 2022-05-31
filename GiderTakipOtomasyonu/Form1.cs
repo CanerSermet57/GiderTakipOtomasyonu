@@ -23,6 +23,7 @@ namespace GiderTakipOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             gtoDb.Database.EnsureDeleted();
             gtoDb.Database.EnsureCreated();
 

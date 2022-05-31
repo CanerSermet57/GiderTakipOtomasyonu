@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GiderTakipOtomasyonu.Forms
 {
-    public partial class Ekle : Form
+    public partial class KisiEkle : Form
     {
-        public Ekle()
+        public KisiEkle()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
