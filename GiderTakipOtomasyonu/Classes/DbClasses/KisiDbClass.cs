@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GiderTakipOtomasyonu
 {
-    public class KisilerDbClass
+    public class KisiDbClass
     {
         public int id { get; set; }
         public float borc { get; set; }
