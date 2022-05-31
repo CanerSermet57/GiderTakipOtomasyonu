@@ -65,7 +65,6 @@ namespace GiderTakipOtomasyonu
                 buttontemp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
                 buttontemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 buttontemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                buttontemp.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
                 buttontemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                 buttontemp.Location = new System.Drawing.Point(5, 3 + i * 55);
                 buttontemp.Name = "buttonLeft" + (i + 1).ToString();

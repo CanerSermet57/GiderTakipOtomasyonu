@@ -43,7 +43,7 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxKullaniciAdi.Location = new System.Drawing.Point(192, 105);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
-            this.textBoxKullaniciAdi.Size = new System.Drawing.Size(187, 20);
+            this.textBoxKullaniciAdi.Size = new System.Drawing.Size(187, 23);
             this.textBoxKullaniciAdi.TabIndex = 0;
             this.textBoxKullaniciAdi.Text = "Kullanici Adi";
             this.textBoxKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKullaniciAdi_KeyPress);
@@ -52,7 +52,7 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxSirketAdi.Location = new System.Drawing.Point(192, 144);
             this.textBoxSirketAdi.Name = "textBoxSirketAdi";
-            this.textBoxSirketAdi.Size = new System.Drawing.Size(187, 20);
+            this.textBoxSirketAdi.Size = new System.Drawing.Size(187, 23);
             this.textBoxSirketAdi.TabIndex = 1;
             this.textBoxSirketAdi.Text = "Sirket Adi";
             this.textBoxSirketAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSirketAdi_KeyPress);
@@ -61,7 +61,7 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxVergiDaireNo.Location = new System.Drawing.Point(192, 183);
             this.textBoxVergiDaireNo.Name = "textBoxVergiDaireNo";
-            this.textBoxVergiDaireNo.Size = new System.Drawing.Size(187, 20);
+            this.textBoxVergiDaireNo.Size = new System.Drawing.Size(187, 23);
             this.textBoxVergiDaireNo.TabIndex = 2;
             this.textBoxVergiDaireNo.Text = "Vergi Daire No";
             this.textBoxVergiDaireNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxVergiDaireNo_KeyPress);
@@ -70,7 +70,7 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxEpostaAdresi.Location = new System.Drawing.Point(192, 225);
             this.textBoxEpostaAdresi.Name = "textBoxEpostaAdresi";
-            this.textBoxEpostaAdresi.Size = new System.Drawing.Size(187, 20);
+            this.textBoxEpostaAdresi.Size = new System.Drawing.Size(187, 23);
             this.textBoxEpostaAdresi.TabIndex = 3;
             this.textBoxEpostaAdresi.Text = "E-posta Adresi";
             this.textBoxEpostaAdresi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEpostaAdresi_KeyPress);
@@ -79,7 +79,7 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxSifre.Location = new System.Drawing.Point(192, 267);
             this.textBoxSifre.Name = "textBoxSifre";
-            this.textBoxSifre.Size = new System.Drawing.Size(187, 20);
+            this.textBoxSifre.Size = new System.Drawing.Size(187, 23);
             this.textBoxSifre.TabIndex = 4;
             this.textBoxSifre.Text = "Sifre";
             this.textBoxSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifre_KeyPress);
@@ -88,7 +88,7 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxSifreTekrar.Location = new System.Drawing.Point(192, 311);
             this.textBoxSifreTekrar.Name = "textBoxSifreTekrar";
-            this.textBoxSifreTekrar.Size = new System.Drawing.Size(187, 20);
+            this.textBoxSifreTekrar.Size = new System.Drawing.Size(187, 23);
             this.textBoxSifreTekrar.TabIndex = 5;
             this.textBoxSifreTekrar.Text = "Sifre Tekrar";
             this.textBoxSifreTekrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifreTekrar_KeyPress);
@@ -111,7 +111,6 @@ namespace GiderTakipOtomasyonu
             this.button1.TabIndex = 7;
             this.button1.Text = "Sifre Sıfırla";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // KayitOl
             // 

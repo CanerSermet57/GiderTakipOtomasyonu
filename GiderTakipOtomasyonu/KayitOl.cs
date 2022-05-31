@@ -57,7 +57,7 @@ namespace GiderTakipOtomasyonu
         {
                                                   
         }
-
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -65,7 +65,7 @@ namespace GiderTakipOtomasyonu
             form.Show();
             form.FormClosing += FormClossing;
         }
-
+        */
         private void FormClossing(object sender, FormClosingEventArgs e)
         {
             this.Show();
