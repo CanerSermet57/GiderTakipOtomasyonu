@@ -65,8 +65,10 @@ namespace GiderTakipOtomasyonu
             string DogrulamaKodu = randomPasswordResetKeyCreate();
             Mail mail = new Mail("", "");
             MailMessage mailMessage = new MailMessage();
-            mailMessage = mail.BodyAdd("Doğrulama Kodunuz : " + DogrulamaKodu, mailMessage);
-            mailMessage = mail.SubjectAdd("Şifre Sıfırlama Doğrulama Kodu", mailMessage);
+            mailMessage = mail.BodyAdd("Bu mail Gider Takip Otomasyon Şifrenizi Sıfırlamak İçin Gönderilmiştir\n" +
+                "Eğer bu isteği siz yapmadıysanız herhangi bir işlem yapmanıza gerek yoktur\n\n" +
+                "Doğrulama Kodunuz : " + DogrulamaKodu + "\n Doğrulama kodunu başkasıyla lütfen paylaşmayın", mailMessage);
+            mailMessage = mail.SubjectAdd("Şifre Sıfırlama Doğrulama Kodunuz", mailMessage);
             try
             {
                 mailMessage = mail.RecipientAdd(textBox1.Text, mailMessage);

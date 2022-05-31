@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace GiderTakipOtomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KayitOl());
+
+
+            gtoDbContext gtoDb = new gtoDbContext();
+            gtoDb.Database.EnsureDeleted();
+            gtoDb.Database.EnsureCreated();
+
+            Application.Run(new Form1());
             /*
              * Application.Run(new Forms.InfrastructureForm());
              * Application.Run(new Form1());
