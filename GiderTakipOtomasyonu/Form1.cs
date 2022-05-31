@@ -23,7 +23,9 @@ namespace GiderTakipOtomasyonu
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            gtoDb.Database.EnsureDeleted();
             gtoDb.Database.EnsureCreated();
+
             FormButton formnesne = FormButton.giveInstance(panel1);
             Button nesne = (Button)formnesne.create("TESTNESNE", new Size(150, 150), new Point(450, 200), "TEST NESNELERI OLUSTUR");
             nesne.Click += exampleCreateObject;
