@@ -205,6 +205,12 @@
     <Compile Include="Forms\KisiEkle.Designer.cs">
       <DependentUpon>KisiEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiSil.Designer.cs">
+      <DependentUpon>KisiSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="KayitOl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiEkle.resx">
       <DependentUpon>KisiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiSil.resx">
+      <DependentUpon>KisiSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KayitOl.resx">
       <DependentUpon>KayitOl.cs</DependentUpon>
