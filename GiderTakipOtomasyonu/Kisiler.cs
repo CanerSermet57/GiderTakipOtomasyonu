@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,13 @@ namespace GiderTakipOtomasyonu
             InitializeComponent();
         }
 
+        gtoDbContext dbContext = new gtoDbContext();
+
         private void Kisiler_Load(object sender, EventArgs e)
         {
+
+            refreshdatagridview();
+            /*
             source.DataSource = DBTestListSix();
             dataGridView2.DataSource = source;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
@@ -27,15 +33,17 @@ namespace GiderTakipOtomasyonu
             dataGridView2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            */
         }
 
         int datagridviewsecilenid = -1;
         List<DBTest> dbTestList = new List<DBTest>();
         BindingSource source = new BindingSource();
 
-
+        /*
         public List<DBTest> DBTestListSix()
-        {            
+        {         
+            
             dbTestList.Add(DBTest.createinstance("Michael", "0", "00", "ad1", "noinf"));
             dbTestList.Add(DBTest.createinstance("Joana", "1", "00", "ad1", "noinf"));
             dbTestList.Add(DBTest.createinstance("Marbel", "2", "00", "ad1", "noinf"));
@@ -43,8 +51,9 @@ namespace GiderTakipOtomasyonu
             dbTestList.Add(DBTest.createinstance("Sophia", "4", "00", "ad1", "noinf"));
             dbTestList.Add(DBTest.createinstance("Clara", "5", "00", "ad1", "noinf"));
             return dbTestList;
+            
         }
-
+        */
         private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             /*
@@ -63,14 +72,15 @@ namespace GiderTakipOtomasyonu
 
         public void refreshdatagridview()
         {
-            source.DataSource = dbTestList;
-            source.ResetBindings(false);
+            var kisilerListesi = dbContext.Kisiler.ToList();
+            dataGridView2.DataSource = kisilerListesi;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             Forms.KisiEkle kisiEkleForm = new Forms.KisiEkle();
             kisiEkleForm.ShowDialog();
+            refreshdatagridview();
             /*   
                //MessageBox.Show(dbTestList.Count.ToString());
                dbTestList.Add(DBTest.createinstance(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, richTextBox1.Text));

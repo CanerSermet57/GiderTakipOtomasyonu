@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,23 @@ namespace GiderTakipOtomasyonu.Forms
         public KisiEkle()
         {
             InitializeComponent();
+        }
+        gtoDbContext dbContext = new gtoDbContext();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var yenikisi = new KisiDbClass()
+            {
+                adi = textBoxAdi.Text,
+                adres = textBoxAdres.Text,
+                alacak = float.Parse(numericUpDownAlacak.Value.ToString()),
+                borc = float.Parse(numericUpDownBorc.Value.ToString()),
+                bilgi = textBoxBilgi.Text,
+                faksNo = textBoxFaks.Text,
+                telNo = textBoxTelefon.Text,
+            };
+            dbContext.Kisiler.Add(yenikisi);
+            dbContext.SaveChanges();
         }
     }
 }
