@@ -72,6 +72,8 @@ namespace GiderTakipOtomasyonu
 
         public void refreshdatagridview()
         {
+            dbContext = new gtoDbContext();
+            DGV.DataSource = null;            
             var kisilerListesi = dbContext.Kisiler.ToList();
             DGV.DataSource = kisilerListesi;
         }
@@ -91,6 +93,7 @@ namespace GiderTakipOtomasyonu
         private void button15_Click(object sender, EventArgs e)
         {
             Forms.KisiDuzenle kisiDuzenleForm = new Forms.KisiDuzenle();
+            kisiDuzenleForm.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
             kisiDuzenleForm.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
             kisiDuzenleForm.bilgi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
             kisiDuzenleForm.adress = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString();
