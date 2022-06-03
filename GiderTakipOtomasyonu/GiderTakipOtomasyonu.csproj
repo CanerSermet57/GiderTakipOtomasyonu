@@ -163,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\DbClasses\CuzdanDbClass.cs" />
     <Compile Include="Classes\DbClasses\KisiDbClass.cs" />
     <Compile Include="Classes\DBTest.cs" />
     <Compile Include="Classes\FormObjectFolder\FormButton.cs" />
