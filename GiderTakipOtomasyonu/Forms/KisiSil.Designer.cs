@@ -85,6 +85,7 @@
             this.button1.TabIndex = 51;
             this.button1.Text = "Sil";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -235,6 +236,7 @@
             this.Controls.Add(this.textBoxAdi);
             this.Name = "KisiSil";
             this.Text = "KisiSil";
+            this.Load += new System.EventHandler(this.KisiSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAlacak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBorc)).EndInit();
             this.ResumeLayout(false);
