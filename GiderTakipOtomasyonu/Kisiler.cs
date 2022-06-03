@@ -73,7 +73,7 @@ namespace GiderTakipOtomasyonu
         public void refreshdatagridview()
         {
             var kisilerListesi = dbContext.Kisiler.ToList();
-            dataGridView2.DataSource = kisilerListesi;
+            DGV.DataSource = kisilerListesi;
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -91,7 +91,15 @@ namespace GiderTakipOtomasyonu
         private void button15_Click(object sender, EventArgs e)
         {
             Forms.KisiDuzenle kisiDuzenleForm = new Forms.KisiDuzenle();
+            kisiDuzenleForm.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            kisiDuzenleForm.bilgi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            kisiDuzenleForm.adress = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            kisiDuzenleForm.faks = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            kisiDuzenleForm.telefon = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            kisiDuzenleForm.borc = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            kisiDuzenleForm.alacak = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[7].Value.ToString());
             kisiDuzenleForm.ShowDialog();
+            refreshdatagridview();
             /*
             dbTestList[Convert.ToInt32(textBox5.Text)].adi = textBox1.Text;
             dbTestList[Convert.ToInt32(textBox5.Text)].tellNo = textBox2.Text;

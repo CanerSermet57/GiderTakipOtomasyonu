@@ -16,5 +16,33 @@ namespace GiderTakipOtomasyonu.Forms
         {
             InitializeComponent();
         }
+
+        public string
+            adi = "",
+            adress = "",
+            telefon = "",
+            faks = "",
+            bilgi = "";
+
+        public float
+            borc = 0,
+            alacak = 0;
+
+
+        private void KisiDuzenle_Load(object sender, EventArgs e)
+        {
+            textBoxAdi.Text = adi;
+            textBoxAdres.Text = adress;
+            textBoxTelefon.Text = telefon;
+            textBoxFaks.Text = faks;
+            textBoxBilgi.Text = bilgi;
+            numericUpDownAlacak.Value = Convert.ToDecimal(alacak);
+            numericUpDownBorc.Value = Convert.ToDecimal(borc);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

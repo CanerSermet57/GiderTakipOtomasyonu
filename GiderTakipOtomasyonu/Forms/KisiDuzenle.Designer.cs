@@ -83,6 +83,7 @@
             this.button1.TabIndex = 35;
             this.button1.Text = "Duzenle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -228,6 +229,7 @@
             this.Controls.Add(this.textBoxAdi);
             this.Name = "KisiDuzenle";
             this.Text = "KisiDuzenle";
+            this.Load += new System.EventHandler(this.KisiDuzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAlacak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBorc)).EndInit();
             this.ResumeLayout(false);
