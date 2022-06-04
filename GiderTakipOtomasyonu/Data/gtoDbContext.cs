@@ -64,6 +64,12 @@ namespace GiderTakipOtomasyonu.Data
 
             //******************** CuzdanDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
+            //******************** CuzdanDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<CuzdanDbClass>().HasData(new CuzdanDbClass { id = 1, bakiyeTL = 100, bakiyeEURO = 1000, bakiyeDolar = 10000 });
+
+            //********** CuzdanDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi **************
+
 
         }
 
