@@ -11,6 +11,8 @@ namespace GiderTakipOtomasyonu.Data
     {
         public DbSet<KisiDbClass> Kisiler { get; set; }
         public DbSet<CuzdanDbClass> Cuzdanlar { get; set; }
+        public DbSet<KategoriDbClass> Kategoriler { get; set; }
+        public DbSet<OdemeTuruDbClass> ÖdemeTürleri { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=.; Database=GTODB; Integrated Security=yes");
@@ -92,6 +94,15 @@ namespace GiderTakipOtomasyonu.Data
 
 
             //******************** KategoriDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** OdemeTuruDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<OdemeTuruDbClass>().Property(x => x.adi)
+                                                   .IsRequired()
+                                                   .HasColumnName("Adı")
+                                                   .HasMaxLength(25);
+
+            //******************** OdemeTuruDbClass Tablo Oluşturma İşlemleri Bitişi ********************
         }
 
     }
