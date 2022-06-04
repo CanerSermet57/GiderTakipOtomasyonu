@@ -103,6 +103,14 @@ namespace GiderTakipOtomasyonu.Data
                                                    .HasMaxLength(25);
 
             //******************** OdemeTuruDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** OdemeTuruDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<OdemeTuruDbClass>().HasData(new OdemeTuruDbClass { id = 1, adi = "Nakit" });
+            modelBuilder.Entity<OdemeTuruDbClass>().HasData(new OdemeTuruDbClass { id = 2, adi = "Kredi Kartı" });
+            modelBuilder.Entity<OdemeTuruDbClass>().HasData(new OdemeTuruDbClass { id = 3, adi = "Diğer" });
+
+            //******************** OdemeTuruDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }
