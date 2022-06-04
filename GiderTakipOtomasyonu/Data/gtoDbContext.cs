@@ -70,6 +70,14 @@ namespace GiderTakipOtomasyonu.Data
 
             //********** CuzdanDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi **************
 
+            //******************** KategoriDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<KategoriDbClass>().Property(x => x.adi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Adı")
+                                                  .HasMaxLength(25);
+
+            //******************** KategoriDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
         }
 
