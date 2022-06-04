@@ -44,7 +44,21 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var silinecekKisi = new KisiDbClass()
+            {
+                id = this.id,
+                adi = textBoxAdi.Text,
+                adres = textBoxAdres.Text,
+                alacak = float.Parse(numericUpDownAlacak.Value.ToString()),
+                borc = float.Parse(numericUpDownBorc.Value.ToString()),
+                bilgi = textBoxBilgi.Text,
+                faksNo = textBoxFaks.Text,
+                telNo = textBoxTelefon.Text,
+            };
+            dbContext.Kisiler.Remove(silinecekKisi);
+            int result = dbContext.SaveChanges();
+            string message = result > 0 ? "Kisi Silindi" : "Başarısız";
+            MessageBox.Show(message);
         }
     }
 }
