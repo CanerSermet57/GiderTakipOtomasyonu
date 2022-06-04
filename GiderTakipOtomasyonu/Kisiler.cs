@@ -22,6 +22,8 @@ namespace GiderTakipOtomasyonu
 
         private void Kisiler_Load(object sender, EventArgs e)
         {
+           // dbContext.Database.EnsureDeleted();
+           // dbContext.Database.EnsureCreated();
 
             refreshdatagridview();
             /*
@@ -134,6 +136,11 @@ namespace GiderTakipOtomasyonu
                 refreshdatagridview();
             }
             */
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

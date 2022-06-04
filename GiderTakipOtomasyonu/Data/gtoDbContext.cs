@@ -79,6 +79,19 @@ namespace GiderTakipOtomasyonu.Data
 
             //******************** KategoriDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
+            //******************** KategoriDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 1, adi = "Mutfak" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 2, adi = "Elektronik" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 3, adi = "Kişisel Eşya" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 4, adi = "Kırtasiye" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 5, adi = "Fatura" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 6, adi = "Temizlik Malzemesi" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 7, adi = "Ticari Mal Satışı" });
+            modelBuilder.Entity<KategoriDbClass>().HasData(new KategoriDbClass { id = 8, adi = "Diğer" });
+
+
+            //******************** KategoriDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }
