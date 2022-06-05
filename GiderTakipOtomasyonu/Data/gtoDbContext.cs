@@ -13,6 +13,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<CuzdanDbClass> Cuzdanlar { get; set; }
         public DbSet<KategoriDbClass> Kategoriler { get; set; }
         public DbSet<OdemeTuruDbClass> ÖdemeTürleri { get; set; }
+        public DbSet<HammaddeDbClass> Hammaddeler { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=.; Database=GTODB; Integrated Security=yes");
@@ -111,6 +112,22 @@ namespace GiderTakipOtomasyonu.Data
             modelBuilder.Entity<OdemeTuruDbClass>().HasData(new OdemeTuruDbClass { id = 3, adi = "Diğer" });
 
             //******************** OdemeTuruDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** HammaddeDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<HammaddeDbClass>().Property(x => x.adi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Ürün Adı")
+                                                  .HasMaxLength(40);
+            modelBuilder.Entity<HammaddeDbClass>().Property(x => x.agirlik)
+                                                  .HasColumnName("Ürün Ağırlığı ");
+            modelBuilder.Entity<HammaddeDbClass>().Property(x => x.fiyat)
+                                                  .HasColumnName("Ürün Fiyatı ");
+            modelBuilder.Entity<HammaddeDbClass>().Property(x => x.stokDurumu)
+                                                  .IsRequired()
+                                                  .HasColumnName("Stok Durumu");
+
+            //******************** HammaddeDbClass Tablo Oluşturma İşlemleri Bitişi ********************
         }
 
     }
