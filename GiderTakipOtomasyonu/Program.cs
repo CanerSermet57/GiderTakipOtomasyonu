@@ -20,7 +20,7 @@ namespace GiderTakipOtomasyonu
 
 
             gtoDbContext gtoDb = new gtoDbContext();
-            //gtoDb.Database.EnsureDeleted();
+            gtoDb.Database.EnsureDeleted();
             gtoDb.Database.EnsureCreated();
 
             Application.Run(new Forms.Hammadde());

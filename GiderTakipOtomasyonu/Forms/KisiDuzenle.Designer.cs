@@ -59,7 +59,7 @@
             0});
             this.numericUpDownAlacak.Name = "numericUpDownAlacak";
             this.numericUpDownAlacak.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownAlacak.TabIndex = 36;
+            this.numericUpDownAlacak.TabIndex = 3;
             // 
             // numericUpDownBorc
             // 
@@ -72,7 +72,7 @@
             0});
             this.numericUpDownBorc.Name = "numericUpDownBorc";
             this.numericUpDownBorc.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownBorc.TabIndex = 37;
+            this.numericUpDownBorc.TabIndex = 2;
             // 
             // button1
             // 
@@ -102,7 +102,7 @@
             this.textBoxBilgi.Multiline = true;
             this.textBoxBilgi.Name = "textBoxBilgi";
             this.textBoxBilgi.Size = new System.Drawing.Size(286, 86);
-            this.textBoxBilgi.TabIndex = 33;
+            this.textBoxBilgi.TabIndex = 7;
             // 
             // label6
             // 
@@ -180,7 +180,7 @@
             this.textBoxTelefon.Location = new System.Drawing.Point(123, 234);
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(286, 32);
-            this.textBoxTelefon.TabIndex = 22;
+            this.textBoxTelefon.TabIndex = 5;
             // 
             // textBoxFaks
             // 
@@ -188,7 +188,7 @@
             this.textBoxFaks.Location = new System.Drawing.Point(123, 272);
             this.textBoxFaks.Name = "textBoxFaks";
             this.textBoxFaks.Size = new System.Drawing.Size(286, 32);
-            this.textBoxFaks.TabIndex = 23;
+            this.textBoxFaks.TabIndex = 6;
             // 
             // textBoxAdres
             // 
@@ -196,7 +196,8 @@
             this.textBoxAdres.Location = new System.Drawing.Point(123, 196);
             this.textBoxAdres.Name = "textBoxAdres";
             this.textBoxAdres.Size = new System.Drawing.Size(286, 32);
-            this.textBoxAdres.TabIndex = 24;
+            this.textBoxAdres.TabIndex = 4;
+            this.textBoxAdres.TextChanged += new System.EventHandler(this.textBoxAdres_TextChanged);
             // 
             // textBoxAdi
             // 
@@ -204,7 +205,7 @@
             this.textBoxAdi.Location = new System.Drawing.Point(123, 82);
             this.textBoxAdi.Name = "textBoxAdi";
             this.textBoxAdi.Size = new System.Drawing.Size(286, 32);
-            this.textBoxAdi.TabIndex = 25;
+            this.textBoxAdi.TabIndex = 1;
             // 
             // KisiDuzenle
             // 

@@ -25,6 +25,11 @@ namespace GiderTakipOtomasyonu.Forms
             faks = "",
             bilgi = "";
 
+        private void textBoxAdres_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public float
             borc = 0,
             alacak = 0;

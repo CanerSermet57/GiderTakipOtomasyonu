@@ -32,5 +32,10 @@ namespace GiderTakipOtomasyonu.Forms
             var kisilerListesi = dbContext.Hammaddeler.ToList();
             DGV.DataSource = kisilerListesi;
         }
+
+        private void buttonekle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
