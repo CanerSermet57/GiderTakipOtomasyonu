@@ -128,6 +128,17 @@ namespace GiderTakipOtomasyonu.Data
                                                   .HasColumnName("Stok Durumu");
 
             //******************** HammaddeDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** HammaddeDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 1, adi = "Un", agirlik = 50, fiyat = 540, stokDurumu = true });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 2, adi = "Sıvıyağ", agirlik = 20, fiyat = 600, stokDurumu = true });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 3, adi = "Şeker", agirlik = 50, fiyat = 300, stokDurumu = false });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 4, adi = "Tuz", agirlik = 5, fiyat = 15, stokDurumu = true });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 5, adi = "Maya", agirlik = 1, fiyat = 5, stokDurumu = false });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 6, adi = "Süt", agirlik = 1, fiyat = 12, stokDurumu = true });
+
+            //******************** HammaddeDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }
