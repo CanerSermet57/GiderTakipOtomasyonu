@@ -12,7 +12,7 @@ namespace GiderTakipOtomasyonu
         public string adi { get; set; }
         public float agirlik { get; set; }
         public float fiyat { get; set; }
-        public bool stokDurumu { get; set; }
+        public float stokSayisi { get; set; }
 
     }
 }

@@ -123,20 +123,20 @@ namespace GiderTakipOtomasyonu.Data
                                                   .HasColumnName("Ürün Ağırlığı ");
             modelBuilder.Entity<HammaddeDbClass>().Property(x => x.fiyat)
                                                   .HasColumnName("Ürün Fiyatı ");
-            modelBuilder.Entity<HammaddeDbClass>().Property(x => x.stokDurumu)
+            modelBuilder.Entity<HammaddeDbClass>().Property(x => x.stokSayisi)
                                                   .IsRequired()
-                                                  .HasColumnName("Stok Durumu");
+                                                  .HasColumnName("Stok Sayisi");
 
             //******************** HammaddeDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
             //******************** HammaddeDbClass Tablo Test Verisi Ekleme İşlemleri ********************
 
-            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 1, adi = "Un", agirlik = 50, fiyat = 540, stokDurumu = true });
-            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 2, adi = "Sıvıyağ", agirlik = 20, fiyat = 600, stokDurumu = true });
-            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 3, adi = "Şeker", agirlik = 50, fiyat = 300, stokDurumu = false });
-            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 4, adi = "Tuz", agirlik = 5, fiyat = 15, stokDurumu = true });
-            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 5, adi = "Maya", agirlik = 1, fiyat = 5, stokDurumu = false });
-            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 6, adi = "Süt", agirlik = 1, fiyat = 12, stokDurumu = true });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 1, adi = "Un", agirlik = 50, fiyat = 540, stokSayisi = 100 });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 2, adi = "Sıvıyağ", agirlik = 20, fiyat = 600, stokSayisi = 50 });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 3, adi = "Şeker", agirlik = 50, fiyat = 300, stokSayisi = 150 });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 4, adi = "Tuz", agirlik = 5, fiyat = 15, stokSayisi = 20 });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 5, adi = "Maya", agirlik = 1, fiyat = 5, stokSayisi = 10 });
+            modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 6, adi = "Süt", agirlik = 1, fiyat = 12, stokSayisi = 20 });
 
             //******************** HammaddeDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
