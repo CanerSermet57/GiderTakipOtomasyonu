@@ -169,6 +169,7 @@
     <Compile Include="Classes\DbClasses\KisiDbClass.cs" />
     <Compile Include="Classes\DbClasses\OdemeTuruDbClass.cs" />
     <Compile Include="Classes\DbClasses\TemaDbClass.cs" />
+    <Compile Include="Classes\DbClasses\TicariMallarDbClass.cs" />
     <Compile Include="Classes\DBTest.cs" />
     <Compile Include="Classes\FormObjectFolder\FormButton.cs" />
     <Compile Include="Classes\FormObject.cs" />
