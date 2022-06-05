@@ -150,6 +150,14 @@ namespace GiderTakipOtomasyonu.Data
                                               .HasMaxLength(15);
 
             //******************** TemaDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** TemaDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 1, adi = "Beyaz" });
+            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 2, adi = "Karanlık" });
+            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 3, adi = "Renkli" });
+
+            //******************** TemaDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }
