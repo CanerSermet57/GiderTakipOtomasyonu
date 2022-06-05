@@ -33,6 +33,12 @@ namespace GiderTakipOtomasyonu.Data
                                                    .HasMaxLength(30);
 
             //******************** KisiDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** KisiDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<KullaniciDbClass>().HasData(new KullaniciDbClass { id = 2, adi = "test", mail = "test@gmail.com", sifre = "test" });
+
+            //******************** KisiDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
     }
 }
