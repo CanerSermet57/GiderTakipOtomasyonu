@@ -38,5 +38,11 @@ namespace GiderTakipOtomasyonu.Forms
             Forms.HammaddeEkle hammaddeekle = new Forms.HammaddeEkle();
             hammaddeekle.ShowDialog();
         }
+
+        private void buttonduzenle_Click(object sender, EventArgs e)
+        {
+            Forms.HammaddeDuzenle hammaddeduzenle = new Forms.HammaddeDuzenle();
+            hammaddeduzenle.ShowDialog();
+        }
     }
 }
