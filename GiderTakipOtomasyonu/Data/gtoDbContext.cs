@@ -14,6 +14,8 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<KategoriDbClass> Kategoriler { get; set; }
         public DbSet<OdemeTuruDbClass> ÖdemeTürleri { get; set; }
         public DbSet<HammaddeDbClass> Hammaddeler { get; set; }
+        public DbSet<TemaDbClass> Temalar { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=.; Database=GTODB; Integrated Security=yes");
@@ -139,6 +141,15 @@ namespace GiderTakipOtomasyonu.Data
             modelBuilder.Entity<HammaddeDbClass>().HasData(new HammaddeDbClass { id = 6, adi = "Süt", agirlik = 1, fiyat = 12, stokSayisi = 20 });
 
             //******************** HammaddeDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** TemaDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<TemaDbClass>().Property(x => x.adi)
+                                              .IsRequired()
+                                              .HasColumnName("Adı")
+                                              .HasMaxLength(15);
+
+            //******************** TemaDbClass Tablo Oluşturma İşlemleri Bitişi ********************
         }
 
     }
