@@ -32,7 +32,9 @@ namespace GiderTakipOtomasyonu.Forms
                 telNo = textBoxTelefon.Text,
             };
             dbContext.Kisiler.Add(yenikisi);
-            dbContext.SaveChanges();
+            int result = dbContext.SaveChanges();
+            string message = result > 0 ? "Kisi Eklendi" : "Başarısız";
+            MessageBox.Show(message);
         }
     }
 }

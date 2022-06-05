@@ -23,12 +23,7 @@ namespace GiderTakipOtomasyonu
             //gtoDb.Database.EnsureDeleted();
             gtoDb.Database.EnsureCreated();
 
-            Application.Run(new Kisiler());
-            /*
-             * Application.Run(new Forms.InfrastructureForm());
-             * Application.Run(new Form1());
-             * Application.Run(new KayitOl());
-            */
+            Application.Run(new Forms.Hammadde());
         }
     }
 }
