@@ -203,6 +203,12 @@
     <Compile Include="Forms\HammaddeEkle.Designer.cs">
       <DependentUpon>HammaddeEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HammadeSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HammadeSil.Designer.cs">
+      <DependentUpon>HammadeSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InfrastructureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HammaddeEkle.resx">
       <DependentUpon>HammaddeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HammadeSil.resx">
+      <DependentUpon>HammadeSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InfrastructureForm.resx">
       <DependentUpon>InfrastructureForm.cs</DependentUpon>
