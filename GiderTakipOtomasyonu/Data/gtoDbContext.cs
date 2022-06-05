@@ -174,6 +174,18 @@ namespace GiderTakipOtomasyonu.Data
                                                       .HasColumnName("Ürün Fiyatı ");
 
             //******************** TicariMallarDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** TicariMallarDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<TicariMallarDbClass>().HasData(new TicariMallarDbClass { id = 1, urunAdi = "Kola", stokSayisi = 15, fiyat = 15 });
+            modelBuilder.Entity<TicariMallarDbClass>().HasData(new TicariMallarDbClass { id = 2, urunAdi = "Fanta", stokSayisi = 10, fiyat = 15 });
+            modelBuilder.Entity<TicariMallarDbClass>().HasData(new TicariMallarDbClass { id = 3, urunAdi = "Poğaça", stokSayisi = 50, fiyat = 4 });
+            modelBuilder.Entity<TicariMallarDbClass>().HasData(new TicariMallarDbClass { id = 4, urunAdi = "Simit", stokSayisi = 70, fiyat = 5 });
+            modelBuilder.Entity<TicariMallarDbClass>().HasData(new TicariMallarDbClass { id = 5, urunAdi = "Ayran", stokSayisi = 30, fiyat = 3 });
+            modelBuilder.Entity<TicariMallarDbClass>().HasData(new TicariMallarDbClass { id = 6, urunAdi = "Pasta", stokSayisi = 15, fiyat = 75 });
+
+
+            //******************** TicariMallarDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }
