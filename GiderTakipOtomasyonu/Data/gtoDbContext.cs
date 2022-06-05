@@ -15,6 +15,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<OdemeTuruDbClass> ÖdemeTürleri { get; set; }
         public DbSet<HammaddeDbClass> Hammaddeler { get; set; }
         public DbSet<TemaDbClass> Temalar { get; set; }
+        public DbSet<TicariMallarDbClass> TicariMallar { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -158,6 +159,21 @@ namespace GiderTakipOtomasyonu.Data
             modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 3, adi = "Renkli" });
 
             //******************** TemaDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** TicariMallarDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<TicariMallarDbClass>().Property(x => x.urunAdi)
+                                                      .IsRequired()
+                                                      .HasColumnName("Ürün Adı")
+                                                      .HasMaxLength(40);
+            modelBuilder.Entity<TicariMallarDbClass>().Property(x => x.stokSayisi)
+                                                      .IsRequired()
+                                                      .HasColumnName("Stok Sayısı");
+            modelBuilder.Entity<TicariMallarDbClass>().Property(x => x.fiyat)
+                                                      .IsRequired()
+                                                      .HasColumnName("Ürün Fiyatı ");
+
+            //******************** TicariMallarDbClass Tablo Oluşturma İşlemleri Bitişi ********************
         }
 
     }
