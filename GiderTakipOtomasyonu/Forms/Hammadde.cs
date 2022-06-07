@@ -35,15 +35,20 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void buttonekle_Click(object sender, EventArgs e)
         {
-            Forms.HammaddeEkle hammaddeekle = new Forms.HammaddeEkle();
-            hammaddeekle.ShowDialog();
+            Forms.HammaddeEkle form = new Forms.HammaddeEkle();
+            form.ShowDialog();
             refreshdatagridview();
         }
 
         private void buttonduzenle_Click(object sender, EventArgs e)
         {
-            Forms.HammaddeDuzenle hammaddeduzenle = new Forms.HammaddeDuzenle();
-            hammaddeduzenle.ShowDialog();
+            Forms.HammaddeDuzenle form = new Forms.HammaddeDuzenle();
+            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            form.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            form.fiyat = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            form.agirlik = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString());
+            form.stokSayisi = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString());
+            form.ShowDialog();
             refreshdatagridview();
         }
 

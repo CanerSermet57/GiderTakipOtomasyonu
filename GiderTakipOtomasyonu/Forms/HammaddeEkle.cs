@@ -21,8 +21,7 @@ namespace GiderTakipOtomasyonu.Forms
         gtoDbContext dbContext = new gtoDbContext();
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            
+        {            
             var yenihammadde = new HammaddeDbClass()
             {
                 adi = textBoxAdi.Text,
