@@ -37,6 +37,7 @@ namespace GiderTakipOtomasyonu
         {
             Forms.KisiEkle kisiEkleForm = new Forms.KisiEkle();
             kisiEkleForm.ShowDialog();
+            refreshdatagridview();
         }
 
         private void button15_Click(object sender, EventArgs e)

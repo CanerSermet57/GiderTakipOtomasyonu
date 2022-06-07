@@ -28,61 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDownAlacak = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownBorc = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownFiyat = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownAgirlik = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxBilgi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxTelefon = new System.Windows.Forms.TextBox();
-            this.textBoxFaks = new System.Windows.Forms.TextBox();
-            this.textBoxAdres = new System.Windows.Forms.TextBox();
             this.textBoxAdi = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAlacak)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBorc)).BeginInit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDownStok = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiyat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAgirlik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDownAlacak
+            // numericUpDownFiyat
             // 
-            this.numericUpDownAlacak.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDownAlacak.Location = new System.Drawing.Point(123, 158);
-            this.numericUpDownAlacak.Maximum = new decimal(new int[] {
+            this.numericUpDownFiyat.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericUpDownFiyat.Location = new System.Drawing.Point(123, 158);
+            this.numericUpDownFiyat.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDownAlacak.Name = "numericUpDownAlacak";
-            this.numericUpDownAlacak.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownAlacak.TabIndex = 2;
+            this.numericUpDownFiyat.Name = "numericUpDownFiyat";
+            this.numericUpDownFiyat.Size = new System.Drawing.Size(286, 32);
+            this.numericUpDownFiyat.TabIndex = 2;
             // 
-            // numericUpDownBorc
+            // numericUpDownAgirlik
             // 
-            this.numericUpDownBorc.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDownBorc.Location = new System.Drawing.Point(123, 120);
-            this.numericUpDownBorc.Maximum = new decimal(new int[] {
+            this.numericUpDownAgirlik.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericUpDownAgirlik.Location = new System.Drawing.Point(123, 120);
+            this.numericUpDownAgirlik.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDownBorc.Name = "numericUpDownBorc";
-            this.numericUpDownBorc.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownBorc.TabIndex = 1;
+            this.numericUpDownAgirlik.Name = "numericUpDownAgirlik";
+            this.numericUpDownAgirlik.Size = new System.Drawing.Size(286, 32);
+            this.numericUpDownAgirlik.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button1.Location = new System.Drawing.Point(123, 402);
+            this.button1.Location = new System.Drawing.Point(123, 234);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(286, 48);
             this.button1.TabIndex = 35;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -95,73 +91,25 @@
             this.label8.Text = "Ürün Ekle";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBoxBilgi
-            // 
-            this.textBoxBilgi.Location = new System.Drawing.Point(123, 310);
-            this.textBoxBilgi.Multiline = true;
-            this.textBoxBilgi.Name = "textBoxBilgi";
-            this.textBoxBilgi.Size = new System.Drawing.Size(286, 86);
-            this.textBoxBilgi.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label6.Location = new System.Drawing.Point(64, 310);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 25);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Bilgi:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label7.Location = new System.Drawing.Point(10, 237);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 25);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Telefon No:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label5.Location = new System.Drawing.Point(36, 275);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Faks No:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label4.Location = new System.Drawing.Point(46, 199);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Adress:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label3.Location = new System.Drawing.Point(46, 161);
+            this.label3.Location = new System.Drawing.Point(62, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 25);
+            this.label3.Size = new System.Drawing.Size(55, 25);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Alacak:";
+            this.label3.Text = "Fiyat:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label2.Location = new System.Drawing.Point(63, 123);
+            this.label2.Location = new System.Drawing.Point(47, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 25);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Borc:";
+            this.label2.Text = "Agirlik:";
             // 
             // label1
             // 
@@ -173,30 +121,6 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Adi:";
             // 
-            // textBoxTelefon
-            // 
-            this.textBoxTelefon.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxTelefon.Location = new System.Drawing.Point(123, 234);
-            this.textBoxTelefon.Name = "textBoxTelefon";
-            this.textBoxTelefon.Size = new System.Drawing.Size(286, 32);
-            this.textBoxTelefon.TabIndex = 4;
-            // 
-            // textBoxFaks
-            // 
-            this.textBoxFaks.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxFaks.Location = new System.Drawing.Point(123, 272);
-            this.textBoxFaks.Name = "textBoxFaks";
-            this.textBoxFaks.Size = new System.Drawing.Size(286, 32);
-            this.textBoxFaks.TabIndex = 5;
-            // 
-            // textBoxAdres
-            // 
-            this.textBoxAdres.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxAdres.Location = new System.Drawing.Point(123, 196);
-            this.textBoxAdres.Name = "textBoxAdres";
-            this.textBoxAdres.Size = new System.Drawing.Size(286, 32);
-            this.textBoxAdres.TabIndex = 3;
-            // 
             // textBoxAdi
             // 
             this.textBoxAdi.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -205,31 +129,49 @@
             this.textBoxAdi.Size = new System.Drawing.Size(286, 32);
             this.textBoxAdi.TabIndex = 0;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label4.Location = new System.Drawing.Point(14, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 25);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Stok Sayisi:";
+            // 
+            // numericUpDownStok
+            // 
+            this.numericUpDownStok.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericUpDownStok.Location = new System.Drawing.Point(123, 196);
+            this.numericUpDownStok.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDownStok.Name = "numericUpDownStok";
+            this.numericUpDownStok.Size = new System.Drawing.Size(286, 32);
+            this.numericUpDownStok.TabIndex = 2;
+            // 
             // HammaddeEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 461);
-            this.Controls.Add(this.numericUpDownAlacak);
-            this.Controls.Add(this.numericUpDownBorc);
+            this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.numericUpDownStok);
+            this.Controls.Add(this.numericUpDownFiyat);
+            this.Controls.Add(this.numericUpDownAgirlik);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxBilgi);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxTelefon);
-            this.Controls.Add(this.textBoxFaks);
-            this.Controls.Add(this.textBoxAdres);
             this.Controls.Add(this.textBoxAdi);
             this.Name = "HammaddeEkle";
             this.Text = "HammaddeEkle";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAlacak)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBorc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiyat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAgirlik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,21 +179,15 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDownAlacak;
-        private System.Windows.Forms.NumericUpDown numericUpDownBorc;
+        private System.Windows.Forms.NumericUpDown numericUpDownFiyat;
+        private System.Windows.Forms.NumericUpDown numericUpDownAgirlik;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxBilgi;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxTelefon;
-        private System.Windows.Forms.TextBox textBoxFaks;
-        private System.Windows.Forms.TextBox textBoxAdres;
         private System.Windows.Forms.TextBox textBoxAdi;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDownStok;
     }
 }

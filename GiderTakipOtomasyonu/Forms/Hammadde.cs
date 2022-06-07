@@ -37,18 +37,21 @@ namespace GiderTakipOtomasyonu.Forms
         {
             Forms.HammaddeEkle hammaddeekle = new Forms.HammaddeEkle();
             hammaddeekle.ShowDialog();
+            refreshdatagridview();
         }
 
         private void buttonduzenle_Click(object sender, EventArgs e)
         {
             Forms.HammaddeDuzenle hammaddeduzenle = new Forms.HammaddeDuzenle();
             hammaddeduzenle.ShowDialog();
+            refreshdatagridview();
         }
 
         private void buttonsil_Click(object sender, EventArgs e)
         {
             Forms.HammadeSil hammaddesil = new Forms.HammadeSil();
             hammaddesil.ShowDialog();
+            refreshdatagridview();
         }
     }
 }
