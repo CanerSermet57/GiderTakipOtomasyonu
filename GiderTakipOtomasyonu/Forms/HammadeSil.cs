@@ -34,7 +34,18 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            var deletehammadde = new HammaddeDbClass()
+            {
+                id = this.id,
+                adi = textBoxAdi.Text,
+                agirlik = float.Parse(numericUpDownAgirlik.Text),
+                fiyat = float.Parse(numericUpDownFiyat.Text),
+                stokSayisi = float.Parse(numericUpDownStok.Text)
+            };
+            dbContext.Hammaddeler.Remove(deletehammadde);
+            int result = dbContext.SaveChanges();
+            string message = result > 0 ? "Urun Silindi" : "Başarısız";
+            MessageBox.Show(message);
         }
     }
 }
