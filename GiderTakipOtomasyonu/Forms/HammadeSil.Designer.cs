@@ -94,6 +94,7 @@
             this.button1.TabIndex = 45;
             this.button1.Text = "Sil";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -172,6 +173,7 @@
             this.Controls.Add(this.textBoxAdi);
             this.Name = "HammadeSil";
             this.Text = "HammadeSil";
+            this.Load += new System.EventHandler(this.HammadeSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAgirlik)).EndInit();
