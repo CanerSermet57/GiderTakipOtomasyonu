@@ -53,7 +53,7 @@
             this.numericUpDownAlacak.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.numericUpDownAlacak.Location = new System.Drawing.Point(123, 163);
             this.numericUpDownAlacak.Maximum = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
@@ -67,7 +67,7 @@
             this.numericUpDownBorc.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.numericUpDownBorc.Location = new System.Drawing.Point(123, 125);
             this.numericUpDownBorc.Maximum = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});

@@ -88,7 +88,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateKisilerPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Kisiler kisi = new SayfaButtonlari.Kisiler(panelRight);
         }
         public void CreateTakvimPage(object sender, EventArgs e)
         {

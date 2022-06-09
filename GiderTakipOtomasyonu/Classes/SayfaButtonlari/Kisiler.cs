@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace GiderTakipOtomasyonu.SayfaButtonlari
 {
-    class Urunler
+    class Kisiler
     {
         Panel panelRight;
 
-        public Urunler(Panel panelRight)
+        public Kisiler(Panel panelRight)
         {
             this.panelRight = panelRight;
             baslangic();
@@ -76,30 +76,36 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
 
         public void buttonekle_Click(object sender, EventArgs e)
         {
-            Forms.HammaddeEkle form = new Forms.HammaddeEkle();
-            form.ShowDialog();
+            Forms.KisiEkle kisiEkleForm = new Forms.KisiEkle();
+            kisiEkleForm.ShowDialog();
             refreshdatagridview();
         }
         public void buttonduzenle_Click(object sender, EventArgs e)
         {
-            Forms.HammaddeDuzenle form = new Forms.HammaddeDuzenle();
-            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
-            form.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            form.fiyat = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString());
-            form.agirlik = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString());
-            form.stokSayisi = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString());
-            form.ShowDialog();
+            Forms.KisiDuzenle kisiDuzenleForm = new Forms.KisiDuzenle();
+            kisiDuzenleForm.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            kisiDuzenleForm.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            kisiDuzenleForm.bilgi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            kisiDuzenleForm.adress = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            kisiDuzenleForm.faks = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            kisiDuzenleForm.telefon = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            kisiDuzenleForm.borc = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            kisiDuzenleForm.alacak = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[7].Value.ToString());
+            kisiDuzenleForm.ShowDialog();
             refreshdatagridview();
         }
         public void buttonsil_Click(object sender, EventArgs e)
         {
-            Forms.HammadeSil form = new Forms.HammadeSil();
-            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
-            form.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            form.fiyat = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString());
-            form.agirlik = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString());
-            form.stokSayisi = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString());
-            form.ShowDialog();
+            Forms.KisiSil kisiSilForm = new Forms.KisiSil();
+            kisiSilForm.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            kisiSilForm.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            kisiSilForm.bilgi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            kisiSilForm.adress = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            kisiSilForm.faks = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            kisiSilForm.telefon = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            kisiSilForm.borc = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            kisiSilForm.alacak = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[7].Value.ToString());
+            kisiSilForm.ShowDialog();
             refreshdatagridview();
         }
 
@@ -149,8 +155,8 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
         {
             dbContext = new gtoDbContext();
             DGV.DataSource = null;
-            var urunlerListesi = dbContext.Hammaddeler.ToList();
-            DGV.DataSource = urunlerListesi;
+            var kisilerListesi = dbContext.Kisiler.ToList();
+            DGV.DataSource = kisilerListesi;
         }
     }
 }

@@ -48,7 +48,7 @@
             this.numericUpDownStok.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.numericUpDownStok.Location = new System.Drawing.Point(123, 210);
             this.numericUpDownStok.Maximum = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
@@ -62,7 +62,7 @@
             this.numericUpDownFiyat.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.numericUpDownFiyat.Location = new System.Drawing.Point(123, 172);
             this.numericUpDownFiyat.Maximum = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
@@ -76,7 +76,7 @@
             this.numericUpDownAgirlik.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.numericUpDownAgirlik.Location = new System.Drawing.Point(123, 134);
             this.numericUpDownAgirlik.Maximum = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
