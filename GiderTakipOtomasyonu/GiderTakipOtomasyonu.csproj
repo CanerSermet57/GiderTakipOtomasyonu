@@ -185,6 +185,7 @@
     <Compile Include="Classes\FormTextController.cs" />
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\PageDesign.cs" />
+    <Compile Include="Classes\SayfaButtonlari\Urunler.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Data\gtoDbContext.cs" />
     <Compile Include="Data\KullaniciDbContext.cs" />

@@ -55,8 +55,9 @@ namespace GiderTakipOtomasyonu
             return buttonNameList;
         }
 
-        static public void buttonLeftCrate(List<string> buttonNameList)
+        static public void buttonLeftCrate()
         {
+            List<string> buttonNameList = buttonNameListCreate();
             Button buttontemp;
             for (int i = 0; i < buttonLeftNumber; i++)
             {
