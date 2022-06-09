@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -236,7 +236,7 @@
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(5, 55);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 42);
+            this.button3.Size = new System.Drawing.Size(160, 42);
             this.button3.TabIndex = 0;
             this.button3.Text = "Cüzdan";
             this.button3.UseVisualStyleBackColor = false;
@@ -251,7 +251,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(5, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 42);
+            this.button2.Size = new System.Drawing.Size(160, 42);
             this.button2.TabIndex = 0;
             this.button2.Text = "Durum";
             this.button2.UseVisualStyleBackColor = false;
@@ -270,29 +270,29 @@
             this.DGV.AllowUserToAddRows = false;
             this.DGV.AllowUserToDeleteRows = false;
             this.DGV.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            this.DGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            this.DGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV.DefaultCellStyle = dataGridViewCellStyle9;
             this.DGV.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DGV.Location = new System.Drawing.Point(118, 57);
+            this.DGV.Location = new System.Drawing.Point(17, 57);
             this.DGV.MultiSelect = false;
             this.DGV.Name = "DGV";
             this.DGV.RowHeadersVisible = false;
@@ -304,7 +304,7 @@
             // buttonduzenle
             // 
             this.buttonduzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonduzenle.Location = new System.Drawing.Point(462, 12);
+            this.buttonduzenle.Location = new System.Drawing.Point(361, 12);
             this.buttonduzenle.Name = "buttonduzenle";
             this.buttonduzenle.Size = new System.Drawing.Size(173, 39);
             this.buttonduzenle.TabIndex = 0;
@@ -315,7 +315,7 @@
             // buttonsil
             // 
             this.buttonsil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonsil.Location = new System.Drawing.Point(708, 12);
+            this.buttonsil.Location = new System.Drawing.Point(607, 12);
             this.buttonsil.Name = "buttonsil";
             this.buttonsil.Size = new System.Drawing.Size(173, 39);
             this.buttonsil.TabIndex = 0;
@@ -326,7 +326,7 @@
             // buttonekle
             // 
             this.buttonekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonekle.Location = new System.Drawing.Point(190, 12);
+            this.buttonekle.Location = new System.Drawing.Point(89, 12);
             this.buttonekle.Name = "buttonekle";
             this.buttonekle.Size = new System.Drawing.Size(173, 39);
             this.buttonekle.TabIndex = 0;
@@ -343,9 +343,9 @@
             this.panel1.Controls.Add(this.buttonekle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel1.Location = new System.Drawing.Point(36, 0);
+            this.panel1.Location = new System.Drawing.Point(134, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 581);
+            this.panel1.Size = new System.Drawing.Size(1050, 581);
             this.panel1.TabIndex = 7;
             // 
             // Hammadde

@@ -19,7 +19,7 @@ namespace GiderTakipOtomasyonu
             panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             panelLeft.Location = new System.Drawing.Point(0, 0);
             panelLeft.Name = "panelLeft";
-            panelLeft.Size = new System.Drawing.Size(136, 661);
+            panelLeft.Size = new System.Drawing.Size(136, 581);
             panelLeft.TabIndex = 2;
             return panelLeft;
         }
@@ -32,7 +32,7 @@ namespace GiderTakipOtomasyonu
             panelRight.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             panelRight.Location = new System.Drawing.Point(136, 0);
             panelRight.Name = "panelRight";
-            panelRight.Size = new System.Drawing.Size(1148, 661);
+            panelRight.Size = new System.Drawing.Size(1050, 581);
             panelRight.TabIndex = 1;
             return panelRight;
         }
@@ -50,7 +50,7 @@ namespace GiderTakipOtomasyonu
             buttonNameList.Add("Personel");
             buttonNameList.Add("Fiyatlar");
             buttonNameList.Add("Kar-Zarar");
-            buttonNameList.Add("Ticari Mal");
+            buttonNameList.Add("Ürünler");
             buttonNameList.Add("Ayarlar");
             return buttonNameList;
         }
@@ -66,9 +66,10 @@ namespace GiderTakipOtomasyonu
                 buttontemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 buttontemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 buttontemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-                buttontemp.Location = new System.Drawing.Point(5, 3 + i * 55);
+                buttontemp.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
+                buttontemp.Location = new System.Drawing.Point(5, 5 + i * 48);
                 buttontemp.Name = "buttonLeft" + (i + 1).ToString();
-                buttontemp.Size = new System.Drawing.Size(150, 50);
+                buttontemp.Size = new System.Drawing.Size(170, 42);
                 buttontemp.TabIndex = 0;
                 buttontemp.Text = buttonNameList[i];
                 buttontemp.UseVisualStyleBackColor = false;

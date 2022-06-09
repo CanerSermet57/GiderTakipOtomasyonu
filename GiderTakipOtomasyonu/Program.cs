@@ -26,7 +26,7 @@ namespace GiderTakipOtomasyonu
             //kullaniciDbContext.Database.EnsureDeleted();
             //kullaniciDbContext.Database.EnsureCreated();
 
-            Application.Run(new Forms.Hammadde());
+            Application.Run(new Forms.InfrastructureForm());
         }
     }
 }
