@@ -37,13 +37,14 @@ namespace GiderTakipOtomasyonu
             this.textBoxSifreTekrar = new System.Windows.Forms.TextBox();
             this.buttonKayitOl = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBoxVergiDairesi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxKullaniciAdi
             // 
             this.textBoxKullaniciAdi.Location = new System.Drawing.Point(192, 105);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
-            this.textBoxKullaniciAdi.Size = new System.Drawing.Size(187, 23);
+            this.textBoxKullaniciAdi.Size = new System.Drawing.Size(187, 20);
             this.textBoxKullaniciAdi.TabIndex = 0;
             this.textBoxKullaniciAdi.Text = "Kullanici Adi";
             this.textBoxKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKullaniciAdi_KeyPress);
@@ -52,50 +53,50 @@ namespace GiderTakipOtomasyonu
             // 
             this.textBoxSirketAdi.Location = new System.Drawing.Point(192, 144);
             this.textBoxSirketAdi.Name = "textBoxSirketAdi";
-            this.textBoxSirketAdi.Size = new System.Drawing.Size(187, 23);
+            this.textBoxSirketAdi.Size = new System.Drawing.Size(187, 20);
             this.textBoxSirketAdi.TabIndex = 1;
             this.textBoxSirketAdi.Text = "Sirket Adi";
             this.textBoxSirketAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSirketAdi_KeyPress);
             // 
             // textBoxVergiDaireNo
             // 
-            this.textBoxVergiDaireNo.Location = new System.Drawing.Point(192, 183);
+            this.textBoxVergiDaireNo.Location = new System.Drawing.Point(192, 229);
             this.textBoxVergiDaireNo.Name = "textBoxVergiDaireNo";
-            this.textBoxVergiDaireNo.Size = new System.Drawing.Size(187, 23);
+            this.textBoxVergiDaireNo.Size = new System.Drawing.Size(187, 20);
             this.textBoxVergiDaireNo.TabIndex = 2;
             this.textBoxVergiDaireNo.Text = "Vergi Daire No";
             this.textBoxVergiDaireNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxVergiDaireNo_KeyPress);
             // 
             // textBoxEpostaAdresi
             // 
-            this.textBoxEpostaAdresi.Location = new System.Drawing.Point(192, 225);
+            this.textBoxEpostaAdresi.Location = new System.Drawing.Point(192, 271);
             this.textBoxEpostaAdresi.Name = "textBoxEpostaAdresi";
-            this.textBoxEpostaAdresi.Size = new System.Drawing.Size(187, 23);
+            this.textBoxEpostaAdresi.Size = new System.Drawing.Size(187, 20);
             this.textBoxEpostaAdresi.TabIndex = 3;
             this.textBoxEpostaAdresi.Text = "E-posta Adresi";
             this.textBoxEpostaAdresi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEpostaAdresi_KeyPress);
             // 
             // textBoxSifre
             // 
-            this.textBoxSifre.Location = new System.Drawing.Point(192, 267);
+            this.textBoxSifre.Location = new System.Drawing.Point(192, 313);
             this.textBoxSifre.Name = "textBoxSifre";
-            this.textBoxSifre.Size = new System.Drawing.Size(187, 23);
+            this.textBoxSifre.Size = new System.Drawing.Size(187, 20);
             this.textBoxSifre.TabIndex = 4;
             this.textBoxSifre.Text = "Sifre";
             this.textBoxSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifre_KeyPress);
             // 
             // textBoxSifreTekrar
             // 
-            this.textBoxSifreTekrar.Location = new System.Drawing.Point(192, 311);
+            this.textBoxSifreTekrar.Location = new System.Drawing.Point(192, 357);
             this.textBoxSifreTekrar.Name = "textBoxSifreTekrar";
-            this.textBoxSifreTekrar.Size = new System.Drawing.Size(187, 23);
+            this.textBoxSifreTekrar.Size = new System.Drawing.Size(187, 20);
             this.textBoxSifreTekrar.TabIndex = 5;
             this.textBoxSifreTekrar.Text = "Sifre Tekrar";
             this.textBoxSifreTekrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifreTekrar_KeyPress);
             // 
             // buttonKayitOl
             // 
-            this.buttonKayitOl.Location = new System.Drawing.Point(192, 337);
+            this.buttonKayitOl.Location = new System.Drawing.Point(192, 383);
             this.buttonKayitOl.Name = "buttonKayitOl";
             this.buttonKayitOl.Size = new System.Drawing.Size(75, 23);
             this.buttonKayitOl.TabIndex = 6;
@@ -105,16 +106,25 @@ namespace GiderTakipOtomasyonu
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(304, 337);
+            this.button1.Location = new System.Drawing.Point(304, 383);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Sifre Sıfırla";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // textBoxVergiDairesi
+            // 
+            this.textBoxVergiDairesi.Location = new System.Drawing.Point(192, 184);
+            this.textBoxVergiDairesi.Name = "textBoxVergiDairesi";
+            this.textBoxVergiDairesi.Size = new System.Drawing.Size(187, 20);
+            this.textBoxVergiDairesi.TabIndex = 8;
+            this.textBoxVergiDairesi.Text = "Vergi dairesi";
+            // 
             // KayitOl
             // 
             this.ClientSize = new System.Drawing.Size(584, 565);
+            this.Controls.Add(this.textBoxVergiDairesi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonKayitOl);
             this.Controls.Add(this.textBoxSifreTekrar);
@@ -141,5 +151,6 @@ namespace GiderTakipOtomasyonu
         private System.Windows.Forms.TextBox textBoxSifreTekrar;
         private System.Windows.Forms.Button buttonKayitOl;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxVergiDairesi;
     }
 }

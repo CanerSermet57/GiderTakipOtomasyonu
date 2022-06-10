@@ -18,6 +18,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<TicariMallarDbClass> TicariMallar { get; set; }
         public DbSet<GiderlerDbClass> Giderler { get; set; }
         public DbSet<KullaniciDetayDbClass> KullaniciDetay { get; set; }
+        public DbSet<KullaniciDbClass> KullaniciDB { get; set; }
         public DbSet<AyarlarDbClass> Ayarlar { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

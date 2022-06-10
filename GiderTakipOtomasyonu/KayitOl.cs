@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,11 @@ namespace GiderTakipOtomasyonu
         {
             InitializeComponent();
         }
-
+        gtoDbContext dbContext = new gtoDbContext();
         //
         //textbox keypress functions
         //
-        
+
         Classes.FormTextController formTextController = Classes.FormTextController.giveInstance();
 
         private void textBoxKullaniciAdi_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,11 +53,6 @@ namespace GiderTakipOtomasyonu
         {
             formTextController.sifreKontrol(e);
         }        
-
-        private void buttonKayitOl_Click(object sender, EventArgs e)
-        {
-                                                  
-        }
         /*
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,6 +65,41 @@ namespace GiderTakipOtomasyonu
         private void FormClossing(object sender, FormClosingEventArgs e)
         {
             this.Show();
+            
+        }
+
+        private void buttonKayitOl_Click(object sender, EventArgs e)
+        {
+            KullaniciDbClass kullanici = new KullaniciDbClass()
+            {
+                adi = textBoxKullaniciAdi.Text,
+                mail= textBoxEpostaAdresi.Text,
+                sifre= textBoxSifre.Text
+            };
+
+            KullaniciDetayDbClass kullaniciDetay = new KullaniciDetayDbClass()
+            {
+                adi = textBoxSirketAdi.Text,
+                vergiDairesi = textBoxVergiDairesi.Text,
+                vergiDairesiNo = textBoxVergiDaireNo.Text
+            };
+             
+            dbContext.KullaniciDB.Add(kullanici);
+            
+
+
+            dbContext.KullaniciDetay.Add(kullaniciDetay);
+            int resultKullaniciDb = dbContext.SaveChanges();
+
+
+            if (resultKullaniciDb>0 )
+            {
+                MessageBox.Show("Kayıt başarılı");
+            }
+            else
+            {
+                MessageBox.Show("Kayıt ol başarısız");
+            }
         }
     }
 }
