@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace GiderTakipOtomasyonu.Forms
         public Gelirler()
         {
             InitializeComponent();
+        }
+
+        private gtoDbContext dbContext;
+
+        private void Gelirler_Load(object sender, EventArgs e)
+        {
+            refreshdatagridview();
+        }
+        public void refreshdatagridview()
+        {
+
+            /*
+            dbContext = new gtoDbContext();
+            DGV.DataSource = null;
+            var gelirler = dbContext.gelirler.ToList();
+            DGV.DataSource = gelirler;
+
+            */
         }
     }
 }
