@@ -26,7 +26,7 @@ namespace GiderTakipOtomasyonu
             //kullaniciDbContext.Database.EnsureDeleted();
             //kullaniciDbContext.Database.EnsureCreated();
 
-            Application.Run(new KayitOl());
+            Application.Run(new Forms.Giderler());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace GiderTakipOtomasyonu.Forms
 {
     public partial class Giderler : Form
     {
+        private gtoDbContext dbContext;
+
         public Giderler()
         {
             InitializeComponent();
@@ -19,7 +22,19 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void Giderler_Load(object sender, EventArgs e)
         {
+            refreshdatagridview();
+        }
 
+        public void refreshdatagridview()
+        {
+
+            
+            dbContext = new gtoDbContext();
+            DGV.DataSource = null;
+            var giderler = dbContext.Giderler.ToList();
+            DGV.DataSource = giderler;
+
+           
         }
     }
 }
