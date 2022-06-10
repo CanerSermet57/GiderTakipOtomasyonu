@@ -11,6 +11,8 @@ namespace GiderTakipOtomasyonu
         public int id { get; set; }
 
         public string adi { get; set; }
-        
+
+        public List<GiderlerDbClass> Giderler { get; set; }
+
     }
 }

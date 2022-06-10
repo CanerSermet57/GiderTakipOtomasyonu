@@ -16,6 +16,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<HammaddeDbClass> Hammaddeler { get; set; }
         public DbSet<TemaDbClass> Temalar { get; set; }
         public DbSet<TicariMallarDbClass> TicariMallar { get; set; }
+        public DbSet<GiderlerDbClass> Giderler { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -186,6 +187,32 @@ namespace GiderTakipOtomasyonu.Data
 
 
             //******************** TicariMallarDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** GiderlerDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<GiderlerDbClass>().Property(x => x.aciklamasi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Ürün Açıklaması")
+                                                  .HasMaxLength(400);
+            modelBuilder.Entity<GiderlerDbClass>().Property(x => x.kime)
+                                                  .IsRequired()
+                                                  .HasColumnName("Kime");
+            modelBuilder.Entity<GiderlerDbClass>().Property(x => x.tutar)
+                                                  .IsRequired()
+                                                  .HasColumnName(" Giderin Tutarı ");
+            modelBuilder.Entity<GiderlerDbClass>().Property(x => x.tarih)
+                                                  .IsRequired();
+            modelBuilder.Entity<GiderlerDbClass>().HasOne(x => x.Kategori)
+                                                  .WithMany(Kategori => Kategori.Giderler)
+                                                  .HasForeignKey(f => f.kategoriId)
+                                                  .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<GiderlerDbClass>().HasOne(x => x.odemeTuru)
+                                                  .WithMany(odemeTuru => odemeTuru.Giderler)
+                                                  .HasForeignKey(f => f.odemeTuruId)
+                                                  .OnDelete(DeleteBehavior.NoAction);
+
+
+            //******************** GiderlerDbClass Tablo Oluşturma İşlemleri Bitişi ********************
         }
 
     }
