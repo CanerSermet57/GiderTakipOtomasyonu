@@ -10,5 +10,7 @@ namespace GiderTakipOtomasyonu
     {
         public int id { get; set; }
         public string adi { get; set; }
+
+        public List<AyarlarDbClass> Ayarlar { get; set; }
     }
 }

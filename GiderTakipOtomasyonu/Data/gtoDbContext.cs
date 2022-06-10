@@ -18,6 +18,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<TicariMallarDbClass> TicariMallar { get; set; }
         public DbSet<GiderlerDbClass> Giderler { get; set; }
         public DbSet<KullaniciDetayDbClass> KullaniciDetay { get; set; }
+        public DbSet<AyarlarDbClass> Ayarlar { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -252,6 +253,22 @@ namespace GiderTakipOtomasyonu.Data
             modelBuilder.Entity<KullaniciDetayDbClass>().HasData(new KullaniciDetayDbClass { id = 2, adi = "test", vergiDairesi = "test VD", vergiDairesiNo = "testvdno" });
 
             //******************** KullaniciDetayDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** AyarlarDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<AyarlarDbClass>().Property(x => x.alarm)
+                                                      .IsRequired()
+                                                      .HasColumnName("Alarm")
+                                                      .HasMaxLength(40);
+            modelBuilder.Entity<AyarlarDbClass>().Property(x => x.bildirim)
+                                                      .IsRequired()
+                                                      .HasColumnName("Bildirim");
+            modelBuilder.Entity<AyarlarDbClass>().HasOne(x => x.tema)
+                                                  .WithMany(tema => tema.Ayarlar)
+                                                  .HasForeignKey(f => f.temaId)
+                                                  .OnDelete(DeleteBehavior.NoAction);
+
+            //******************** AyarlarDbClass Tablo Oluşturma İşlemleri Bitişi ********************
         }
 
     }
