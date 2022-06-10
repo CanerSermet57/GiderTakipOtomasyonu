@@ -88,7 +88,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.label8.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(483, 44);
+            this.label8.Size = new System.Drawing.Size(484, 44);
             this.label8.TabIndex = 44;
             this.label8.Text = "Gider Ekle";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -197,7 +197,7 @@ namespace GiderTakipOtomasyonu.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 432);
+            this.ClientSize = new System.Drawing.Size(484, 432);
             this.Controls.Add(this.numericUpDownKategori);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.numericUpDownOdemeTuru);

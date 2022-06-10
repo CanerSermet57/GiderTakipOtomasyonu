@@ -218,6 +218,12 @@
     <Compile Include="Forms\Giderler.Designer.cs">
       <DependentUpon>Giderler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GiderSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiderSil.Designer.cs">
+      <DependentUpon>GiderSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Hammadde.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Giderler.resx">
       <DependentUpon>Giderler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiderSil.resx">
+      <DependentUpon>GiderSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Hammadde.resx">
       <DependentUpon>Hammadde.cs</DependentUpon>

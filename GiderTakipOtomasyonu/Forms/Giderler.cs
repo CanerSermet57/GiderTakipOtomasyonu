@@ -43,5 +43,10 @@ namespace GiderTakipOtomasyonu.Forms
             form.ShowDialog();
             refreshdatagridview();
         }
+
+        private void buttonsil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

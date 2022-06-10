@@ -111,6 +111,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.buttonsil.TabIndex = 0;
             this.buttonsil.Text = "SIL";
             this.buttonsil.UseVisualStyleBackColor = true;
+            this.buttonsil.Click += new System.EventHandler(this.buttonsil_Click);
             // 
             // buttonekle
             // 
