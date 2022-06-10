@@ -245,6 +245,13 @@ namespace GiderTakipOtomasyonu.Data
                                                       .HasColumnName("Vergi Dairesi No");
 
             //******************** KullaniciDetayDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** KullaniciDetayDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<KullaniciDetayDbClass>().HasData(new KullaniciDetayDbClass { id = 1, adi = "admin", vergiDairesi = "admin VD", vergiDairesiNo = "adminvdNo" });
+            modelBuilder.Entity<KullaniciDetayDbClass>().HasData(new KullaniciDetayDbClass { id = 2, adi = "test", vergiDairesi = "test VD", vergiDairesiNo = "testvdno" });
+
+            //******************** KullaniciDetayDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }
