@@ -164,6 +164,7 @@
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\DbClasses\CuzdanDbClass.cs" />
+    <Compile Include="Classes\DbClasses\GiderlerDbClass.cs" />
     <Compile Include="Classes\DbClasses\HammaddeDbClass.cs" />
     <Compile Include="Classes\DbClasses\KategoriDbClass.cs" />
     <Compile Include="Classes\DbClasses\KisiDbClass.cs" />
