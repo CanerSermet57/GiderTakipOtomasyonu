@@ -36,5 +36,10 @@ namespace GiderTakipOtomasyonu.Forms
             string message = result > 0 ? "Kisi Eklendi" : "Başarısız";
             MessageBox.Show(message);
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

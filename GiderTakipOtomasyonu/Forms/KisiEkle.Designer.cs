@@ -95,6 +95,7 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Kisi Ekleme";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBoxBilgi
             // 

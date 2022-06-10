@@ -17,8 +17,5 @@ namespace GiderTakipOtomasyonu
         public string telNo { get; set; }
         public float borc { get; set; }
         public float alacak { get; set; }
-
-
-
     }
 }
