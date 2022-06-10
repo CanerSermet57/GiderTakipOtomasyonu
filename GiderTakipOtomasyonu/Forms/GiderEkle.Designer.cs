@@ -29,37 +29,37 @@ namespace GiderTakipOtomasyonu.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDownStok = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTutar = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxAdi = new System.Windows.Forms.TextBox();
+            this.textBoxAciklama = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxKime = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownOdemeTuru = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownKategori = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTutar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOdemeTuru)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKategori)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDownStok
+            // numericUpDownTutar
             // 
-            this.numericUpDownStok.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDownStok.Location = new System.Drawing.Point(141, 210);
-            this.numericUpDownStok.Maximum = new decimal(new int[] {
+            this.numericUpDownTutar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericUpDownTutar.Location = new System.Drawing.Point(141, 210);
+            this.numericUpDownTutar.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDownStok.Name = "numericUpDownStok";
-            this.numericUpDownStok.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownStok.TabIndex = 38;
+            this.numericUpDownTutar.Name = "numericUpDownTutar";
+            this.numericUpDownTutar.Size = new System.Drawing.Size(286, 32);
+            this.numericUpDownTutar.TabIndex = 38;
             // 
             // button1
             // 
@@ -70,6 +70,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.button1.TabIndex = 45;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -102,13 +103,13 @@ namespace GiderTakipOtomasyonu.Forms
             this.label1.TabIndex = 43;
             this.label1.Text = "Açıklama:";
             // 
-            // textBoxAdi
+            // textBoxAciklama
             // 
-            this.textBoxAdi.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxAdi.Location = new System.Drawing.Point(141, 96);
-            this.textBoxAdi.Name = "textBoxAdi";
-            this.textBoxAdi.Size = new System.Drawing.Size(286, 32);
-            this.textBoxAdi.TabIndex = 36;
+            this.textBoxAciklama.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBoxAciklama.Location = new System.Drawing.Point(141, 96);
+            this.textBoxAciklama.Name = "textBoxAciklama";
+            this.textBoxAciklama.Size = new System.Drawing.Size(286, 32);
+            this.textBoxAciklama.TabIndex = 36;
             // 
             // label2
             // 
@@ -120,13 +121,13 @@ namespace GiderTakipOtomasyonu.Forms
             this.label2.TabIndex = 47;
             this.label2.Text = "Kime:";
             // 
-            // textBox1
+            // textBoxKime
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(141, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 32);
-            this.textBox1.TabIndex = 46;
+            this.textBoxKime.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBoxKime.Location = new System.Drawing.Point(141, 134);
+            this.textBoxKime.Name = "textBoxKime";
+            this.textBoxKime.Size = new System.Drawing.Size(286, 32);
+            this.textBoxKime.TabIndex = 46;
             // 
             // dateTimePicker1
             // 
@@ -146,18 +147,18 @@ namespace GiderTakipOtomasyonu.Forms
             this.label3.TabIndex = 49;
             this.label3.Text = "Tarih:";
             // 
-            // numericUpDown1
+            // numericUpDownOdemeTuru
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDown1.Location = new System.Drawing.Point(141, 248);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownOdemeTuru.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericUpDownOdemeTuru.Location = new System.Drawing.Point(141, 248);
+            this.numericUpDownOdemeTuru.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDown1.TabIndex = 50;
+            this.numericUpDownOdemeTuru.Name = "numericUpDownOdemeTuru";
+            this.numericUpDownOdemeTuru.Size = new System.Drawing.Size(286, 32);
+            this.numericUpDownOdemeTuru.TabIndex = 50;
             // 
             // label5
             // 
@@ -169,18 +170,18 @@ namespace GiderTakipOtomasyonu.Forms
             this.label5.TabIndex = 51;
             this.label5.Text = "Ödemetürü:";
             // 
-            // numericUpDown2
+            // numericUpDownKategori
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDown2.Location = new System.Drawing.Point(141, 286);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numericUpDownKategori.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericUpDownKategori.Location = new System.Drawing.Point(141, 286);
+            this.numericUpDownKategori.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDown2.TabIndex = 52;
+            this.numericUpDownKategori.Name = "numericUpDownKategori";
+            this.numericUpDownKategori.Size = new System.Drawing.Size(286, 32);
+            this.numericUpDownKategori.TabIndex = 52;
             // 
             // label6
             // 
@@ -197,25 +198,25 @@ namespace GiderTakipOtomasyonu.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 432);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDownKategori);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownOdemeTuru);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDownStok);
+            this.Controls.Add(this.textBoxKime);
+            this.Controls.Add(this.numericUpDownTutar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxAdi);
+            this.Controls.Add(this.textBoxAciklama);
             this.Name = "GiderEkle";
             this.Text = "GiderEkle";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTutar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOdemeTuru)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKategori)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,19 +224,19 @@ namespace GiderTakipOtomasyonu.Forms
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDownStok;
+        private System.Windows.Forms.NumericUpDown numericUpDownTutar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxAdi;
+        private System.Windows.Forms.TextBox textBoxAciklama;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxKime;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownOdemeTuru;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDownKategori;
         private System.Windows.Forms.Label label6;
     }
 }
