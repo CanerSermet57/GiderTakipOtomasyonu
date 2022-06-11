@@ -304,6 +304,15 @@ namespace GiderTakipOtomasyonu.Data
 
             //******************** PersonelDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
+            //******************** PersonelDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<PersonelDbClass>().HasData(new PersonelDbClass { id = 1, adi = "Ali Osman", soyAdi = "Karayel", görevi = "Kasiyer", maasi = 4200, tatilGunu = "Pazartesi" });
+            modelBuilder.Entity<PersonelDbClass>().HasData(new PersonelDbClass { id = 2, adi = "Mehmet", soyAdi = "Küçük", görevi = "Temizlikçi", maasi = 4200, tatilGunu = "Salı" });
+            modelBuilder.Entity<PersonelDbClass>().HasData(new PersonelDbClass { id = 3, adi = "Leyla", soyAdi = "Son", görevi = "Güvenlik", maasi = 5000, tatilGunu = "Çarşamba" });
+            modelBuilder.Entity<PersonelDbClass>().HasData(new PersonelDbClass { id = 4, adi = "Merve", soyAdi = "Durmaz", görevi = "Sekreter", maasi = 4500, tatilGunu = "Perşembe" });
+
+
+            //******************** PersonelDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
 
             //******************** KullaniciDetayDbClass Tablo Oluşturma İşlemleri ********************
 
