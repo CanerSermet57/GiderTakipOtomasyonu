@@ -216,6 +216,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAciklama);
             this.Name = "GiderDuzenle";
             this.Text = "GiderDuzenle";
+            this.Load += new System.EventHandler(this.GiderDuzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKategori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOdemeTuru)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTutar)).EndInit();

@@ -57,5 +57,19 @@ namespace GiderTakipOtomasyonu.Forms
             form.ShowDialog();
             refreshdatagridview();
         }
+
+        private void buttonduzenle_Click(object sender, EventArgs e)
+        {
+            Forms.GiderDuzenle form = new Forms.GiderDuzenle();
+            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            form.aciklama = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            form.kime = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            form.tarih = (DateTime)DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value;
+            form.tutar = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString());
+            form.odemeTuru = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            form.kategoriId = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[8].Value.ToString());
+            form.ShowDialog();
+            refreshdatagridview();
+        }
     }
 }

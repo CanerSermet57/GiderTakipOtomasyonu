@@ -37,6 +37,8 @@ namespace GiderTakipOtomasyonu.Forms
             this.buttonsil = new System.Windows.Forms.Button();
             this.buttonekle = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@ namespace GiderTakipOtomasyonu.Forms
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +101,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.buttonduzenle.TabIndex = 0;
             this.buttonduzenle.Text = "DUZENLE";
             this.buttonduzenle.UseVisualStyleBackColor = true;
+            this.buttonduzenle.Click += new System.EventHandler(this.buttonduzenle_Click);
             // 
             // buttonsil
             // 
@@ -144,6 +145,29 @@ namespace GiderTakipOtomasyonu.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(136, 581);
             this.panel2.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.DGV);
+            this.panel1.Controls.Add(this.buttonduzenle);
+            this.panel1.Controls.Add(this.buttonsil);
+            this.panel1.Controls.Add(this.buttonekle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panel1.Location = new System.Drawing.Point(134, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1050, 581);
+            this.panel1.TabIndex = 10;
             // 
             // button13
             // 
@@ -324,29 +348,6 @@ namespace GiderTakipOtomasyonu.Forms
             this.button2.TabIndex = 0;
             this.button2.Text = "Durum";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.DGV);
-            this.panel1.Controls.Add(this.buttonduzenle);
-            this.panel1.Controls.Add(this.buttonsil);
-            this.panel1.Controls.Add(this.buttonekle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel1.Location = new System.Drawing.Point(134, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 581);
-            this.panel1.TabIndex = 10;
             // 
             // Giderler
             // 
