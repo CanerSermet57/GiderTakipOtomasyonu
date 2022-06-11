@@ -216,6 +216,12 @@
     <Compile Include="Forms\Gelirler.Designer.cs">
       <DependentUpon>Gelirler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GelirSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GelirSil.Designer.cs">
+      <DependentUpon>GelirSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GiderDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Gelirler.resx">
       <DependentUpon>Gelirler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GelirSil.resx">
+      <DependentUpon>GelirSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GiderDuzenle.resx">
       <DependentUpon>GiderDuzenle.cs</DependentUpon>
