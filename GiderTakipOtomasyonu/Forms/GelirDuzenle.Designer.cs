@@ -1,7 +1,7 @@
 ﻿
 namespace GiderTakipOtomasyonu.Forms
 {
-    partial class GelirSil
+    partial class GelirDuzenle
     {
         /// <summary>
         /// Required designer variable.
@@ -51,111 +51,106 @@ namespace GiderTakipOtomasyonu.Forms
             // numericUpDownKategori
             // 
             this.numericUpDownKategori.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDownKategori.Location = new System.Drawing.Point(140, 309);
+            this.numericUpDownKategori.Location = new System.Drawing.Point(141, 294);
             this.numericUpDownKategori.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericUpDownKategori.Name = "numericUpDownKategori";
-            this.numericUpDownKategori.ReadOnly = true;
             this.numericUpDownKategori.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownKategori.TabIndex = 80;
+            this.numericUpDownKategori.TabIndex = 94;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label6.Location = new System.Drawing.Point(23, 311);
+            this.label6.Location = new System.Drawing.Point(24, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 25);
-            this.label6.TabIndex = 81;
+            this.label6.TabIndex = 95;
             this.label6.Text = "Kategori id:";
             // 
             // numericUpDownOdemeTuru
             // 
             this.numericUpDownOdemeTuru.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDownOdemeTuru.Location = new System.Drawing.Point(140, 271);
+            this.numericUpDownOdemeTuru.Location = new System.Drawing.Point(141, 256);
             this.numericUpDownOdemeTuru.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericUpDownOdemeTuru.Name = "numericUpDownOdemeTuru";
-            this.numericUpDownOdemeTuru.ReadOnly = true;
             this.numericUpDownOdemeTuru.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownOdemeTuru.TabIndex = 78;
+            this.numericUpDownOdemeTuru.TabIndex = 92;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label5.Location = new System.Drawing.Point(2, 271);
+            this.label5.Location = new System.Drawing.Point(3, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 25);
-            this.label5.TabIndex = 79;
+            this.label5.TabIndex = 93;
             this.label5.Text = "ÖdemetürüId:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label3.Location = new System.Drawing.Point(74, 236);
+            this.label3.Location = new System.Drawing.Point(75, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 25);
-            this.label3.TabIndex = 77;
+            this.label3.TabIndex = 91;
             this.label3.Text = "Tarih:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(140, 236);
+            this.dateTimePicker1.Location = new System.Drawing.Point(141, 221);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(286, 29);
-            this.dateTimePicker1.TabIndex = 76;
+            this.dateTimePicker1.TabIndex = 90;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label2.Location = new System.Drawing.Point(51, 157);
+            this.label2.Location = new System.Drawing.Point(52, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 25);
-            this.label2.TabIndex = 75;
+            this.label2.TabIndex = 89;
             this.label2.Text = "Kimden:";
             // 
             // textBoxKime
             // 
             this.textBoxKime.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxKime.Location = new System.Drawing.Point(140, 157);
+            this.textBoxKime.Location = new System.Drawing.Point(141, 142);
             this.textBoxKime.Name = "textBoxKime";
-            this.textBoxKime.ReadOnly = true;
             this.textBoxKime.Size = new System.Drawing.Size(286, 32);
-            this.textBoxKime.TabIndex = 74;
+            this.textBoxKime.TabIndex = 88;
             // 
             // numericUpDownTutar
             // 
             this.numericUpDownTutar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDownTutar.Location = new System.Drawing.Point(140, 195);
+            this.numericUpDownTutar.Location = new System.Drawing.Point(141, 180);
             this.numericUpDownTutar.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericUpDownTutar.Name = "numericUpDownTutar";
-            this.numericUpDownTutar.ReadOnly = true;
             this.numericUpDownTutar.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDownTutar.TabIndex = 69;
+            this.numericUpDownTutar.TabIndex = 83;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button1.Location = new System.Drawing.Point(140, 347);
+            this.button1.Location = new System.Drawing.Point(141, 332);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(286, 48);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "Sil";
+            this.button1.TabIndex = 87;
+            this.button1.Text = "Düzenle";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -163,10 +158,10 @@ namespace GiderTakipOtomasyonu.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label4.Location = new System.Drawing.Point(71, 197);
+            this.label4.Location = new System.Drawing.Point(72, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
-            this.label4.TabIndex = 70;
+            this.label4.TabIndex = 84;
             this.label4.Text = "Tutar:";
             // 
             // label8
@@ -176,30 +171,29 @@ namespace GiderTakipOtomasyonu.Forms
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(468, 44);
-            this.label8.TabIndex = 72;
-            this.label8.Text = "Gelir Sil";
+            this.label8.TabIndex = 86;
+            this.label8.Text = "Gelir Düzenle";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label1.Location = new System.Drawing.Point(42, 122);
+            this.label1.Location = new System.Drawing.Point(43, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 25);
-            this.label1.TabIndex = 71;
+            this.label1.TabIndex = 85;
             this.label1.Text = "Açıklama:";
             // 
             // textBoxAciklama
             // 
             this.textBoxAciklama.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxAciklama.Location = new System.Drawing.Point(140, 119);
+            this.textBoxAciklama.Location = new System.Drawing.Point(141, 104);
             this.textBoxAciklama.Name = "textBoxAciklama";
-            this.textBoxAciklama.ReadOnly = true;
             this.textBoxAciklama.Size = new System.Drawing.Size(286, 32);
-            this.textBoxAciklama.TabIndex = 68;
+            this.textBoxAciklama.TabIndex = 82;
             // 
-            // GelirSil
+            // GelirDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,9 +212,9 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxAciklama);
-            this.Name = "GelirSil";
-            this.Text = "GelirSil";
-            this.Load += new System.EventHandler(this.GelirSil_Load);
+            this.Name = "GelirDuzenle";
+            this.Text = "GelirDuzenle";
+            this.Load += new System.EventHandler(this.GelirDuzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKategori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOdemeTuru)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTutar)).EndInit();
