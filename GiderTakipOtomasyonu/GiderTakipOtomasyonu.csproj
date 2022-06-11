@@ -191,6 +191,7 @@
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\PageDesign.cs" />
     <Compile Include="Classes\SayfaButtonlari\DGVOlustur.cs" />
+    <Compile Include="Classes\SayfaButtonlari\Gider.cs" />
     <Compile Include="Classes\SayfaButtonlari\Kisiler.cs" />
     <Compile Include="Classes\SayfaButtonlari\Personel.cs" />
     <Compile Include="Classes\SayfaButtonlari\Urunler.cs" />

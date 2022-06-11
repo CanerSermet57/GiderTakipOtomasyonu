@@ -80,7 +80,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateGiderlerPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Gider gider = new SayfaButtonlari.Gider(panelRight);
         }
         public void CreateGelirlerPage(object sender, EventArgs e)
         {
