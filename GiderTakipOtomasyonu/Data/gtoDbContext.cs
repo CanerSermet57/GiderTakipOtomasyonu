@@ -262,6 +262,21 @@ namespace GiderTakipOtomasyonu.Data
 
             //******************** GelirlerDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
+            //******************** GelirlerDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            DateTime dtt = new DateTime(2022, 06, 11);
+
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 1, aciklamasi = "Açıklama1", kimden = "Osman", tutar = 50, odemeTuruId = 1, kategoriId = 7, tarih = dtt });
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 2, aciklamasi = "Açıklama2", kimden = "Mehmet", tutar = 10, odemeTuruId = 2, kategoriId = 7, tarih = dtt });
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 3, aciklamasi = "Açıklama3", kimden = "Ali Olmuş", tutar = 100, odemeTuruId = 3, kategoriId = 7, tarih = dtt });
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 4, aciklamasi = "Açıklama4", kimden = "Muhammed", tutar = 1050, odemeTuruId = 2, kategoriId = 7, tarih = dtt });
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 5, aciklamasi = "Açıklama5", kimden = "Johny", tutar = 510, odemeTuruId = 1, kategoriId = 7, tarih = dtt });
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 6, aciklamasi = "Açıklama6", kimden = "Adem", tutar = 20, odemeTuruId = 3, kategoriId = 7, tarih = dtt });
+            modelBuilder.Entity<GelirlerDbClass>().HasData(new GelirlerDbClass { id = 7, aciklamasi = "Açıklama7", kimden = "Muzaffer", tutar = 5, odemeTuruId = 2, kategoriId = 7, tarih = dtt });
+
+
+            //******************** GelirlerDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
 
             //******************** KullaniciDetayDbClass Tablo Oluşturma İşlemleri ********************
 
