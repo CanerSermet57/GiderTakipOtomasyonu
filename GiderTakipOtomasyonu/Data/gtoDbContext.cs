@@ -18,6 +18,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<TicariMallarDbClass> TicariMallar { get; set; }
         public DbSet<GiderlerDbClass> Giderler { get; set; }
         public DbSet<GelirlerDbClass> Gelirler { get; set; }
+        public DbSet<PersonelDbClass> Personeller { get; set; }
         public DbSet<KullaniciDetayDbClass> KullaniciDetay { get; set; }
         public DbSet<KullaniciDbClass> KullaniciDB { get; set; }
         public DbSet<AyarlarDbClass> Ayarlar { get; set; }
@@ -276,6 +277,32 @@ namespace GiderTakipOtomasyonu.Data
 
 
             //******************** GelirlerDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** PersonelDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<PersonelDbClass>().Property(x => x.adi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Personelin Adı")
+                                                  .HasMaxLength(20);
+            modelBuilder.Entity<PersonelDbClass>().Property(x => x.soyAdi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Personelin Soyadı")
+                                                  .HasMaxLength(20);
+            modelBuilder.Entity<PersonelDbClass>().Property(x => x.görevi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Görevi")
+                                                  .HasMaxLength(20);
+            modelBuilder.Entity<PersonelDbClass>().Property(x => x.maasi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Personelin Maaşı");
+            modelBuilder.Entity<PersonelDbClass>().Property(x => x.iseBaslamaTarihi)
+                                                  .IsRequired();
+            modelBuilder.Entity<PersonelDbClass>().Property(x => x.tatilGunu)
+                                                  .IsRequired()
+                                                  .HasColumnName("Tatil Günü")
+                                                  .HasMaxLength(15);
+
+            //******************** PersonelDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
 
             //******************** KullaniciDetayDbClass Tablo Oluşturma İşlemleri ********************
