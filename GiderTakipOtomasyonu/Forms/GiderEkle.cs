@@ -41,11 +41,11 @@ namespace GiderTakipOtomasyonu.Forms
 
             if (resultKullaniciDb > 0)
             {
-                MessageBox.Show("Kayıt başarılı");
+                MessageBox.Show("Gider ekleme başarılı");
             }
             else
             {
-                MessageBox.Show("Kayıt ol başarısız");
+                MessageBox.Show("Gider ekleme başarısız");
             }
         }
     }
