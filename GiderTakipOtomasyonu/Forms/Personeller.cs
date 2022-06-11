@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace GiderTakipOtomasyonu.Forms
 {
     public partial class Personeller : Form
     {
+        private gtoDbContext dbContext;
         public Personeller()
         {
             InitializeComponent();
@@ -27,8 +29,16 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void Personeller_Load(object sender, EventArgs e)
         {
-            
+            refreshdatagridview();
         }
+        public void refreshdatagridview()
+        {
+            dbContext = new gtoDbContext();
+            DGV.DataSource = null;
+            var personelListesi = dbContext.Personeller.ToList();
+            DGV.DataSource = personelListesi;
+        }
+
 
         private void buttonekle_Click(object sender, EventArgs e)
         {
