@@ -173,6 +173,7 @@
     <Compile Include="Classes\DbClasses\KullaniciDbClass.cs" />
     <Compile Include="Classes\DbClasses\KullaniciDetayDbClass.cs" />
     <Compile Include="Classes\DbClasses\OdemeTuruDbClass.cs" />
+    <Compile Include="Classes\DbClasses\PersonelDbClass.cs" />
     <Compile Include="Classes\DbClasses\TemaDbClass.cs" />
     <Compile Include="Classes\DbClasses\TicariMallarDbClass.cs" />
     <Compile Include="Classes\DBTest.cs" />
