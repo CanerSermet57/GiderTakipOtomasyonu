@@ -31,8 +31,6 @@ namespace GiderTakipOtomasyonu.Forms
                 tarih = dateTimePicker1.Value,
                 odemeTuruId = Convert.ToInt32(numericUpDownOdemeTuru.Value.ToString()),
                 kategoriId = Convert.ToInt32(numericUpDownKategori.Value.ToString())
-                
-
             };
 
 

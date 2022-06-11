@@ -84,7 +84,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateGelirlerPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Gelir gelir = new SayfaButtonlari.Gelir(panelRight);
         }
         public void CreateKisilerPage(object sender, EventArgs e)
         {
