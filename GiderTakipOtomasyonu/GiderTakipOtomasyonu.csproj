@@ -280,11 +280,29 @@
     <Compile Include="Forms\KisiSil.Designer.cs">
       <DependentUpon>KisiSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelDuzenle.Designer.cs">
+      <DependentUpon>PersonelDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Personeller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Personeller.Designer.cs">
       <DependentUpon>Personeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelSil.Designer.cs">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
     </Compile>
     <Compile Include="KayitOl.cs">
       <SubType>Form</SubType>
