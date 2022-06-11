@@ -27,13 +27,13 @@ namespace GiderTakipOtomasyonu.Forms
         public void refreshdatagridview()
         {
 
-            /*
+            
             dbContext = new gtoDbContext();
             DGV.DataSource = null;
-            var gelirler = dbContext.gelirler.ToList();
+            var gelirler = dbContext.Gelirler.ToList();
             DGV.DataSource = gelirler;
 
-            */
+            
         }
     }
 }
