@@ -17,6 +17,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<TemaDbClass> Temalar { get; set; }
         public DbSet<TicariMallarDbClass> TicariMallar { get; set; }
         public DbSet<GiderlerDbClass> Giderler { get; set; }
+        public DbSet<GelirlerDbClass> Gelirler { get; set; }
         public DbSet<KullaniciDetayDbClass> KullaniciDetay { get; set; }
         public DbSet<KullaniciDbClass> KullaniciDB { get; set; }
         public DbSet<AyarlarDbClass> Ayarlar { get; set; }
@@ -231,6 +232,35 @@ namespace GiderTakipOtomasyonu.Data
 
 
             //******************** GiderlerDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** GelirlerDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<GelirlerDbClass>().Property(x => x.aciklamasi)
+                                                  .IsRequired()
+                                                  .HasColumnName("Ürün Açıklaması")
+                                                  .HasMaxLength(400);
+            modelBuilder.Entity<GelirlerDbClass>().Property(x => x.kimden)
+                                                  .IsRequired()
+                                                  .HasColumnName("Kimden");
+            modelBuilder.Entity<GelirlerDbClass>().Property(x => x.tutar)
+                                                  .IsRequired()
+                                                  .HasColumnName("Gelirin Tutarı");
+            modelBuilder.Entity<GelirlerDbClass>().Property(x => x.tarih)
+                                                  .IsRequired();
+            modelBuilder.Entity<GiderlerDbClass>().Property(x => x.odemeTuruId)
+                                                  .HasColumnName("Ödeme Türü Id");
+            modelBuilder.Entity<GelirlerDbClass>().HasOne(x => x.odemeTuru)
+                                                  .WithMany(odemeTuru => odemeTuru.Gelirler)
+                                                  .HasForeignKey(f => f.odemeTuruId)
+                                                  .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<GiderlerDbClass>().Property(x => x.kategoriId)
+                                                  .HasColumnName("Kategori Id");
+            modelBuilder.Entity<GelirlerDbClass>().HasOne(x => x.Kategori)
+                                                  .WithMany(Kategori => Kategori.Gelirler)
+                                                  .HasForeignKey(f => f.kategoriId)
+                                                  .OnDelete(DeleteBehavior.NoAction);
+
+            //******************** GelirlerDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
 
             //******************** KullaniciDetayDbClass Tablo Oluşturma İşlemleri ********************

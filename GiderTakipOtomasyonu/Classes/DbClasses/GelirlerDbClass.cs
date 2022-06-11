@@ -10,7 +10,7 @@ namespace GiderTakipOtomasyonu
     {
         public int id { get; set; }
         public string aciklamasi { get; set; }
-        public string kime { get; set; }
+        public string kimden { get; set; }
         public float tutar { get; set; }
         public DateTime tarih { get; set; }
 
