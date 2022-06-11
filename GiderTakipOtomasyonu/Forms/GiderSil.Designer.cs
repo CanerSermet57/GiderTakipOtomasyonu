@@ -136,6 +136,7 @@ namespace GiderTakipOtomasyonu.Forms
             // 
             // numericUpDownTutar
             // 
+            this.numericUpDownTutar.DecimalPlaces = 2;
             this.numericUpDownTutar.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.numericUpDownTutar.Location = new System.Drawing.Point(141, 240);
             this.numericUpDownTutar.Maximum = new decimal(new int[] {
@@ -157,6 +158,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.button1.TabIndex = 59;
             this.button1.Text = "Sil";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -219,6 +221,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAciklama);
             this.Name = "GiderSil";
             this.Text = "GiderSil";
+            this.Load += new System.EventHandler(this.GiderSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKategori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOdemeTuru)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTutar)).EndInit();
