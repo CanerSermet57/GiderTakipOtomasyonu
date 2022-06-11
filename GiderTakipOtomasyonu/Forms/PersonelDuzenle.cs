@@ -16,5 +16,10 @@ namespace GiderTakipOtomasyonu.Forms
         {
             InitializeComponent();
         }
+
+        private void PersonelDuzenle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

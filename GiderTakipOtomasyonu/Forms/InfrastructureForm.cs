@@ -96,7 +96,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreatePersonelPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Personel personel = new SayfaButtonlari.Personel(panelRight);
         }
         public void CreateFiyatlarPage(object sender, EventArgs e)
         {

@@ -192,6 +192,7 @@
     <Compile Include="Classes\PageDesign.cs" />
     <Compile Include="Classes\SayfaButtonlari\DGVOlustur.cs" />
     <Compile Include="Classes\SayfaButtonlari\Kisiler.cs" />
+    <Compile Include="Classes\SayfaButtonlari\Personel.cs" />
     <Compile Include="Classes\SayfaButtonlari\Urunler.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Data\gtoDbContext.cs" />
@@ -374,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiSil.resx">
       <DependentUpon>KisiSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelDuzenle.resx">
+      <DependentUpon>PersonelDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Personeller.resx">
       <DependentUpon>Personeller.cs</DependentUpon>
