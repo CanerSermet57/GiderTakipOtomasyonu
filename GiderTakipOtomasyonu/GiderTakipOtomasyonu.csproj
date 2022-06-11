@@ -165,6 +165,7 @@
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\DbClasses\AyarlarDbClass.cs" />
     <Compile Include="Classes\DbClasses\CuzdanDbClass.cs" />
+    <Compile Include="Classes\DbClasses\GelirlerDbClass.cs" />
     <Compile Include="Classes\DbClasses\GiderlerDbClass.cs" />
     <Compile Include="Classes\DbClasses\HammaddeDbClass.cs" />
     <Compile Include="Classes\DbClasses\KategoriDbClass.cs" />
