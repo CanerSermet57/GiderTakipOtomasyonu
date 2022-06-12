@@ -144,6 +144,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.button1.TabIndex = 60;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -228,6 +229,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAdi);
             this.Name = "PersonelEkle";
             this.Text = "PersonelEkle";
+            this.Load += new System.EventHandler(this.PersonelEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericMaas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

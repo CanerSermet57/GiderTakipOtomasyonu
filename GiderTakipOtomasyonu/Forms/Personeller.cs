@@ -19,13 +19,7 @@ namespace GiderTakipOtomasyonu.Forms
             InitializeComponent();
         }
 
-        private void buttonduzenle_Click(object sender, EventArgs e)
-        {
-            Forms.PersonelDuzenle form = new Forms.PersonelDuzenle();
-            
-            form.ShowDialog();
-            
-        }
+        
 
         private void Personeller_Load(object sender, EventArgs e)
         {
@@ -43,8 +37,15 @@ namespace GiderTakipOtomasyonu.Forms
         private void buttonekle_Click(object sender, EventArgs e)
         {
             Forms.PersonelEkle form = new Forms.PersonelEkle();
+            form.ShowDialog();
+            refreshdatagridview();
+        }
+        private void buttonduzenle_Click(object sender, EventArgs e)
+        {
+            Forms.PersonelDuzenle form = new Forms.PersonelDuzenle();
 
             form.ShowDialog();
+
         }
 
         private void buttonsil_Click(object sender, EventArgs e)
