@@ -234,6 +234,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAdi);
             this.Name = "PersonelSil";
             this.Text = "PersonelSil";
+            this.Load += new System.EventHandler(this.PersonelSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericMaas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
