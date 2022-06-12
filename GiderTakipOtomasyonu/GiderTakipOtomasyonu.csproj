@@ -405,6 +405,9 @@
     <EmbeddedResource Include="Forms\Personeller.resx">
       <DependentUpon>Personeller.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelSil.resx">
+      <DependentUpon>PersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KayitOl.resx">
       <DependentUpon>KayitOl.cs</DependentUpon>
     </EmbeddedResource>
