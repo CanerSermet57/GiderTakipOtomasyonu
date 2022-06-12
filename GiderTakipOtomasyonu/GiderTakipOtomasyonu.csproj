@@ -162,7 +162,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\DbClasses\AyarlarDbClass.cs" />
     <Compile Include="Classes\DbClasses\CuzdanDbClass.cs" />
     <Compile Include="Classes\DbClasses\GelirlerDbClass.cs" />
@@ -196,7 +195,6 @@
     <Compile Include="Classes\SayfaButtonlari\Kisiler.cs" />
     <Compile Include="Classes\SayfaButtonlari\Personel.cs" />
     <Compile Include="Classes\SayfaButtonlari\Urunler.cs" />
-    <Compile Include="Classes\User.cs" />
     <Compile Include="Data\gtoDbContext.cs" />
     <Compile Include="Data\KullaniciDbContext.cs" />
     <Compile Include="Form1.cs">
@@ -252,6 +250,12 @@
     </Compile>
     <Compile Include="Forms\GiderSil.Designer.cs">
       <DependentUpon>GiderSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Hammadde.cs">
       <SubType>Form</SubType>
@@ -371,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GiderSil.resx">
       <DependentUpon>GiderSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Hammadde.resx">
       <DependentUpon>Hammadde.cs</DependentUpon>
