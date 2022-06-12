@@ -43,7 +43,13 @@ namespace GiderTakipOtomasyonu.Forms
         private void buttonduzenle_Click(object sender, EventArgs e)
         {
             Forms.PersonelDuzenle form = new Forms.PersonelDuzenle();
-
+            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            form.adi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            form.soyAdi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            form.görevi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            form.maas = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString());
+            form.iseGirisTarihi = (DateTime)DGV.Rows[DGV.CurrentCell.RowIndex].Cells[5].Value;
+            form.tatilGunu = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[6].Value.ToString();
             form.ShowDialog();
 
         }
