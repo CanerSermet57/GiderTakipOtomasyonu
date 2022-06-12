@@ -44,6 +44,15 @@ namespace GiderTakipOtomasyonu.Forms
                 MessageBox.Show("Kullanıcı adı veya şifre hatalı");
             }
             */
+            Forms.InfrastructureForm form = new InfrastructureForm();
+            this.Hide();
+            form.FormClosed += formclosed;
+            form.Show();
+        }
+
+        public void formclosed(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         //kontrol için yazılacak temel at demiştiniz
@@ -67,6 +76,11 @@ namespace GiderTakipOtomasyonu.Forms
         private void textBoxSifre_KeyPress(object sender, KeyPressEventArgs e)
         {
             formTextController.sifreKontrol(e);
+        }
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

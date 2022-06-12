@@ -92,6 +92,7 @@ namespace GiderTakipOtomasyonu
             {
                 kullaniciKontrol = false;
                 MessageBox.Show("Kullanıcı adı hatalı");
+                return;
             }
 
             //şirket kontrol
@@ -103,6 +104,8 @@ namespace GiderTakipOtomasyonu
             {
                 sirketAdiKontrol = false;
                 MessageBox.Show("Şirket adı hatalı");
+                return;
+
             }
 
             //şifre uygunluğunu kontrol ediyor
@@ -114,6 +117,7 @@ namespace GiderTakipOtomasyonu
             {
                 sifreKontrol = false;
                 MessageBox.Show("Şifre hatalı");
+                return;
             }
 
             //e posta kontrollü için
@@ -125,6 +129,7 @@ namespace GiderTakipOtomasyonu
             {
                 ePostaKontrol = false;
                 MessageBox.Show("E-posta hatalı");
+                return;
             }
 
             //vergi dairesi kontrolü
@@ -136,6 +141,7 @@ namespace GiderTakipOtomasyonu
             {
                 vergiDaireKontrol = false;
                 MessageBox.Show("Vergi dairesi hatalı");
+                return;
             }
 
             //vergi daire no kontrol
@@ -147,6 +153,7 @@ namespace GiderTakipOtomasyonu
             {
                 vergiDaireNoKontrol = false;
                 MessageBox.Show("Vergi dairesi no hatalı");
+                return;
             }
 
             //eğer hepsi tamamsa kayıt yapıyor

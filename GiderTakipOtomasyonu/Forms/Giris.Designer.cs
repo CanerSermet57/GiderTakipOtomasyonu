@@ -35,23 +35,24 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxKullaniciAdi = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label2.Location = new System.Drawing.Point(132, 139);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label2.Location = new System.Drawing.Point(75, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 65;
             this.label2.Text = "Şifre:";
             // 
             // textBoxSifre
             // 
+            this.textBoxSifre.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxSifre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxSifre.Location = new System.Drawing.Point(195, 136);
+            this.textBoxSifre.Location = new System.Drawing.Point(155, 79);
             this.textBoxSifre.Name = "textBoxSifre";
             this.textBoxSifre.Size = new System.Drawing.Size(237, 32);
             this.textBoxSifre.TabIndex = 64;
@@ -60,17 +61,18 @@ namespace GiderTakipOtomasyonu.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label1.Location = new System.Drawing.Point(79, 105);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label1.Location = new System.Drawing.Point(22, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 63;
             this.label1.Text = "Kullanıcı Adı:";
             // 
             // textBoxKullaniciAdi
             // 
+            this.textBoxKullaniciAdi.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxKullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(195, 98);
+            this.textBoxKullaniciAdi.Location = new System.Drawing.Point(155, 41);
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(237, 32);
             this.textBoxKullaniciAdi.TabIndex = 62;
@@ -78,50 +80,62 @@ namespace GiderTakipOtomasyonu.Forms
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button1.Location = new System.Drawing.Point(230, 187);
+            this.button1.BackColor = System.Drawing.Color.LightCyan;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button1.Location = new System.Drawing.Point(155, 117);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 37);
+            this.button1.Size = new System.Drawing.Size(237, 37);
             this.button1.TabIndex = 66;
             this.button1.Text = "Giriş";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button2.Location = new System.Drawing.Point(230, 250);
+            this.button2.BackColor = System.Drawing.Color.LightCyan;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button2.Location = new System.Drawing.Point(155, 160);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 37);
+            this.button2.Size = new System.Drawing.Size(115, 37);
             this.button2.TabIndex = 67;
             this.button2.Text = "Kayıt Ol";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
+            // button3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label3.Location = new System.Drawing.Point(256, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 20);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Şifremi unuttum";
+            this.button3.BackColor = System.Drawing.Color.LightCyan;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button3.Location = new System.Drawing.Point(277, 160);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 37);
+            this.button3.TabIndex = 67;
+            this.button3.Text = "Şifre Sıfırla";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button2_Click);
             // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(424, 231);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxSifre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxKullaniciAdi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Giris";
             this.Text = "Giris";
+            this.Load += new System.EventHandler(this.Giris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +149,6 @@ namespace GiderTakipOtomasyonu.Forms
         private System.Windows.Forms.TextBox textBoxKullaniciAdi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
     }
 }
