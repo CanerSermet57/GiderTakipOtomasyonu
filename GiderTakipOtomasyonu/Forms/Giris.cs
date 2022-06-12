@@ -17,7 +17,6 @@ namespace GiderTakipOtomasyonu.Forms
     {
         Classes.FormTextController formTextController = Classes.FormTextController.giveInstance();
         KullaniciDbContext kullaniciDbContext = new KullaniciDbContext();
-
        
         public Giris()
         {
@@ -26,28 +25,25 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
+            var kullanicilar = kullaniciDbContext.Kullanicilar.ToList();            
+
             KullaniciDbClass Kullanici = new KullaniciDbClass
             {
                 adi = textBoxKullaniciAdi.Text,
                 sifre = textBoxSifre.Text
             };
 
-
-            /*if (girisKontrol())
+            for (int i = 0; i < kullanicilar.Count; i++)
             {
-
-            }
-            else
-            {
-                MessageBox.Show("Kullanıcı adı veya şifre hatalı");
-            }
-            */
-            Forms.InfrastructureForm form = new InfrastructureForm();
-            this.Hide();
-            form.FormClosed += formclosed;
-            form.Show();
+                if (kullanicilar[i].adi == Kullanici.adi && kullanicilar[i].sifre == Kullanici.sifre)
+                {
+                    Forms.InfrastructureForm form = new InfrastructureForm();
+                    this.Hide();
+                    form.FormClosed += formclosed;
+                    form.Show();
+                    return;
+                }                
+            }            
         }
 
         public void formclosed(object sender, EventArgs e)
