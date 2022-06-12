@@ -13,7 +13,7 @@ namespace GiderTakipOtomasyonu.Forms
 {
     public partial class Giris : Form
     {
-        gtoDbContext dbContext = new gtoDbContext();
+        
         KullaniciDbContext kullaniciDbContext = new KullaniciDbContext();
 
         public Giris()
@@ -32,11 +32,16 @@ namespace GiderTakipOtomasyonu.Forms
 
         }
 
-        private bool kontrol(int kullaniciadi, int sifre)
+        private bool girisKontrol(int kullaniciadi, int sifre)
         {
             bool k = true;
             return k;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            KayitOl form = new KayitOl();
+            form.ShowDialog();
+        }
     }
 }
