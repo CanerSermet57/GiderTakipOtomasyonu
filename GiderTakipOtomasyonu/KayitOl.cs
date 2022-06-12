@@ -1,4 +1,5 @@
-﻿using GiderTakipOtomasyonu.Data;
+﻿using GiderTakipOtomasyonu.Classes;
+using GiderTakipOtomasyonu.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,18 @@ namespace GiderTakipOtomasyonu
 {
     public partial class KayitOl : Form
     {
+        RegexUretici kontrol = new RegexUretici();
+
+        bool kullaniciKontrol = true;
+        bool sirketAdiKontrol = true;
+        bool sifreKontrol = true;
+        bool vergiDaireKontrol = true;
+        bool vergiDaireNoKontrol = true;
+        bool ePostaKontrol = true;
+        
+
+
+
         public KayitOl()
         {
             InitializeComponent();
@@ -70,36 +83,112 @@ namespace GiderTakipOtomasyonu
 
         private void buttonKayitOl_Click(object sender, EventArgs e)
         {
-            KullaniciDbClass kullanici = new KullaniciDbClass()
+            //kullanıcı adı uygunluğu kontrol
+            if (kontrol.regexsadeceyazi.IsMatch(textBoxKullaniciAdi.Text))
             {
-                adi = textBoxKullaniciAdi.Text,
-                mail= textBoxEpostaAdresi.Text,
-                sifre= textBoxSifre.Text
-            };
-
-            KullaniciDetayDbClass kullaniciDetay = new KullaniciDetayDbClass()
-            {
-                adi = textBoxSirketAdi.Text,
-                vergiDairesi = textBoxVergiDairesi.Text,
-                vergiDairesiNo = textBoxVergiDaireNo.Text
-            };
-             
-            dbContext.KullaniciDB.Add(kullanici);
-            
-
-
-            dbContext.KullaniciDetay.Add(kullaniciDetay);
-            int resultKullaniciDb = dbContext.SaveChanges();
-
-
-            if (resultKullaniciDb>0 )
-            {
-                MessageBox.Show("Kayıt başarılı");
+                kullaniciKontrol = true;
             }
             else
             {
-                MessageBox.Show("Kayıt ol başarısız");
+                kullaniciKontrol = false;
+                MessageBox.Show("Kullanıcı adı hatalı");
             }
+
+            //şirket kontrol
+            if (kontrol.regexsadeceyazi.IsMatch(textBoxSirketAdi.Text))
+            {
+                sirketAdiKontrol = true;
+            }
+            else
+            {
+                sirketAdiKontrol = false;
+                MessageBox.Show("Şirket adı hatalı");
+            }
+
+            //şifre uygunluğunu kontrol ediyor
+            if (kontrol.regexsifre.IsMatch(textBoxSifre.Text))
+            {
+                sifreKontrol = true;
+            }
+            else
+            {
+                sifreKontrol = false;
+                MessageBox.Show("Şifre hatalı");
+            }
+
+            //e posta kontrollü için
+            if (kontrol.regexEposta.IsMatch(textBoxEpostaAdresi.Text))
+            {
+                ePostaKontrol = true;
+            }
+            else
+            {
+                ePostaKontrol = false;
+                MessageBox.Show("E-posta hatalı");
+            }
+
+            //vergi dairesi kontrolü
+            if (kontrol.regexsadeceyazi.IsMatch(textBoxVergiDairesi.Text))
+            {
+                vergiDaireKontrol = true;
+            }
+            else
+            {
+                vergiDaireKontrol = false;
+                MessageBox.Show("Vergi dairesi hatalı");
+            }
+
+            //vergi daire no kontrol
+            if (textBoxVergiDaireNo.Text!="")
+            {
+                vergiDaireNoKontrol = true;
+            }
+            else
+            {
+                vergiDaireNoKontrol = false;
+                MessageBox.Show("Vergi dairesi no hatalı");
+            }
+
+            //eğer hepsi tamamsa kayıt yapıyor
+            if (kullaniciKontrol == true && sifreKontrol==true && ePostaKontrol == true && vergiDaireKontrol == true && vergiDaireNoKontrol == true && sirketAdiKontrol == true && textBoxSifre.Text ==textBoxSifreTekrar.Text )
+            {
+                KullaniciDbClass kullanici = new KullaniciDbClass()
+                {
+                    adi = textBoxKullaniciAdi.Text,
+                    mail = textBoxEpostaAdresi.Text,
+                    sifre = textBoxSifre.Text
+                };
+
+                KullaniciDetayDbClass kullaniciDetay = new KullaniciDetayDbClass()
+                {
+                    adi = textBoxSirketAdi.Text,
+                    vergiDairesi = textBoxVergiDairesi.Text,
+                    vergiDairesiNo = textBoxVergiDaireNo.Text
+                };
+
+                dbContext.KullaniciDB.Add(kullanici);
+
+
+
+                dbContext.KullaniciDetay.Add(kullaniciDetay);
+                int resultKullaniciDb = dbContext.SaveChanges();
+
+
+                if (resultKullaniciDb > 0)
+                {
+                    MessageBox.Show("Kayıt başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt ol başarısız");
+                }
+
+                Forms.InfrastructureForm form = new Forms.InfrastructureForm();
+                form.Show();
+                
+            }
+
+            
         }
     }
 }

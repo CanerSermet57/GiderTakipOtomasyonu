@@ -189,6 +189,7 @@
     <Compile Include="Classes\FormTextController.cs" />
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\PageDesign.cs" />
+    <Compile Include="Classes\RegexUretici.cs" />
     <Compile Include="Classes\SayfaButtonlari\DGVOlustur.cs" />
     <Compile Include="Classes\SayfaButtonlari\Gelir.cs" />
     <Compile Include="Classes\SayfaButtonlari\Gider.cs" />

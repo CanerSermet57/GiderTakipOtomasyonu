@@ -13,7 +13,7 @@ namespace GiderTakipOtomasyonu.Forms
 {
     public partial class GelirEkle : Form
     {
-
+        
         gtoDbContext dbContext = new gtoDbContext();
 
         public GelirEkle()

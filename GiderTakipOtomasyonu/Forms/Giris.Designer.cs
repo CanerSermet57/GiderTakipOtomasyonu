@@ -55,6 +55,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxSifre.Name = "textBoxSifre";
             this.textBoxSifre.Size = new System.Drawing.Size(237, 32);
             this.textBoxSifre.TabIndex = 64;
+            this.textBoxSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSifre_KeyPress);
             // 
             // label1
             // 
@@ -73,6 +74,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxKullaniciAdi.Name = "textBoxKullaniciAdi";
             this.textBoxKullaniciAdi.Size = new System.Drawing.Size(237, 32);
             this.textBoxKullaniciAdi.TabIndex = 62;
+            this.textBoxKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKullaniciAdi_KeyPress);
             // 
             // button1
             // 
