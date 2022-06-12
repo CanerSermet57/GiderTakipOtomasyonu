@@ -64,7 +64,7 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            KayitOl form = new KayitOl();
+            SifreSıfırlama form = new SifreSıfırlama();
             form.ShowDialog();
         }
 

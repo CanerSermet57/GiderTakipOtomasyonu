@@ -28,49 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-5, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mail :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(132, 30);
+            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(126, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 24);
+            this.textBox1.Size = new System.Drawing.Size(238, 29);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightCyan;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(136, 68);
+            this.button1.Location = new System.Drawing.Point(178, 63);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 62);
+            this.button1.Size = new System.Drawing.Size(186, 48);
             this.button1.TabIndex = 2;
             this.button1.Text = "Sıfırlama Maili Gönder";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 24);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mail Adresi: ";
             // 
             // SifreSıfırlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 152);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(376, 135);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Name = "SifreSıfırlama";
             this.Text = "SifreSıfırlama";
             this.ResumeLayout(false);
@@ -79,9 +82,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
