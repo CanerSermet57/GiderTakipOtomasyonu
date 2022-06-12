@@ -35,5 +35,23 @@ namespace GiderTakipOtomasyonu.Forms
             dateIseBaslama.Value = iseGirisTarihi;
             comboboxTatilGunu.Text = tatilGunu;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var UptadePersonel = new PersonelDbClass()
+            {
+                id = this.id,
+                adi = textBoxAdi.Text,
+                soyAdi = textBoxSoyadi.Text,
+                görevi = textBoxGorevi.Text,
+                maasi = float.Parse(numericMaas.Value.ToString()),
+                iseBaslamaTarihi = dateIseBaslama.Value,
+                tatilGunu = comboboxTatilGunu.Text
+            };
+            dbContext.Personeller.Update(UptadePersonel);
+            int result = dbContext.SaveChanges();
+            string message = result > 0 ? "Personel Düzenlendi" : "Başarısız";
+            MessageBox.Show(message);
+        }
     }
 }

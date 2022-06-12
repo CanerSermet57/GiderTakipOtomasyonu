@@ -51,6 +51,7 @@ namespace GiderTakipOtomasyonu.Forms
             form.iseGirisTarihi = (DateTime)DGV.Rows[DGV.CurrentCell.RowIndex].Cells[5].Value;
             form.tatilGunu = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[6].Value.ToString();
             form.ShowDialog();
+            refreshdatagridview();
 
         }
 
