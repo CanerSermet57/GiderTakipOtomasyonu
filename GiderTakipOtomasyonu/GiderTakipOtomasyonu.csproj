@@ -399,6 +399,9 @@
     <EmbeddedResource Include="Forms\PersonelDuzenle.resx">
       <DependentUpon>PersonelDuzenle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Personeller.resx">
       <DependentUpon>Personeller.cs</DependentUpon>
     </EmbeddedResource>
