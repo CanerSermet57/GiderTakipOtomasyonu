@@ -456,6 +456,9 @@
     <EmbeddedResource Include="Forms\TicariMalEkle.resx">
       <DependentUpon>TicariMalEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TicariMalSil.resx">
+      <DependentUpon>TicariMalSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KayitOl.resx">
       <DependentUpon>KayitOl.cs</DependentUpon>
     </EmbeddedResource>
