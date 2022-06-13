@@ -29,31 +29,31 @@ namespace GiderTakipOtomasyonu.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericMaas = new System.Windows.Forms.NumericUpDown();
+            this.numericStokSayisi = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxAdi = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericFiyat = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericMaas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericStokSayisi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFiyat)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericMaas
+            // numericStokSayisi
             // 
-            this.numericMaas.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericMaas.Location = new System.Drawing.Point(127, 135);
-            this.numericMaas.Maximum = new decimal(new int[] {
+            this.numericStokSayisi.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericStokSayisi.Location = new System.Drawing.Point(127, 135);
+            this.numericStokSayisi.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericMaas.Name = "numericMaas";
-            this.numericMaas.Size = new System.Drawing.Size(286, 32);
-            this.numericMaas.TabIndex = 69;
+            this.numericStokSayisi.Name = "numericStokSayisi";
+            this.numericStokSayisi.Size = new System.Drawing.Size(286, 32);
+            this.numericStokSayisi.TabIndex = 69;
             // 
             // button1
             // 
@@ -64,6 +64,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.button1.TabIndex = 75;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -115,18 +116,18 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxAdi.Size = new System.Drawing.Size(286, 32);
             this.textBoxAdi.TabIndex = 68;
             // 
-            // numericUpDown1
+            // numericFiyat
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.numericUpDown1.Location = new System.Drawing.Point(127, 175);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericFiyat.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.numericFiyat.Location = new System.Drawing.Point(127, 175);
+            this.numericFiyat.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(286, 32);
-            this.numericUpDown1.TabIndex = 76;
+            this.numericFiyat.Name = "numericFiyat";
+            this.numericFiyat.Size = new System.Drawing.Size(286, 32);
+            this.numericFiyat.TabIndex = 76;
             // 
             // label2
             // 
@@ -144,9 +145,9 @@ namespace GiderTakipOtomasyonu.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 321);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericFiyat);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericMaas);
+            this.Controls.Add(this.numericStokSayisi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
@@ -155,22 +156,22 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAdi);
             this.Name = "TicariMalEkle";
             this.Text = "TicariMalEkle";
-            ((System.ComponentModel.ISupportInitialize)(this.numericMaas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericStokSayisi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFiyat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.NumericUpDown numericMaas;
+        private System.Windows.Forms.NumericUpDown numericStokSayisi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxAdi;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericFiyat;
         private System.Windows.Forms.Label label2;
     }
 }
