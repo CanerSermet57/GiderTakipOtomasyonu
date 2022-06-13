@@ -112,7 +112,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateAyarlarPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Ayarlar ayarlar = new SayfaButtonlari.Ayarlar(panelRight);
         }
 
         

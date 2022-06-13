@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxFiyatlar = new System.Windows.Forms.CheckBox();
+            this.checkBoxKisiler = new System.Windows.Forms.CheckBox();
+            this.checkBoxBanka = new System.Windows.Forms.CheckBox();
+            this.checkBoxUrunler = new System.Windows.Forms.CheckBox();
+            this.checkBoxPersonel = new System.Windows.Forms.CheckBox();
+            this.checkBoxGelirler = new System.Windows.Forms.CheckBox();
+            this.checkBoxCuzdan = new System.Windows.Forms.CheckBox();
+            this.checkBoxKarZarar = new System.Windows.Forms.CheckBox();
+            this.checkBoxTakvim = new System.Windows.Forms.CheckBox();
+            this.checkBoxGider = new System.Windows.Forms.CheckBox();
+            this.checkBoxDurum = new System.Windows.Forms.CheckBox();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -42,25 +58,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,6 +78,222 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1050, 581);
             this.panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Tema: ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.LightBlue;
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Koyu Tema",
+            "Standart Tema"});
+            this.comboBox1.Location = new System.Drawing.Point(116, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(175, 32);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button14.Location = new System.Drawing.Point(800, 510);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(231, 58);
+            this.button14.TabIndex = 2;
+            this.button14.Text = "Değişiklikleri Kaydet";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(20, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(231, 58);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "TÜM VERİLERİ SİL!";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox1.Controls.Add(this.checkBoxFiyatlar);
+            this.groupBox1.Controls.Add(this.checkBoxKisiler);
+            this.groupBox1.Controls.Add(this.checkBoxBanka);
+            this.groupBox1.Controls.Add(this.checkBoxUrunler);
+            this.groupBox1.Controls.Add(this.checkBoxPersonel);
+            this.groupBox1.Controls.Add(this.checkBoxGelirler);
+            this.groupBox1.Controls.Add(this.checkBoxCuzdan);
+            this.groupBox1.Controls.Add(this.checkBoxKarZarar);
+            this.groupBox1.Controls.Add(this.checkBoxTakvim);
+            this.groupBox1.Controls.Add(this.checkBoxGider);
+            this.groupBox1.Controls.Add(this.checkBoxDurum);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(6, 200);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1040, 289);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Modüller";
+            // 
+            // checkBoxFiyatlar
+            // 
+            this.checkBoxFiyatlar.AutoSize = true;
+            this.checkBoxFiyatlar.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxFiyatlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxFiyatlar.Location = new System.Drawing.Point(535, 220);
+            this.checkBoxFiyatlar.Name = "checkBoxFiyatlar";
+            this.checkBoxFiyatlar.Size = new System.Drawing.Size(218, 35);
+            this.checkBoxFiyatlar.TabIndex = 0;
+            this.checkBoxFiyatlar.Text = "Fiyatlar Modülü";
+            this.checkBoxFiyatlar.UseVisualStyleBackColor = false;
+            this.checkBoxFiyatlar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxKisiler
+            // 
+            this.checkBoxKisiler.AutoSize = true;
+            this.checkBoxKisiler.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxKisiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxKisiler.Location = new System.Drawing.Point(285, 220);
+            this.checkBoxKisiler.Name = "checkBoxKisiler";
+            this.checkBoxKisiler.Size = new System.Drawing.Size(202, 35);
+            this.checkBoxKisiler.TabIndex = 0;
+            this.checkBoxKisiler.Text = "Kişiler Modülü";
+            this.checkBoxKisiler.UseVisualStyleBackColor = false;
+            this.checkBoxKisiler.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxBanka
+            // 
+            this.checkBoxBanka.AutoSize = true;
+            this.checkBoxBanka.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxBanka.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxBanka.Location = new System.Drawing.Point(35, 220);
+            this.checkBoxBanka.Name = "checkBoxBanka";
+            this.checkBoxBanka.Size = new System.Drawing.Size(205, 35);
+            this.checkBoxBanka.TabIndex = 0;
+            this.checkBoxBanka.Text = "Banka Modülü";
+            this.checkBoxBanka.UseVisualStyleBackColor = false;
+            this.checkBoxBanka.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxUrunler
+            // 
+            this.checkBoxUrunler.AutoSize = true;
+            this.checkBoxUrunler.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxUrunler.Location = new System.Drawing.Point(785, 140);
+            this.checkBoxUrunler.Name = "checkBoxUrunler";
+            this.checkBoxUrunler.Size = new System.Drawing.Size(217, 35);
+            this.checkBoxUrunler.TabIndex = 0;
+            this.checkBoxUrunler.Text = "Ürünler Modülü";
+            this.checkBoxUrunler.UseVisualStyleBackColor = false;
+            this.checkBoxUrunler.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxPersonel
+            // 
+            this.checkBoxPersonel.AutoSize = true;
+            this.checkBoxPersonel.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPersonel.Location = new System.Drawing.Point(535, 140);
+            this.checkBoxPersonel.Name = "checkBoxPersonel";
+            this.checkBoxPersonel.Size = new System.Drawing.Size(235, 35);
+            this.checkBoxPersonel.TabIndex = 0;
+            this.checkBoxPersonel.Text = "Personel Modülü";
+            this.checkBoxPersonel.UseVisualStyleBackColor = false;
+            this.checkBoxPersonel.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxGelirler
+            // 
+            this.checkBoxGelirler.AutoSize = true;
+            this.checkBoxGelirler.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxGelirler.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxGelirler.Location = new System.Drawing.Point(285, 140);
+            this.checkBoxGelirler.Name = "checkBoxGelirler";
+            this.checkBoxGelirler.Size = new System.Drawing.Size(215, 35);
+            this.checkBoxGelirler.TabIndex = 0;
+            this.checkBoxGelirler.Text = "Gelirler Modülü";
+            this.checkBoxGelirler.UseVisualStyleBackColor = false;
+            this.checkBoxGelirler.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxCuzdan
+            // 
+            this.checkBoxCuzdan.AutoSize = true;
+            this.checkBoxCuzdan.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxCuzdan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCuzdan.Location = new System.Drawing.Point(35, 140);
+            this.checkBoxCuzdan.Name = "checkBoxCuzdan";
+            this.checkBoxCuzdan.Size = new System.Drawing.Size(222, 35);
+            this.checkBoxCuzdan.TabIndex = 0;
+            this.checkBoxCuzdan.Text = "Cüzdan Modülü";
+            this.checkBoxCuzdan.UseVisualStyleBackColor = false;
+            this.checkBoxCuzdan.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxKarZarar
+            // 
+            this.checkBoxKarZarar.AutoSize = true;
+            this.checkBoxKarZarar.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxKarZarar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxKarZarar.Location = new System.Drawing.Point(785, 60);
+            this.checkBoxKarZarar.Name = "checkBoxKarZarar";
+            this.checkBoxKarZarar.Size = new System.Drawing.Size(244, 35);
+            this.checkBoxKarZarar.TabIndex = 0;
+            this.checkBoxKarZarar.Text = "Kar-Zarar Modülü";
+            this.checkBoxKarZarar.UseVisualStyleBackColor = false;
+            this.checkBoxKarZarar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxTakvim
+            // 
+            this.checkBoxTakvim.AutoSize = true;
+            this.checkBoxTakvim.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxTakvim.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTakvim.Location = new System.Drawing.Point(535, 60);
+            this.checkBoxTakvim.Name = "checkBoxTakvim";
+            this.checkBoxTakvim.Size = new System.Drawing.Size(216, 35);
+            this.checkBoxTakvim.TabIndex = 0;
+            this.checkBoxTakvim.Text = "Takvim Modülü";
+            this.checkBoxTakvim.UseVisualStyleBackColor = false;
+            this.checkBoxTakvim.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxGider
+            // 
+            this.checkBoxGider.AutoSize = true;
+            this.checkBoxGider.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxGider.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxGider.Location = new System.Drawing.Point(285, 60);
+            this.checkBoxGider.Name = "checkBoxGider";
+            this.checkBoxGider.Size = new System.Drawing.Size(224, 35);
+            this.checkBoxGider.TabIndex = 0;
+            this.checkBoxGider.Text = "Giderler Modülü";
+            this.checkBoxGider.UseVisualStyleBackColor = false;
+            this.checkBoxGider.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxDurum
+            // 
+            this.checkBoxDurum.BackColor = System.Drawing.Color.LightGreen;
+            this.checkBoxDurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxDurum.Location = new System.Drawing.Point(35, 60);
+            this.checkBoxDurum.Name = "checkBoxDurum";
+            this.checkBoxDurum.Size = new System.Drawing.Size(209, 35);
+            this.checkBoxDurum.TabIndex = 0;
+            this.checkBoxDurum.Text = "Durum Modülü";
+            this.checkBoxDurum.UseVisualStyleBackColor = false;
+            this.checkBoxDurum.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button13
             // 
@@ -281,222 +497,6 @@
             this.panel2.Size = new System.Drawing.Size(136, 581);
             this.panel2.TabIndex = 11;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(35, 60);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(209, 35);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Durum Modülü";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox1.Controls.Add(this.checkBox11);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox10);
-            this.groupBox1.Controls.Add(this.checkBox9);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox8);
-            this.groupBox1.Controls.Add(this.checkBox7);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 200);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1040, 289);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modüller";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(35, 140);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(222, 35);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "Cüzdan Modülü";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(35, 220);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(205, 35);
-            this.checkBox3.TabIndex = 0;
-            this.checkBox3.Text = "Banka Modülü";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(285, 60);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(224, 35);
-            this.checkBox4.TabIndex = 0;
-            this.checkBox4.Text = "Giderler Modülü";
-            this.checkBox4.UseVisualStyleBackColor = false;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(285, 140);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(215, 35);
-            this.checkBox5.TabIndex = 0;
-            this.checkBox5.Text = "Gelirler Modülü";
-            this.checkBox5.UseVisualStyleBackColor = false;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(285, 220);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(202, 35);
-            this.checkBox6.TabIndex = 0;
-            this.checkBox6.Text = "Kişiler Modülü";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(535, 60);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(216, 35);
-            this.checkBox7.TabIndex = 0;
-            this.checkBox7.Text = "Takvim Modülü";
-            this.checkBox7.UseVisualStyleBackColor = false;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(785, 60);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(244, 35);
-            this.checkBox8.TabIndex = 0;
-            this.checkBox8.Text = "Kar-Zarar Modülü";
-            this.checkBox8.UseVisualStyleBackColor = false;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(535, 140);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(235, 35);
-            this.checkBox9.TabIndex = 0;
-            this.checkBox9.Text = "Personel Modülü";
-            this.checkBox9.UseVisualStyleBackColor = false;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(785, 140);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(217, 35);
-            this.checkBox10.TabIndex = 0;
-            this.checkBox10.Text = "Ürünler Modülü";
-            this.checkBox10.UseVisualStyleBackColor = false;
-            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.BackColor = System.Drawing.Color.LightGreen;
-            this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(535, 220);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(218, 35);
-            this.checkBox11.TabIndex = 0;
-            this.checkBox11.Text = "Fiyatlar Modülü";
-            this.checkBox11.UseVisualStyleBackColor = false;
-            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(20, 510);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 58);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "TÜM VERİLERİ SİL!";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button14.Location = new System.Drawing.Point(800, 510);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(231, 58);
-            this.button14.TabIndex = 2;
-            this.button14.Text = "Değişiklikleri Kaydet";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightBlue;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Koyu Tema",
-            "Standart Tema"});
-            this.comboBox1.Location = new System.Drawing.Point(116, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 32);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Tema: ";
-            // 
             // Ayalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,9 +508,9 @@
             this.Text = "Ayalar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -532,17 +532,17 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBoxDurum;
+        private System.Windows.Forms.CheckBox checkBoxFiyatlar;
+        private System.Windows.Forms.CheckBox checkBoxKisiler;
+        private System.Windows.Forms.CheckBox checkBoxBanka;
+        private System.Windows.Forms.CheckBox checkBoxUrunler;
+        private System.Windows.Forms.CheckBox checkBoxPersonel;
+        private System.Windows.Forms.CheckBox checkBoxGelirler;
+        private System.Windows.Forms.CheckBox checkBoxCuzdan;
+        private System.Windows.Forms.CheckBox checkBoxKarZarar;
+        private System.Windows.Forms.CheckBox checkBoxTakvim;
+        private System.Windows.Forms.CheckBox checkBoxGider;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
