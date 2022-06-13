@@ -31,6 +31,7 @@ namespace GiderTakipOtomasyonu
             InitializeComponent();
         }
         gtoDbContext dbContext = new gtoDbContext();
+        KullaniciDbContext kullaniciDbContext = new KullaniciDbContext();
         //
         //textbox keypress functions
         //
@@ -81,7 +82,56 @@ namespace GiderTakipOtomasyonu
             
         }
 
+        
+
         private void buttonKayitOl_Click(object sender, EventArgs e)
+        {
+
+            regex();
+
+            //eğer hepsi tamamsa kayıt yapıyor
+            if (kullaniciKontrol == true && sifreKontrol==true && ePostaKontrol == true && vergiDaireKontrol == true && vergiDaireNoKontrol == true && sirketAdiKontrol == true && textBoxSifre.Text ==textBoxSifreTekrar.Text )
+            {
+                KullaniciDbClass kullanici = new KullaniciDbClass()
+                {
+                    adi = textBoxKullaniciAdi.Text,
+                    mail = textBoxEpostaAdresi.Text,
+                    sifre = textBoxSifre.Text
+                };
+                kullaniciDbContext.Kullanicilar.Add(kullanici);
+                int resultKullaniciDb = kullaniciDbContext.SaveChanges();
+                
+                gtoDbContext.staticdbname = kullanici.id.ToString();
+                dbContext.Database.EnsureCreated();
+                KullaniciDetayDbClass kullaniciDetay = new KullaniciDetayDbClass()
+                {
+                    adi = textBoxSirketAdi.Text,
+                    vergiDairesi = textBoxVergiDairesi.Text,
+                    vergiDairesiNo = textBoxVergiDaireNo.Text
+                };
+
+                
+                dbContext.KullaniciDetay.Add(kullaniciDetay);
+
+                int resultKullaniciDetayDb = dbContext.SaveChanges();
+               
+
+
+                if (resultKullaniciDb > 0 && resultKullaniciDetayDb > 0)
+                {
+                    MessageBox.Show("Kayıt başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt ol başarısız");
+                }
+                this.Close();                
+            }
+
+            
+        }
+
+        public void regex()
         {
             //kullanıcı adı uygunluğu kontrol
             if (kontrol.regexsadeceyazi.IsMatch(textBoxKullaniciAdi.Text))
@@ -145,7 +195,7 @@ namespace GiderTakipOtomasyonu
             }
 
             //vergi daire no kontrol
-            if (textBoxVergiDaireNo.Text!="")
+            if (textBoxVergiDaireNo.Text != "")
             {
                 vergiDaireNoKontrol = true;
             }
@@ -161,48 +211,8 @@ namespace GiderTakipOtomasyonu
             {
                 MessageBox.Show("Şifreler aynı değil");
             }
-            
-
-            //eğer hepsi tamamsa kayıt yapıyor
-            if (kullaniciKontrol == true && sifreKontrol==true && ePostaKontrol == true && vergiDaireKontrol == true && vergiDaireNoKontrol == true && sirketAdiKontrol == true && textBoxSifre.Text ==textBoxSifreTekrar.Text )
-            {
-                KullaniciDbClass kullanici = new KullaniciDbClass()
-                {
-                    adi = textBoxKullaniciAdi.Text,
-                    mail = textBoxEpostaAdresi.Text,
-                    sifre = textBoxSifre.Text
-                };
-
-                KullaniciDetayDbClass kullaniciDetay = new KullaniciDetayDbClass()
-                {
-                    adi = textBoxSirketAdi.Text,
-                    vergiDairesi = textBoxVergiDairesi.Text,
-                    vergiDairesiNo = textBoxVergiDaireNo.Text
-                };
-
-                dbContext.KullaniciDB.Add(kullanici);
-
-
-
-                dbContext.KullaniciDetay.Add(kullaniciDetay);
-                int resultKullaniciDb = dbContext.SaveChanges();
-
-
-                if (resultKullaniciDb > 0)
-                {
-                    MessageBox.Show("Kayıt başarılı");
-                }
-                else
-                {
-                    MessageBox.Show("Kayıt ol başarısız");
-                }
-
-                Forms.InfrastructureForm form = new Forms.InfrastructureForm();
-                form.Show();
-                
-            }
-
-            
         }
     }
+
+
 }

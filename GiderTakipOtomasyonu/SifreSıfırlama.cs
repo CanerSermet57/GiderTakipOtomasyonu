@@ -47,9 +47,12 @@ namespace GiderTakipOtomasyonu
             {
                 if (textBox1.Text == randomPasswordResetKey)
                 {
-                    MessageBox.Show("Şifreniz Sıfırlanmıştır");
                     SendingOrChecking = true;
-                    textBox1.Text = "";
+                    Forms.SifreGüncelle sifre = new Forms.SifreGüncelle();
+                    sifre.mail = textBox1.Text;
+                    sifre.ShowDialog();
+                    this.Close();
+                    
                 }
                 else
                 {
@@ -101,5 +104,9 @@ namespace GiderTakipOtomasyonu
             return randomPasswordResetKey;
         }
 
+        private void SifreSıfırlama_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
