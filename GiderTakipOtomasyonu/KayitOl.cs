@@ -91,7 +91,7 @@ namespace GiderTakipOtomasyonu
             else
             {
                 kullaniciKontrol = false;
-                MessageBox.Show("Kullanıcı adı hatalı");
+                MessageBox.Show("Kullanıcı adının lütfen en az 6 karakter olmasına ve bir harfle başlamasına dikkat edin");
                 return;
             }
 
@@ -103,7 +103,7 @@ namespace GiderTakipOtomasyonu
             else
             {
                 sirketAdiKontrol = false;
-                MessageBox.Show("Şirket adı hatalı");
+                MessageBox.Show("Şirket adının en az 6 karakter olmasına ve bir harfle başlamasına dikkat edin");
                 return;
 
             }
@@ -116,7 +116,7 @@ namespace GiderTakipOtomasyonu
             else
             {
                 sifreKontrol = false;
-                MessageBox.Show("Şifre hatalı");
+                MessageBox.Show("Şifre hatalı. Şifreniz en az bir büyük karakter, bir küçük karakter, bir sembol ve rakam içerdiğinden emmin olun");
                 return;
             }
 
@@ -128,7 +128,7 @@ namespace GiderTakipOtomasyonu
             else
             {
                 ePostaKontrol = false;
-                MessageBox.Show("E-posta hatalı");
+                MessageBox.Show("E-posta hatalı lütfen yeniden girin");
                 return;
             }
 
@@ -140,7 +140,7 @@ namespace GiderTakipOtomasyonu
             else
             {
                 vergiDaireKontrol = false;
-                MessageBox.Show("Vergi dairesi hatalı");
+                MessageBox.Show("Vergi dairesi en 6 karakter içermeli");
                 return;
             }
 
@@ -152,9 +152,16 @@ namespace GiderTakipOtomasyonu
             else
             {
                 vergiDaireNoKontrol = false;
-                MessageBox.Show("Vergi dairesi no hatalı");
+                MessageBox.Show("Vergi dairesi no boş olamaz");
                 return;
             }
+
+
+            if (textBoxSifre.Text != textBoxSifreTekrar.Text)
+            {
+                MessageBox.Show("Şifreler aynı değil");
+            }
+            
 
             //eğer hepsi tamamsa kayıt yapıyor
             if (kullaniciKontrol == true && sifreKontrol==true && ePostaKontrol == true && vergiDaireKontrol == true && vergiDaireNoKontrol == true && sirketAdiKontrol == true && textBoxSifre.Text ==textBoxSifreTekrar.Text )

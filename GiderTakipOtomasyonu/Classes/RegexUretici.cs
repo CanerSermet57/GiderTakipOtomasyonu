@@ -10,6 +10,8 @@ namespace GiderTakipOtomasyonu.Classes
     class RegexUretici
     {
 
+        //kayıt ol sayfası regex
+
         //sadece yazi
         public Regex regexsadeceyazi = new Regex(@"^[A-Za-z][A-Za-z0-9_]{7,29}$");
 
@@ -20,7 +22,8 @@ namespace GiderTakipOtomasyonu.Classes
         public Regex regexEposta = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
 
 
-
+        //gelir sayfası için
+        public Regex regexGelirDuzenle = new Regex(@"^{0,30}$");
 
     }
 }

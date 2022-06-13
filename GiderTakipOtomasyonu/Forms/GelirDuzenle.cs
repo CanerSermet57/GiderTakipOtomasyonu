@@ -1,4 +1,5 @@
-﻿using GiderTakipOtomasyonu.Data;
+﻿using GiderTakipOtomasyonu.Classes;
+using GiderTakipOtomasyonu.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace GiderTakipOtomasyonu.Forms
     public partial class GelirDuzenle : Form
     {
         gtoDbContext dbContext = new gtoDbContext();
-
+        RegexUretici kontrol = new RegexUretici();
 
         public string aciklama, kimden;
         public DateTime tarih;
@@ -38,6 +39,13 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (kontrol.regexGelirDuzenle.IsMatch(textBoxAciklama.Text))
+            {
+
+            }
+
+
             GelirlerDbClass gelir = new GelirlerDbClass()
             {
                 id = this.id,
