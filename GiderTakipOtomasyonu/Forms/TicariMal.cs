@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace GiderTakipOtomasyonu.Forms
 {
     public partial class TicariMal : Form
     {
+        private gtoDbContext dbContext;
         public TicariMal()
         {
             InitializeComponent();
@@ -34,6 +36,18 @@ namespace GiderTakipOtomasyonu.Forms
             Forms.TicariMalSil form = new Forms.TicariMalSil();
             form.ShowDialog();
             
+        }
+
+        private void TicariMal_Load(object sender, EventArgs e)
+        {
+            refreshdatagridview();
+        }
+        public void refreshdatagridview()
+        {
+            dbContext = new gtoDbContext();
+            DGV.DataSource = null;
+            var TicariMalListem = dbContext.TicariMallar.ToList();
+            DGV.DataSource = TicariMalListem;
         }
     }
 }
