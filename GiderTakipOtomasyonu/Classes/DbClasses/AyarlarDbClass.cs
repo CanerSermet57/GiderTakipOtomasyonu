@@ -14,5 +14,24 @@ namespace GiderTakipOtomasyonu
 
         public TemaDbClass tema { get; set; }
         public int? temaId { get; set; } = 1;
+        public bool boolDurum { get; set; }
+        public bool boolCuzdan { get; set; }
+        public bool boolBanka { get; set; }
+        public bool boolGider { get; set; }
+        public bool boolGelir { get; set; }
+        public bool boolKisiler { get; set; }
+        public bool boolTakvim { get; set; }
+        public bool boolPersonel { get; set; }
+        public bool boolFiyatlar { get; set; }
+        public bool boolKarZarar { get; set; }
+        public bool boolHammadde { get; set; }
+
+
+
+
+
+
+
+
     }
 }
