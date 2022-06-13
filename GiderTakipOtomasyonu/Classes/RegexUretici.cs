@@ -12,18 +12,22 @@ namespace GiderTakipOtomasyonu.Classes
 
         //kayıt ol sayfası regex
 
+
         //sadece yazi
-        public Regex regexsadeceyazi = new Regex(@"^[A-Za-z][A-Za-z0-9_]{7,29}$");
+        public Regex regexsadeceyazi = new Regex(@"^[A-Za-z][A-Za-z0-9_]{5,29}$");
 
         //sifre için
-        public Regex regexsifre = new Regex(@"(?=^.{6,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$");
+        public Regex regexsifre = new Regex(@"(?=^.{5,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$");
 
         //e posta için
         public Regex regexEposta = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
 
 
         //gelir sayfası için
-        public Regex regexGelirDuzenle = new Regex(@"^{0,30}$");
+
+
+        //Düzenle kısımları için
+        public Regex regexDuzenle = new Regex(@"^{0,30}$");
 
     }
 }

@@ -158,17 +158,31 @@ namespace GiderTakipOtomasyonu
 
             }
 
-            //şifre uygunluğunu kontrol ediyor
-            if (kontrol.regexsifre.IsMatch(textBoxSifre.Text))
+
+            //vergi dairesi kontrolü
+            if (kontrol.regexsadeceyazi.IsMatch(textBoxVergiDairesi.Text))
             {
-                sifreKontrol = true;
+                vergiDaireKontrol = true;
             }
             else
             {
-                sifreKontrol = false;
-                MessageBox.Show("Şifre hatalı. Şifreniz en az bir büyük karakter, bir küçük karakter, bir sembol ve rakam içerdiğinden emmin olun");
+                vergiDaireKontrol = false;
+                MessageBox.Show("Vergi dairesi en az 6 karakter içermeli");
                 return;
             }
+
+            //vergi daire no kontrol
+            if (textBoxVergiDaireNo.Text != "")
+            {
+                vergiDaireNoKontrol = true;
+            }
+            else
+            {
+                vergiDaireNoKontrol = false;
+                MessageBox.Show("Vergi dairesi no boş olamaz");
+                return;
+            }
+
 
             //e posta kontrollü için
             if (kontrol.regexEposta.IsMatch(textBoxEpostaAdresi.Text))
@@ -182,27 +196,16 @@ namespace GiderTakipOtomasyonu
                 return;
             }
 
-            //vergi dairesi kontrolü
-            if (kontrol.regexsadeceyazi.IsMatch(textBoxVergiDairesi.Text))
-            {
-                vergiDaireKontrol = true;
-            }
-            else
-            {
-                vergiDaireKontrol = false;
-                MessageBox.Show("Vergi dairesi en 6 karakter içermeli");
-                return;
-            }
 
-            //vergi daire no kontrol
-            if (textBoxVergiDaireNo.Text != "")
+            //şifre uygunluğunu kontrol ediyor
+            if (kontrol.regexsifre.IsMatch(textBoxSifre.Text))
             {
-                vergiDaireNoKontrol = true;
+                sifreKontrol = true;
             }
             else
             {
-                vergiDaireNoKontrol = false;
-                MessageBox.Show("Vergi dairesi no boş olamaz");
+                sifreKontrol = false;
+                MessageBox.Show("Şifre hatalı. Şifreniz en az bir büyük karakter, bir küçük karakter, bir sembol ve rakam içerdiğinden emmin olun");
                 return;
             }
 

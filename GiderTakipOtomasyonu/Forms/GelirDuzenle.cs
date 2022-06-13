@@ -39,8 +39,9 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
 
-            if (kontrol.regexGelirDuzenle.IsMatch(textBoxAciklama.Text))
+            if (kontrol.regexDuzenle.IsMatch(textBoxAciklama.Text))
             {
 
             }
