@@ -29,5 +29,20 @@ namespace GiderTakipOtomasyonu.Forms
             numericStokSayisi.Value = (decimal)stokSayisi;
             numericFiyat.Value = (decimal)fiyat;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var silTicariMal = new TicariMallarDbClass()
+            {
+                id = this.id,
+                urunAdi = textBoxAdi.Text,
+                stokSayisi = float.Parse(numericStokSayisi.Value.ToString()),
+                fiyat = float.Parse(numericFiyat.Value.ToString()),                
+            };
+            dbContext.TicariMallar.Remove(silTicariMal);
+            int result = dbContext.SaveChanges();
+            string message = result > 0 ? "Tiacari Mal Silindi" : "Başarısız";
+            MessageBox.Show(message);
+        }
     }
 }

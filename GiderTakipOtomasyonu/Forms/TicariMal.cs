@@ -23,12 +23,14 @@ namespace GiderTakipOtomasyonu.Forms
         {
             Forms.TicariMalEkle form = new Forms.TicariMalEkle();
             form.ShowDialog();
+            refreshdatagridview();
         }
 
         private void buttonduzenle_Click(object sender, EventArgs e)
         {
             Forms.TicariMalDüzenle form = new Forms.TicariMalDüzenle();            
             form.ShowDialog();
+            refreshdatagridview();
         }
 
         private void buttonsil_Click(object sender, EventArgs e)
@@ -38,9 +40,9 @@ namespace GiderTakipOtomasyonu.Forms
             form.urunAdi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
             form.stokSayisi = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString());
             form.fiyat = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString());
-
             form.ShowDialog();
-            
+            refreshdatagridview();
+
         }
 
         private void TicariMal_Load(object sender, EventArgs e)
