@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,32 +66,41 @@ namespace GiderTakipOtomasyonu
 
         public bool sendPasswordResetMail()
         {
-            string DogrulamaKodu = randomPasswordResetKeyCreate();
-            Mail mail = new Mail("gtpproje@hotmail.com", "1.Gtoproje");
-            MailMessage mailMessage = new MailMessage();
-            mailMessage = mail.BodyAdd("Bu mail Gider Takip Otomasyon Şifrenizi Sıfırlamak İçin Gönderilmiştir\n" +
-                "Eğer bu isteği siz yapmadıysanız herhangi bir işlem yapmanıza gerek yoktur\n\n" +
-                "Doğrulama Kodunuz : " + DogrulamaKodu + "\n Doğrulama kodunu başkasıyla lütfen paylaşmayın", mailMessage);
-            mailMessage = mail.SubjectAdd("Şifre Sıfırlama Doğrulama Kodunuz", mailMessage);
-            try
+            KullaniciDbContext kullaniciDbContext = new KullaniciDbContext();
+            var kullanicilar = kullaniciDbContext.Kullanicilar.ToList();
+            for (int i = 0; i < kullanicilar.Count; i++)
             {
-                mailMessage = mail.RecipientAdd(textBox1.Text, mailMessage);
-                try
+                if (kullanicilar[i].mail == textBox1.Text)
                 {
-                    mail.sendMail(mailMessage);
-                    return true;
-                }
-                catch (Exception)
-                {
+                    string DogrulamaKodu = randomPasswordResetKeyCreate();
+                    Mail mail = new Mail("gtpproje@hotmail.com", "1.Gtoproje");
+                    MailMessage mailMessage = new MailMessage();
+                    mailMessage = mail.BodyAdd("Bu mail Gider Takip Otomasyon Şifrenizi Sıfırlamak İçin Gönderilmiştir\n" +
+                        "Eğer bu isteği siz yapmadıysanız herhangi bir işlem yapmanıza gerek yoktur\n\n" +
+                        "Doğrulama Kodunuz : " + DogrulamaKodu + "\n Doğrulama kodunu başkasıyla lütfen paylaşmayın", mailMessage);
+                    mailMessage = mail.SubjectAdd("Şifre Sıfırlama Doğrulama Kodunuz", mailMessage);
+                    try
+                    {
+                        mailMessage = mail.RecipientAdd(textBox1.Text, mailMessage);
+                        try
+                        {
+                            mail.sendMail(mailMessage);
+                            return true;
+                        }
+                        catch (Exception)
+                        {
 
-                    return false;
+                            return false;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Mail Adresi Geçersiz");
+                        return false;
+                    }
                 }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Mail Adresi Geçersiz");
-                return false;
-            }            
+            return false;
         }
 
 
