@@ -26,6 +26,7 @@ namespace GiderTakipOtomasyonu
 
         private string randomPasswordResetKey = "";
         private bool SendingOrChecking = true;
+        Forms.SifreGüncelle sifre = new Forms.SifreGüncelle();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,6 +34,7 @@ namespace GiderTakipOtomasyonu
             {
                 if (sendPasswordResetMail())
                 {
+                    sifre.mail = textBox1.Text;
                     label1.Text = "Doğrulama Kodu";
                     button1.Text = "Doğrula";
                     textBox1.Text = "";
@@ -47,9 +49,7 @@ namespace GiderTakipOtomasyonu
             {
                 if (textBox1.Text == randomPasswordResetKey)
                 {
-                    SendingOrChecking = true;
-                    Forms.SifreGüncelle sifre = new Forms.SifreGüncelle();
-                    sifre.mail = textBox1.Text;
+                    SendingOrChecking = true;                                     
                     sifre.ShowDialog();
                     this.Close();
                     

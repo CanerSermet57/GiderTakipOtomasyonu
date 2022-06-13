@@ -42,6 +42,7 @@ namespace GiderTakipOtomasyonu.Forms
                             sifre = textBox1.Text,
                             id = kullanicilar[i].id
                         };
+                        kullaniciDbContext = new KullaniciDbContext();
                         kullaniciDbContext.Update(Kullanici);
                         int result = kullaniciDbContext.SaveChanges();
                         if (result > 0)
@@ -51,6 +52,7 @@ namespace GiderTakipOtomasyonu.Forms
                     }
                 }
             }            
+
         }
     }
 }
