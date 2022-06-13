@@ -14,6 +14,7 @@ namespace GiderTakipOtomasyonu.Forms
     public partial class TicariMalEkle : Form
     {
         gtoDbContext dbContext = new gtoDbContext();
+
         public TicariMalEkle()
         {
             InitializeComponent();

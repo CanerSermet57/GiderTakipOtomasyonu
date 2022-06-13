@@ -28,7 +28,11 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void buttonduzenle_Click(object sender, EventArgs e)
         {
-            Forms.TicariMalDüzenle form = new Forms.TicariMalDüzenle();            
+            Forms.TicariMalDüzenle form = new Forms.TicariMalDüzenle();
+            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            form.urunAdi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            form.stokSayisi = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            form.fiyat = float.Parse(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString());
             form.ShowDialog();
             refreshdatagridview();
         }

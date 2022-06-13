@@ -155,6 +155,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAdi);
             this.Name = "TicariMalDüzenle";
             this.Text = "TicariMalDüzenle";
+            this.Load += new System.EventHandler(this.TicariMalDüzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStokSayisi)).EndInit();
             this.ResumeLayout(false);
