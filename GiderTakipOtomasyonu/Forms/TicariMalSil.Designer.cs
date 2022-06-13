@@ -158,6 +158,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.Controls.Add(this.textBoxAdi);
             this.Name = "TicariMalSil";
             this.Text = "TicariMalSil";
+            this.Load += new System.EventHandler(this.TicariMalSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStokSayisi)).EndInit();
             this.ResumeLayout(false);
