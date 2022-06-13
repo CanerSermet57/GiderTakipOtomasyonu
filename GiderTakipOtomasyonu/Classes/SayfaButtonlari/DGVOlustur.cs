@@ -23,7 +23,7 @@ namespace GiderTakipOtomasyonu
             DGV.AllowUserToOrderColumns = true;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
             DGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             DGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ActiveCaption;

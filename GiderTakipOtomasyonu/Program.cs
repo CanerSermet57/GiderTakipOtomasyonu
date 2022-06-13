@@ -24,9 +24,9 @@ namespace GiderTakipOtomasyonu
             //gtoDb.Database.EnsureDeleted();
             //gtoDb.Database.EnsureCreated();
             //kullaniciDbContext.Database.EnsureDeleted();
-            //kullaniciDbContext.Database.EnsureCreated();
+            kullaniciDbContext.Database.EnsureCreated();
 
-            Application.Run(new Forms.TicariMal());
+            Application.Run(new Forms.Giris());
         }
     }
 }

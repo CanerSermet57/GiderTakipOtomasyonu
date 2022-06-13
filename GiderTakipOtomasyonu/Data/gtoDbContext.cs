@@ -9,6 +9,7 @@ namespace GiderTakipOtomasyonu.Data
 {
     public class gtoDbContext : DbContext
     {
+        public static string staticdbname = "";
         public DbSet<KisiDbClass> Kisiler { get; set; }
         public DbSet<CuzdanDbClass> Cuzdanlar { get; set; }
         public DbSet<KategoriDbClass> Kategoriler { get; set; }
@@ -25,7 +26,7 @@ namespace GiderTakipOtomasyonu.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.; Database=GTODB; Integrated Security=yes");
+            optionsBuilder.UseSqlServer(@"Data Source=.; Database="+"GTODB"+ staticdbname + "; Integrated Security=yes");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -351,6 +352,12 @@ namespace GiderTakipOtomasyonu.Data
                                                   .OnDelete(DeleteBehavior.NoAction);
 
             //******************** AyarlarDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            //******************** TicaAyarlarDbClassriMallarDbClass Tablo Test Verisi Ekleme İşlemleri ********************
+
+            modelBuilder.Entity<AyarlarDbClass>().HasData(new AyarlarDbClass { id = 1 });
+            
+            //******************** AyarlarDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }
 
     }

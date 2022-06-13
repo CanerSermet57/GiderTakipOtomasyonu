@@ -40,10 +40,18 @@ namespace GiderTakipOtomasyonu.Forms
                     Forms.InfrastructureForm form = new InfrastructureForm();
                     this.Hide();
                     form.FormClosed += formclosed;
+                    db((kullanicilar[i].id).ToString());
                     form.Show();
                     return;
                 }                
             }            
+        }
+
+        public void db(string dbname)
+        {
+            gtoDbContext gtoDb = new gtoDbContext();
+            gtoDbContext.staticdbname = dbname;
+            gtoDb.Database.EnsureCreated();
         }
 
         public void formclosed(object sender, EventArgs e)
