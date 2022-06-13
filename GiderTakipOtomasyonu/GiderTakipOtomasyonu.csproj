@@ -337,6 +337,12 @@
     <Compile Include="Forms\PersonelSil.Designer.cs">
       <DependentUpon>PersonelSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SifreGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SifreGüncelle.Designer.cs">
+      <DependentUpon>SifreGüncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TicariMal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +455,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelSil.resx">
       <DependentUpon>PersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SifreGüncelle.resx">
+      <DependentUpon>SifreGüncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TicariMal.resx">
       <DependentUpon>TicariMal.cs</DependentUpon>

@@ -24,6 +24,7 @@ namespace GiderTakipOtomasyonu.Forms
         {            
             var yenihammadde = new HammaddeDbClass()
             {
+                
                 adi = textBoxAdi.Text,
                 agirlik = float.Parse(numericUpDownAgirlik.Text),
                 fiyat = float.Parse(numericUpDownFiyat.Text),

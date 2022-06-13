@@ -63,7 +63,7 @@ namespace GiderTakipOtomasyonu
         public bool sendPasswordResetMail()
         {
             string DogrulamaKodu = randomPasswordResetKeyCreate();
-            Mail mail = new Mail("", "");
+            Mail mail = new Mail("gtpproje@hotmail.com", "1.Gtoproje");
             MailMessage mailMessage = new MailMessage();
             mailMessage = mail.BodyAdd("Bu mail Gider Takip Otomasyon Şifrenizi Sıfırlamak İçin Gönderilmiştir\n" +
                 "Eğer bu isteği siz yapmadıysanız herhangi bir işlem yapmanıza gerek yoktur\n\n" +

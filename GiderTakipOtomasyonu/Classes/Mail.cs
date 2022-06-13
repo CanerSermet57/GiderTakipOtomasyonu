@@ -50,7 +50,7 @@ namespace GiderTakipOtomasyonu
         public void sendMail(MailMessage mail)
         {
             mail.From = new MailAddress(senderMail);
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            SmtpClient smtp = new SmtpClient("smtp.office365.com", 587);
             smtp.Credentials = new NetworkCredential(senderMail, senderPassword);
             smtp.EnableSsl = true;
             smtp.SendAsync(mail, (object)mail);
