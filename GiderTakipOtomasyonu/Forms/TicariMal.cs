@@ -16,5 +16,24 @@ namespace GiderTakipOtomasyonu.Forms
         {
             InitializeComponent();
         }
+
+        private void buttonekle_Click(object sender, EventArgs e)
+        {
+            Forms.TicariMalEkle form = new Forms.TicariMalEkle();
+            form.ShowDialog();
+        }
+
+        private void buttonduzenle_Click(object sender, EventArgs e)
+        {
+            Forms.TicariMalDüzenle form = new Forms.TicariMalDüzenle();            
+            form.ShowDialog();
+        }
+
+        private void buttonsil_Click(object sender, EventArgs e)
+        {
+            Forms.TicariMalSil form = new Forms.TicariMalSil();
+            form.ShowDialog();
+            
+        }
     }
 }

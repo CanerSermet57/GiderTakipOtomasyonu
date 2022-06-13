@@ -343,6 +343,24 @@
     <Compile Include="Forms\TicariMal.Designer.cs">
       <DependentUpon>TicariMal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TicariMalDüzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TicariMalDüzenle.Designer.cs">
+      <DependentUpon>TicariMalDüzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TicariMalEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TicariMalEkle.Designer.cs">
+      <DependentUpon>TicariMalEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TicariMalSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TicariMalSil.Designer.cs">
+      <DependentUpon>TicariMalSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="KayitOl.cs">
       <SubType>Form</SubType>
     </Compile>
