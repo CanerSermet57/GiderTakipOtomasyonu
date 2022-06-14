@@ -100,7 +100,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateFiyatlarPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Fiyatlar fiyatlar = new SayfaButtonlari.Fiyatlar(panelRight);
         }
         public void CreateKarZararPage(object sender, EventArgs e)
         {
