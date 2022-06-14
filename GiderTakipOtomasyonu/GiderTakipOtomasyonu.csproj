@@ -219,6 +219,12 @@
     <Compile Include="Forms\Cüzdan.Designer.cs">
       <DependentUpon>Cüzdan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\exchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\exchange.Designer.cs">
+      <DependentUpon>exchange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GelirDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cüzdan.resx">
       <DependentUpon>Cüzdan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\exchange.resx">
+      <DependentUpon>exchange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GelirDuzenle.resx">
       <DependentUpon>GelirDuzenle.cs</DependentUpon>
