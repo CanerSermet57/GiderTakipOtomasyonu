@@ -38,6 +38,7 @@ namespace GiderTakipOtomasyonu.Forms
                 panelLeft.Controls.Add(PageDesign.buttonLeftPanelList[i]);
             }
             ButtonClickAssignment();
+            SayfaButtonlari.Durum durum = new SayfaButtonlari.Durum(panelRight);
         }
     
         public void formInfrastructureStartCodes()
@@ -106,7 +107,7 @@ namespace GiderTakipOtomasyonu.Forms
 
         public void CreateDurumPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Durum durum = new SayfaButtonlari.Durum(panelRight);
         }
         public void CreateCuzdanPage(object sender, EventArgs e)
         {
@@ -130,7 +131,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateTakvimPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            MessageBox.Show("Takvim Yapım Aşamasındadır");
         }
         public void CreatePersonelPage(object sender, EventArgs e)
         {
@@ -142,7 +143,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateKarZararPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            MessageBox.Show("Kar-Zarar Yapım Aşamasındadır");
         }
         public void CreateUrunlerPage(object sender, EventArgs e)
         {

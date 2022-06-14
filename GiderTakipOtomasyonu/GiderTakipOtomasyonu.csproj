@@ -194,6 +194,7 @@
     <Compile Include="Classes\SayfaButtonlari\Ayarlar.cs" />
     <Compile Include="Classes\SayfaButtonlari\Banka.cs" />
     <Compile Include="Classes\SayfaButtonlari\DGVOlustur.cs" />
+    <Compile Include="Classes\SayfaButtonlari\Durum.cs" />
     <Compile Include="Classes\SayfaButtonlari\Fiyatlar.cs" />
     <Compile Include="Classes\SayfaButtonlari\Gelir.cs" />
     <Compile Include="Classes\SayfaButtonlari\Gider.cs" />
