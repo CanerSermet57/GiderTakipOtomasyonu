@@ -26,7 +26,7 @@ namespace GiderTakipOtomasyonu
             //kullaniciDbContext.Database.EnsureDeleted();
             kullaniciDbContext.Database.EnsureCreated();
 
-            Application.Run(new Kisiler());
+            Application.Run(new Forms.InfrastructureForm());
         }
     }
 }
