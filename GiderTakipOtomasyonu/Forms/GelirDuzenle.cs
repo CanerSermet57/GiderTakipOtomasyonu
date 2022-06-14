@@ -98,7 +98,7 @@ namespace GiderTakipOtomasyonu.Forms
             else
             {
                 aciklamaKontrol = false;
-                MessageBox.Show("Açıklama kısmının lütfen en az 6 karakter olmasına ve bir harfle başlamasına dikkat edin");
+                MessageBox.Show("Açıklama kısmının lütfen en az 3 karakter olmasına ve bir harfle başlamasına dikkat edin");
                 return;
             }
 
@@ -110,7 +110,7 @@ namespace GiderTakipOtomasyonu.Forms
             else
             {
                 kimdenKontrol = false;
-                MessageBox.Show("Kimden kısmının lütfen en az 6 karakter olmasına ve bir harfle başlamasına dikkat edin");
+                MessageBox.Show("Kimden kısmının lütfen en az 3 karakter olmasına ve bir harfle başlamasına dikkat edin");
                 return;
             }
 

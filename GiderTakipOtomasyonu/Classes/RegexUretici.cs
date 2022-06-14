@@ -27,7 +27,7 @@ namespace GiderTakipOtomasyonu.Classes
 
 
         //Düzenle kısımları için
-        public Regex regexDuzenle = new Regex(@"^{1,30}$");
+        public Regex regexDuzenle = new Regex(@"^[A-Za-z][A-Za-z0-9_]{2,29}$");
 
     }
 }
