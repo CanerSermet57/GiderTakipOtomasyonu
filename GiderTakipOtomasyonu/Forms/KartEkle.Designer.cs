@@ -38,9 +38,9 @@ namespace GiderTakipOtomasyonu.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxKartAdi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxCvcKodu = new System.Windows.Forms.TextBox();
+            this.textBoxTarih = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIslemSiniri)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +84,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.button1.TabIndex = 73;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -134,14 +135,6 @@ namespace GiderTakipOtomasyonu.Forms
             this.label5.TabIndex = 83;
             this.label5.Text = "Tarih:";
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(123, 157);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(286, 29);
-            this.dateTimePicker2.TabIndex = 82;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -160,15 +153,23 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxCvcKodu.Size = new System.Drawing.Size(286, 32);
             this.textBoxCvcKodu.TabIndex = 84;
             // 
+            // textBoxTarih
+            // 
+            this.textBoxTarih.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBoxTarih.Location = new System.Drawing.Point(123, 154);
+            this.textBoxTarih.Name = "textBoxTarih";
+            this.textBoxTarih.Size = new System.Drawing.Size(286, 32);
+            this.textBoxTarih.TabIndex = 86;
+            // 
             // KartEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 364);
+            this.Controls.Add(this.textBoxTarih);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxCvcKodu);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxKartNo);
             this.Controls.Add(this.numericUpDownIslemSiniri);
@@ -195,8 +196,8 @@ namespace GiderTakipOtomasyonu.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxKartAdi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxCvcKodu;
+        private System.Windows.Forms.TextBox textBoxTarih;
     }
 }

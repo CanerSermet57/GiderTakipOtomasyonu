@@ -36,5 +36,12 @@ namespace GiderTakipOtomasyonu.Forms
 
 
         }
+
+        private void buttonekle_Click(object sender, EventArgs e)
+        {
+            Forms.KartEkle form = new Forms.KartEkle();
+            form.ShowDialog();
+            refreshdatagridview();
+        }
     }
 }
