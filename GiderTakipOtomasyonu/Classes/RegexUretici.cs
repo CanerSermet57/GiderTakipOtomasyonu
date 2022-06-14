@@ -37,5 +37,8 @@ namespace GiderTakipOtomasyonu.Classes
         //kişi kısımları için
         public Regex regexAdi = new Regex(@"^[A-Za-z0-9_]{1,30}$");
 
+
+        //personel için
+        public Regex regexBosKontrol = new Regex(@"^[A-Za-z0-9_]{1,30}$");
     }
 }
