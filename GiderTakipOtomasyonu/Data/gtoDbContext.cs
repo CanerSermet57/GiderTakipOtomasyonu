@@ -21,7 +21,6 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<GelirlerDbClass> Gelirler { get; set; }
         public DbSet<PersonelDbClass> Personeller { get; set; }
         public DbSet<KullaniciDetayDbClass> KullaniciDetay { get; set; }
-        public DbSet<KullaniciDbClass> KullaniciDB { get; set; }
         public DbSet<AyarlarDbClass> Ayarlar { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

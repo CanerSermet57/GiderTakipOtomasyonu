@@ -41,7 +41,7 @@ namespace GiderTakipOtomasyonu.Forms
             };
             dbContext.TicariMallar.Remove(silTicariMal);
             int result = dbContext.SaveChanges();
-            string message = result > 0 ? "Tiacari Mal Silindi" : "Başarısız";
+            string message = result > 0 ? "Ticari Mal Silindi" : "Başarısız";
             MessageBox.Show(message);
         }
     }
