@@ -38,6 +38,7 @@ namespace GiderTakipOtomasyonu.Data
 
             modelBuilder.Entity<KullaniciDbClass>().HasData(new KullaniciDbClass { id = 1, adi = "admin", mail = "admin@gmail.com", sifre = "admin" });
             modelBuilder.Entity<KullaniciDbClass>().HasData(new KullaniciDbClass { id = 2, adi = "test", mail = "test@gmail.com", sifre = "test" });
+            modelBuilder.Entity<KullaniciDbClass>().HasData(new KullaniciDbClass { id = 3, adi = "caner", mail = "canersermet@gmail.com", sifre = "caner" });
 
             //******************** KisiDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
         }

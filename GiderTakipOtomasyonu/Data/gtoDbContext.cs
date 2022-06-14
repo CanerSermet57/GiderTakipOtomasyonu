@@ -13,6 +13,7 @@ namespace GiderTakipOtomasyonu.Data
         public DbSet<KisiDbClass> Kisiler { get; set; }
         public DbSet<CuzdanDbClass> Cuzdanlar { get; set; }
         public DbSet<KategoriDbClass> Kategoriler { get; set; }
+        public DbSet<KartlarımDbClass> Kartlarım { get; set; }
         public DbSet<OdemeTuruDbClass> ÖdemeTürleri { get; set; }
         public DbSet<HammaddeDbClass> Hammaddeler { get; set; }
         public DbSet<TemaDbClass> Temalar { get; set; }
@@ -333,6 +334,7 @@ namespace GiderTakipOtomasyonu.Data
 
             modelBuilder.Entity<KullaniciDetayDbClass>().HasData(new KullaniciDetayDbClass { id = 1, adi = "admin", vergiDairesi = "admin VD", vergiDairesiNo = "adminvdNo" });
             modelBuilder.Entity<KullaniciDetayDbClass>().HasData(new KullaniciDetayDbClass { id = 2, adi = "test", vergiDairesi = "test VD", vergiDairesiNo = "testvdno" });
+            modelBuilder.Entity<KullaniciDetayDbClass>().HasData(new KullaniciDetayDbClass { id = 3, adi = "caner", vergiDairesi = "caner VD", vergiDairesiNo = "000000" });
 
             //******************** KullaniciDetayDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
 
@@ -355,8 +357,35 @@ namespace GiderTakipOtomasyonu.Data
             //******************** TicaAyarlarDbClassriMallarDbClass Tablo Test Verisi Ekleme İşlemleri ********************
 
             modelBuilder.Entity<AyarlarDbClass>().HasData(new AyarlarDbClass { id = 1 });
-            
+
             //******************** AyarlarDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
+
+            //******************** KartlarımDbClass Tablo Oluşturma İşlemleri ********************
+
+            modelBuilder.Entity<KartlarımDbClass>().Property(x => x.kartAdı)
+                                              .HasColumnName("Kart Adı")
+                                              .IsRequired()
+                                              .HasMaxLength(30);
+            modelBuilder.Entity<KartlarımDbClass>().Property(x => x.kartNo)
+                                              .HasColumnName("Kart Numarası")
+                                              .IsRequired();                                              
+            modelBuilder.Entity<KartlarımDbClass>().Property(x => x.sonKullanmaTarihi)
+                                              .HasColumnName("Kartın Son Kullanma Tarihi")
+                                              .IsRequired()
+                                              .HasMaxLength(5);
+            modelBuilder.Entity<KartlarımDbClass>().Property(x => x.CVCKodu)
+                                              .HasColumnName("Kart CVC")
+                                              .IsRequired()
+                                              .HasMaxLength(3);
+            modelBuilder.Entity<KartlarımDbClass>().Property(x => x.islemSınırı)
+                                              .HasColumnName("islem Sınırı")
+                                              .IsRequired();
+                                              
+
+
+            //******************** KartlarımDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+
+            
         }
 
     }
