@@ -9,7 +9,7 @@ namespace GiderTakipOtomasyonu
     public class KartlarımDbClass
     {
         public int id { get; set; }
-        public string kartAdı { get; set; }
+        public string kartAdi { get; set; }
         public string kartNo { get; set; }
         public string sonKullanmaTarihi { get; set; }
         public string CVCKodu { get; set; }

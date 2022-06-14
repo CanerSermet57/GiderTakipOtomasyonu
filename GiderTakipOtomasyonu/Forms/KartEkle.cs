@@ -24,7 +24,7 @@ namespace GiderTakipOtomasyonu.Forms
         {
             KartlarımDbClass kartlarım = new KartlarımDbClass()
             {
-                kartAdı = textBoxKartAdi.Text,
+                kartAdi = textBoxKartAdi.Text,
                 kartNo = textBoxKartNo.Text,
                 sonKullanmaTarihi = textBoxTarih.Text,
                 CVCKodu = textBoxCvcKodu.Text,
