@@ -69,18 +69,34 @@ namespace GiderTakipOtomasyonu
         static public List<string> buttonNameListCreate()
         {
             List<string> buttonNameList = new List<string>();
-            buttonNameList.Add("Durum");
-            buttonNameList.Add("Cüzdan");
-            buttonNameList.Add("Banka");
-            buttonNameList.Add("Giderler");
-            buttonNameList.Add("Gelirler");
-            buttonNameList.Add("Kişiler");
-            buttonNameList.Add("Takvim");
-            buttonNameList.Add("Personel");
-            buttonNameList.Add("Fiyatlar");
-            buttonNameList.Add("Kar-Zarar");
-            buttonNameList.Add("Ürünler");
+
+            gtoDbContext gtoDb = new gtoDbContext();
+            var ayarlar = gtoDb.Ayarlar.ToList();
+            bool result;
+            if (ayarlar[0].boolDurum)
+                buttonNameList.Add("Durum");
+            if (ayarlar[0].boolCuzdan)
+                buttonNameList.Add("Cüzdan");
+            if (ayarlar[0].boolBanka)
+                buttonNameList.Add("Banka");
+            if (ayarlar[0].boolGider)
+                buttonNameList.Add("Giderler");
+            if (ayarlar[0].boolGelir)
+                buttonNameList.Add("Gelirler");
+            if (ayarlar[0].boolKisiler)
+                buttonNameList.Add("Kişiler");
+            if (ayarlar[0].boolTakvim)
+                buttonNameList.Add("Takvim");
+            if (ayarlar[0].boolPersonel)
+                buttonNameList.Add("Personel");
+            if (ayarlar[0].boolFiyatlar)
+                buttonNameList.Add("Fiyatlar");
+            if (ayarlar[0].boolKarZarar)
+                buttonNameList.Add("Kar-Zarar");
+            if (ayarlar[0].boolHammadde)
+                buttonNameList.Add("Ürünler");
             buttonNameList.Add("Ayarlar");
+            buttonLeftNumber = buttonNameList.Count;
             return buttonNameList;
         }
 
@@ -91,7 +107,7 @@ namespace GiderTakipOtomasyonu
 
             List<string> buttonNameList = buttonNameListCreate();
             Button buttonCode;
-            for (int i = 0; i < buttonLeftNumber; i++)
+            for (int i = 0; i < buttonNameList.Count; i++)
             {
                 buttonCode = new Button();
                 
@@ -101,7 +117,7 @@ namespace GiderTakipOtomasyonu
                 buttonCode.ImageAlign = ContentAlignment.MiddleLeft;
                 buttonCode.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
                 buttonCode.Location = new Point(5, 5 + i * 48);
-                buttonCode.Name = "buttonLeft" + (i + 1).ToString();
+                buttonCode.Name = buttonNameList[i];
                 buttonCode.Size = new Size(170, 42);
                 buttonCode.TabIndex = 0;
                 buttonCode.Text = buttonNameList[i];

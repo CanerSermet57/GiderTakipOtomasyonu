@@ -52,18 +52,56 @@ namespace GiderTakipOtomasyonu.Forms
 
         public void ButtonClickAssignment()
         {
-            PageDesign.buttonLeftPanelList[0].Click += CreateDurumPage;
-            PageDesign.buttonLeftPanelList[1].Click += CreateCuzdanPage;
-            PageDesign.buttonLeftPanelList[2].Click += CreateBankaPage;
-            PageDesign.buttonLeftPanelList[3].Click += CreateGiderlerPage;
-            PageDesign.buttonLeftPanelList[4].Click += CreateGelirlerPage;
-            PageDesign.buttonLeftPanelList[5].Click += CreateKisilerPage;
-            PageDesign.buttonLeftPanelList[6].Click += CreateTakvimPage;
-            PageDesign.buttonLeftPanelList[7].Click += CreatePersonelPage;
-            PageDesign.buttonLeftPanelList[8].Click += CreateFiyatlarPage;
-            PageDesign.buttonLeftPanelList[9].Click += CreateKarZararPage;
-            PageDesign.buttonLeftPanelList[10].Click += CreateUrunlerPage;
-            PageDesign.buttonLeftPanelList[11].Click += CreateAyarlarPage;
+            for (int i = 0; i < PageDesign.buttonLeftPanelList.Count; i++)
+            {
+                switch (PageDesign.buttonLeftPanelList[i].Name)
+                {
+                    case "Durum":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateDurumPage;
+                        break;
+
+                    case "Cüzdan":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateCuzdanPage;
+                        break;
+
+                    case "Banka":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateBankaPage;
+                        break;
+
+                    case "Giderler":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateGiderlerPage;
+                        break;
+
+                    case "Gelirler":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateGelirlerPage;
+                        break;
+
+                    case "Kişiler":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateKisilerPage;
+                        break;
+
+                    case "Takvim":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateTakvimPage;
+                        break;
+
+                    case "Personel":
+                        PageDesign.buttonLeftPanelList[i].Click += CreatePersonelPage;
+                        break;
+
+                    case "Fiyatlar":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateFiyatlarPage;
+                        break;
+
+                    case "Kar-Zarar":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateKarZararPage;
+                        break;
+
+                    case "Ürünler":
+                        PageDesign.buttonLeftPanelList[i].Click += CreateUrunlerPage;
+                        break;
+                }
+            }            
+            PageDesign.buttonLeftPanelList[PageDesign.buttonLeftPanelList.Count-1].Click += CreateAyarlarPage;
         }
 
         public void CreateDurumPage(object sender, EventArgs e)
