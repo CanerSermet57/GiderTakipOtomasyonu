@@ -29,5 +29,10 @@ namespace GiderTakipOtomasyonu.Classes
         //Gelir kısımları için
         public Regex regexDuzenle = new Regex(@"^[A-Za-z][A-Za-z0-9_]{2,29}$");
 
+
+        //kart kısımları için
+        public Regex regexKartNo = new Regex(@"^[A-Za-z0-9_]{16,16}$");
+        public Regex regexCvc = new Regex(@"^[A-Za-z0-9_]{3,3}$");
+
     }
 }

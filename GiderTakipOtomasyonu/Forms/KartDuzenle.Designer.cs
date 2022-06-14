@@ -69,6 +69,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxCvcKodu.Name = "textBoxCvcKodu";
             this.textBoxCvcKodu.Size = new System.Drawing.Size(286, 32);
             this.textBoxCvcKodu.TabIndex = 96;
+            this.textBoxCvcKodu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCvcKodu_KeyPress);
             // 
             // label5
             // 
@@ -97,6 +98,7 @@ namespace GiderTakipOtomasyonu.Forms
             this.textBoxKartNo.Name = "textBoxKartNo";
             this.textBoxKartNo.Size = new System.Drawing.Size(286, 32);
             this.textBoxKartNo.TabIndex = 93;
+            this.textBoxKartNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKartNo_KeyPress);
             // 
             // numericUpDownIslemSiniri
             // 
