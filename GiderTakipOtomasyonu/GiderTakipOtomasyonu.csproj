@@ -333,6 +333,12 @@
     <Compile Include="Forms\Kartlarım.Designer.cs">
       <DependentUpon>Kartlarım.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KartSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KartSil.Designer.cs">
+      <DependentUpon>KartSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KisiDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +496,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kartlarım.resx">
       <DependentUpon>Kartlarım.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KartSil.resx">
+      <DependentUpon>KartSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiDuzenle.resx">
       <DependentUpon>KisiDuzenle.cs</DependentUpon>

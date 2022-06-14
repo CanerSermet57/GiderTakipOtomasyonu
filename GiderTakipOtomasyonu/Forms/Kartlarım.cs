@@ -56,5 +56,18 @@ namespace GiderTakipOtomasyonu.Forms
             form.ShowDialog();
             refreshdatagridview();
         }
+
+        private void buttonsil_Click(object sender, EventArgs e)
+        {
+            Forms.KartSil form = new Forms.KartSil();
+            form.id = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            form.kartAdi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            form.kartNo = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            form.sonKullanmaTarihi = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            form.cvcKodu = DGV.Rows[DGV.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            form.islemSiniri = Convert.ToInt32(DGV.Rows[DGV.CurrentCell.RowIndex].Cells[5].Value.ToString());
+            form.ShowDialog();
+            refreshdatagridview();
+        }
     }
 }
