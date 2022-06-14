@@ -22,6 +22,15 @@ namespace GiderTakipOtomasyonu.Forms
         public float tutar;
         public int odemeTuruId, kategoriId, id;
 
+
+        //regex kontrol için değişkenler
+        public bool aciklamaKontrol = true;
+        public bool kimdenKontrol = true;
+        public bool tutarKontrol = true;
+        public bool odemeTuruIdKontrol = true;
+        public bool kategoriIdKontrol = true;
+        
+
         private void GelirDuzenle_Load(object sender, EventArgs e)
         {
             textBoxAciklama.Text = aciklama;
@@ -39,42 +48,108 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            regex();
 
-            if (kontrol.regexDuzenle.IsMatch(textBoxAciklama.Text))
+
+            if (aciklamaKontrol == true && kimdenKontrol == true && tutarKontrol == true && odemeTuruIdKontrol == true && kategoriIdKontrol == true )
             {
 
+                GelirlerDbClass gelir = new GelirlerDbClass()
+                {
+                    id = this.id,
+                    aciklamasi = textBoxAciklama.Text,
+                    kimden = textBoxKime.Text,
+                    tutar = float.Parse(numericUpDownTutar.Value.ToString()),
+                    tarih = dateTimePicker1.Value,
+                    odemeTuruId = Convert.ToInt32(numericUpDownOdemeTuru.Value.ToString()),
+                    kategoriId = Convert.ToInt32(numericUpDownKategori.Value.ToString())
+
+
+                };
+
+
+
+                dbContext.Gelirler.Update(gelir);
+
+                int resultKullaniciDb = dbContext.SaveChanges();
+
+
+                if (resultKullaniciDb > 0)
+                {
+                    MessageBox.Show("Gider Düzenleme başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Gider Düzenleme başarısız");
+                }
             }
 
 
-            GelirlerDbClass gelir = new GelirlerDbClass()
+            
+        }
+
+        public void regex()
+        {
+            //aciklama uygunluğu kontrol
+            if (kontrol.regexDuzenle.IsMatch(textBoxAciklama.Text))
             {
-                id = this.id,
-                aciklamasi = textBoxAciklama.Text,
-                kimden = textBoxKime.Text,
-                tutar = float.Parse(numericUpDownTutar.Value.ToString()),
-                tarih = dateTimePicker1.Value,
-                odemeTuruId = Convert.ToInt32(numericUpDownOdemeTuru.Value.ToString()),
-                kategoriId = Convert.ToInt32(numericUpDownKategori.Value.ToString())
-                
-
-            };
-
-
-
-            dbContext.Gelirler.Update(gelir);
-
-            int resultKullaniciDb = dbContext.SaveChanges();
-
-
-            if (resultKullaniciDb > 0)
-            {
-                MessageBox.Show("Gider Düzenleme başarılı");
+                aciklamaKontrol = true;
             }
             else
             {
-                MessageBox.Show("Gider Düzenleme başarısız");
+                aciklamaKontrol = false;
+                MessageBox.Show("Açıklama kısmının lütfen en az 6 karakter olmasına ve bir harfle başlamasına dikkat edin");
+                return;
             }
+
+            //kimden kısmı kontrol
+            if (kontrol.regexDuzenle.IsMatch(textBoxKime.Text))
+            {
+                kimdenKontrol = true;
+            }
+            else
+            {
+                kimdenKontrol = false;
+                MessageBox.Show("Kimden kısmının lütfen en az 6 karakter olmasına ve bir harfle başlamasına dikkat edin");
+                return;
+            }
+
+            //tutar kısmı kontrol
+            if (numericUpDownTutar.Value>0)
+            {
+                tutarKontrol = true;
+            }
+            else
+            {
+                tutarKontrol = false;
+                MessageBox.Show("Tutar kısmı 1 den küçük olamaz");
+                return;
+            }
+
+            //odeme turu id kontrol
+            if (numericUpDownOdemeTuru.Value > 0 || numericUpDownOdemeTuru.Value < 50)
+            {
+                odemeTuruIdKontrol = true;
+            }
+            else
+            {
+                odemeTuruIdKontrol = false;
+                MessageBox.Show("Odeme turu id kısmı 50 den büyük ya da 1 den küçük olamaz");
+                return;
+            }
+
+            //kategori id kontroll
+            if (numericUpDownKategori.Value > 0 || numericUpDownKategori.Value < 50)
+            {
+                kategoriIdKontrol = true;
+            }
+            else
+            {
+                kategoriIdKontrol = false;
+                MessageBox.Show("Kategori id kısmı 50 den büyük ya da 1 den küçük olamaz");
+                return;
+            }
+
         }
     }
 }

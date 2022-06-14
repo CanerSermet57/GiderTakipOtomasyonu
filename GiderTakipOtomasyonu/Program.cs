@@ -22,7 +22,7 @@ namespace GiderTakipOtomasyonu
             gtoDbContext gtoDb = new gtoDbContext();
             KullaniciDbContext kullaniciDbContext = new KullaniciDbContext();
             //gtoDb.Database.EnsureDeleted();
-            //gtoDb.Database.EnsureCreated();
+            gtoDb.Database.EnsureCreated();
             //kullaniciDbContext.Database.EnsureDeleted();
             kullaniciDbContext.Database.EnsureCreated();
 
