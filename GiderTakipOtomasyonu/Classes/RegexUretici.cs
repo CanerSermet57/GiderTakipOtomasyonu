@@ -34,5 +34,8 @@ namespace GiderTakipOtomasyonu.Classes
         public Regex regexKartNo = new Regex(@"^[A-Za-z0-9_]{16,16}$");
         public Regex regexCvc = new Regex(@"^[A-Za-z0-9_]{3,3}$");
 
+        //kişi kısımları için
+        public Regex regexAdi = new Regex(@"^[A-Za-z0-9_]{1,30}$");
+
     }
 }

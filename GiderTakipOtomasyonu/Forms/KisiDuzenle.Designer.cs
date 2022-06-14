@@ -181,6 +181,7 @@
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(286, 32);
             this.textBoxTelefon.TabIndex = 5;
+            this.textBoxTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefon_KeyPress);
             // 
             // textBoxFaks
             // 
@@ -189,6 +190,7 @@
             this.textBoxFaks.Name = "textBoxFaks";
             this.textBoxFaks.Size = new System.Drawing.Size(286, 32);
             this.textBoxFaks.TabIndex = 6;
+            this.textBoxFaks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFaks_KeyPress);
             // 
             // textBoxAdres
             // 
