@@ -380,12 +380,13 @@ namespace GiderTakipOtomasyonu.Data
             modelBuilder.Entity<KartlarımDbClass>().Property(x => x.islemSınırı)
                                               .HasColumnName("islem Sınırı")
                                               .IsRequired();
-                                              
+
 
 
             //******************** KartlarımDbClass Tablo Oluşturma İşlemleri Bitişi ********************
+            modelBuilder.Entity<KartlarımDbClass>().HasData(new KartlarımDbClass { id =1,kartAdı="Ziraat Bankkart",kartNo="1234567891231234",sonKullanmaTarihi="06/28",islemSınırı=1000,CVCKodu="123"});
 
-            
+
         }
 
     }
