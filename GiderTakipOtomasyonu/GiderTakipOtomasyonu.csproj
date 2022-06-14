@@ -219,6 +219,12 @@
     <Compile Include="Forms\Cüzdan.Designer.cs">
       <DependentUpon>Cüzdan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Durum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Durum.Designer.cs">
+      <DependentUpon>Durum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\exchange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cüzdan.resx">
       <DependentUpon>Cüzdan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Durum.resx">
+      <DependentUpon>Durum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\exchange.resx">
       <DependentUpon>exchange.cs</DependentUpon>
