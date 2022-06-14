@@ -192,6 +192,7 @@
     <Compile Include="Classes\PageDesign.cs" />
     <Compile Include="Classes\RegexUretici.cs" />
     <Compile Include="Classes\SayfaButtonlari\Ayarlar.cs" />
+    <Compile Include="Classes\SayfaButtonlari\Banka.cs" />
     <Compile Include="Classes\SayfaButtonlari\DGVOlustur.cs" />
     <Compile Include="Classes\SayfaButtonlari\Fiyatlar.cs" />
     <Compile Include="Classes\SayfaButtonlari\Gelir.cs" />

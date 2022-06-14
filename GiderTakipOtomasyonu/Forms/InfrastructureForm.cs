@@ -114,7 +114,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateBankaPage(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            SayfaButtonlari.Banka banka = new SayfaButtonlari.Banka(panelRight);
         }
         public void CreateGiderlerPage(object sender, EventArgs e)
         {
