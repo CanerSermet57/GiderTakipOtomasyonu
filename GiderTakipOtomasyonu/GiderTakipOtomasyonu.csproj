@@ -213,6 +213,12 @@
     <Compile Include="Forms\Ayalar.Designer.cs">
       <DependentUpon>Ayalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Cüzdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cüzdan.Designer.cs">
+      <DependentUpon>Cüzdan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GelirDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -394,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ayalar.resx">
       <DependentUpon>Ayalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cüzdan.resx">
+      <DependentUpon>Cüzdan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GelirDuzenle.resx">
       <DependentUpon>GelirDuzenle.cs</DependentUpon>
