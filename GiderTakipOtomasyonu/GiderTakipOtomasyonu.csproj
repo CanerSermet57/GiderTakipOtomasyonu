@@ -167,6 +167,7 @@
     <Compile Include="Classes\DbClasses\GelirlerDbClass.cs" />
     <Compile Include="Classes\DbClasses\GiderlerDbClass.cs" />
     <Compile Include="Classes\DbClasses\HammaddeDbClass.cs" />
+    <Compile Include="Classes\DbClasses\KartlarımDbClass.cs" />
     <Compile Include="Classes\DbClasses\KategoriDbClass.cs" />
     <Compile Include="Classes\DbClasses\KisiDbClass.cs" />
     <Compile Include="Classes\DbClasses\KullaniciDbClass.cs" />
