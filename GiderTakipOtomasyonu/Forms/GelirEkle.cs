@@ -1,4 +1,5 @@
-﻿using GiderTakipOtomasyonu.Data;
+﻿using GiderTakipOtomasyonu.Classes;
+using GiderTakipOtomasyonu.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,15 @@ namespace GiderTakipOtomasyonu.Forms
     {
         
         gtoDbContext dbContext = new gtoDbContext();
+        RegexUretici kontrol = new RegexUretici();
+
+
+        //regex kontrol için değişkenler
+        public bool aciklamaKontrol = true;
+        public bool kimdenKontrol = true;
+        public bool tutarKontrol = true;
+        public bool odemeTuruIdKontrol = true;
+        public bool kategoriIdKontrol = true;
 
         public GelirEkle()
         {
@@ -23,31 +33,93 @@ namespace GiderTakipOtomasyonu.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GelirlerDbClass gelir = new GelirlerDbClass()
+            regex();
+
+            if (kimdenKontrol == true && tutarKontrol == true && odemeTuruIdKontrol == true && kategoriIdKontrol == true)
             {
-                aciklamasi = textBoxAciklama.Text,
-                kimden = textBoxKime.Text,
-                tutar = float.Parse(numericUpDownTutar.Value.ToString()),
-                tarih = dateTimePicker1.Value,
-                odemeTuruId = Convert.ToInt32(numericUpDownOdemeTuru.Value.ToString()),
-                kategoriId = Convert.ToInt32(numericUpDownKategori.Value.ToString())
-            };
+                GelirlerDbClass gelir = new GelirlerDbClass()
+                {
+                    aciklamasi = textBoxAciklama.Text,
+                    kimden = textBoxKime.Text,
+                    tutar = float.Parse(numericUpDownTutar.Value.ToString()),
+                    tarih = dateTimePicker1.Value,
+                    odemeTuruId = Convert.ToInt32(numericUpDownOdemeTuru.Value.ToString()),
+                    kategoriId = Convert.ToInt32(numericUpDownKategori.Value.ToString())
+                };
 
 
 
-            dbContext.Gelirler.Add(gelir);
+                dbContext.Gelirler.Add(gelir);
 
-            int resultKullaniciDb = dbContext.SaveChanges();
+                int resultKullaniciDb = dbContext.SaveChanges();
 
 
-            if (resultKullaniciDb > 0)
+                if (resultKullaniciDb > 0)
+                {
+                    MessageBox.Show("Gelir ekleme başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Gelir ekleme başarısız");
+                }
+            }
+
+            
+        }
+
+        public void regex()
+        {
+
+
+            //kimden kısmı kontrol
+            if (kontrol.regexDuzenle.IsMatch(textBoxKime.Text))
             {
-                MessageBox.Show("Gelir ekleme başarılı");
+                kimdenKontrol = true;
             }
             else
             {
-                MessageBox.Show("Gelir ekleme başarısız");
+                kimdenKontrol = false;
+                MessageBox.Show("Kimden kısmının lütfen en az 3 karakter olmasına ve bir harfle başlamasına dikkat edin");
+                return;
             }
+
+            //tutar kısmı kontrol
+            if (numericUpDownTutar.Value > 0)
+            {
+                tutarKontrol = true;
+            }
+            else
+            {
+                tutarKontrol = false;
+                MessageBox.Show("Tutar kısmı 1 den küçük olamaz");
+                return;
+            }
+
+            //odeme turu id kontrol
+            if (numericUpDownOdemeTuru.Value > 0 && numericUpDownOdemeTuru.Value < 50)
+            {
+                odemeTuruIdKontrol = true;
+            }
+            else
+            {
+                odemeTuruIdKontrol = false;
+                MessageBox.Show("Odeme turu id kısmı 50 den büyük ya da 1 den küçük olamaz");
+                return;
+            }
+
+            //kategori id kontroll
+            if (numericUpDownKategori.Value > 0 && numericUpDownKategori.Value < 50)
+            {
+                kategoriIdKontrol = true;
+            }
+            else
+            {
+                kategoriIdKontrol = false;
+                MessageBox.Show("Kategori id kısmı 50 den büyük ya da 1 den küçük olamaz");
+                return;
+            }
+
         }
+
     }
 }

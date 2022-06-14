@@ -26,7 +26,7 @@ namespace GiderTakipOtomasyonu.Classes
         //gelir sayfası için
 
 
-        //Düzenle kısımları için
+        //Gelir kısımları için
         public Regex regexDuzenle = new Regex(@"^[A-Za-z][A-Za-z0-9_]{2,29}$");
 
     }

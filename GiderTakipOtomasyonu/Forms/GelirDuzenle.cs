@@ -51,7 +51,7 @@ namespace GiderTakipOtomasyonu.Forms
             regex();
 
 
-            if (aciklamaKontrol == true && kimdenKontrol == true && tutarKontrol == true && odemeTuruIdKontrol == true && kategoriIdKontrol == true )
+            if (kimdenKontrol == true && tutarKontrol == true && odemeTuruIdKontrol == true && kategoriIdKontrol == true )
             {
 
                 GelirlerDbClass gelir = new GelirlerDbClass()
@@ -90,17 +90,7 @@ namespace GiderTakipOtomasyonu.Forms
 
         public void regex()
         {
-            //aciklama uygunluğu kontrol
-            if (kontrol.regexDuzenle.IsMatch(textBoxAciklama.Text))
-            {
-                aciklamaKontrol = true;
-            }
-            else
-            {
-                aciklamaKontrol = false;
-                MessageBox.Show("Açıklama kısmının lütfen en az 3 karakter olmasına ve bir harfle başlamasına dikkat edin");
-                return;
-            }
+            
 
             //kimden kısmı kontrol
             if (kontrol.regexDuzenle.IsMatch(textBoxKime.Text))
@@ -127,7 +117,7 @@ namespace GiderTakipOtomasyonu.Forms
             }
 
             //odeme turu id kontrol
-            if (numericUpDownOdemeTuru.Value > 0 || numericUpDownOdemeTuru.Value < 50)
+            if (numericUpDownOdemeTuru.Value > 0 && numericUpDownOdemeTuru.Value < 50)
             {
                 odemeTuruIdKontrol = true;
             }
@@ -139,7 +129,7 @@ namespace GiderTakipOtomasyonu.Forms
             }
 
             //kategori id kontroll
-            if (numericUpDownKategori.Value > 0 || numericUpDownKategori.Value < 50)
+            if (numericUpDownKategori.Value > 0 && numericUpDownKategori.Value < 50)
             {
                 kategoriIdKontrol = true;
             }
