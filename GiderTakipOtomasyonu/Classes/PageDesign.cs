@@ -1,5 +1,7 @@
-﻿using System;
+﻿using GiderTakipOtomasyonu.Data;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,30 +12,57 @@ namespace GiderTakipOtomasyonu
     class PageDesign
     {
         static public List<Button> buttonLeftPanelList = new List<Button>();
+        static public List<Button> buttonRightPanelList = new List<Button>();
         static public int buttonLeftNumber = 12;
+        
+        
 
         static public Panel panelLEFTStartCodes()
         {
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+
             Panel panelLeft = new Panel();
-            panelLeft.BackColor = System.Drawing.SystemColors.HotTrack;
             panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            panelLeft.Location = new System.Drawing.Point(0, 0);
+            panelLeft.Location = new Point(0, 0);
             panelLeft.Name = "panelLeft";
-            panelLeft.Size = new System.Drawing.Size(136, 581);
+            panelLeft.Size = new Size(136, 581);
             panelLeft.TabIndex = 2;
+
+            if (tema[0].tema == "Koyu")
+            {
+                panelLeft.BackColor = SystemColors.HotTrack;
+            }
+            else if (true)
+            {
+                panelLeft.BackColor = Color.LightGreen;                
+            }
+
             return panelLeft;
+            
         }
 
         static public Panel panelRIGHTStartCodes()
-        {
-            Panel panelRight = new Panel();
-            panelRight.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+        {           
+
+            Panel panelRight = new Panel();            
             panelRight.Dock = System.Windows.Forms.DockStyle.Right;
             panelRight.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            panelRight.Location = new System.Drawing.Point(136, 0);
+            panelRight.Location = new Point(136, 0);
             panelRight.Name = "panelRight";
-            panelRight.Size = new System.Drawing.Size(1050, 581);
+            panelRight.Size = new Size(1050, 581);
             panelRight.TabIndex = 1;
+
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+            if (tema[0].tema == "Koyu")
+            {
+                panelRight.BackColor = SystemColors.ControlDarkDark;
+            }
+            else if (true)
+            {
+                panelRight.BackColor = Color.LightBlue;                
+            }
             return panelRight;
         }
 
@@ -57,25 +86,124 @@ namespace GiderTakipOtomasyonu
 
         static public void buttonLeftCrate()
         {
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+
             List<string> buttonNameList = buttonNameListCreate();
-            Button buttontemp;
+            Button buttonCode;
             for (int i = 0; i < buttonLeftNumber; i++)
             {
-                buttontemp = new Button();
-                buttontemp.BackColor = System.Drawing.SystemColors.ScrollBar;
-                buttontemp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-                buttontemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                buttontemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                buttontemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-                buttontemp.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
-                buttontemp.Location = new System.Drawing.Point(5, 5 + i * 48);
-                buttontemp.Name = "buttonLeft" + (i + 1).ToString();
-                buttontemp.Size = new System.Drawing.Size(170, 42);
-                buttontemp.TabIndex = 0;
-                buttontemp.Text = buttonNameList[i];
-                buttontemp.UseVisualStyleBackColor = false;
-                buttonLeftPanelList.Add(buttontemp);
+                buttonCode = new Button();
+                
+                buttonCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+                buttonCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                buttonCode.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                buttonCode.ImageAlign = ContentAlignment.MiddleLeft;
+                buttonCode.Image = global::GiderTakipOtomasyonu.Properties.Resources.cc301a34b3cd6eaf030f5714137f20ef_4Fk_icon;
+                buttonCode.Location = new Point(5, 5 + i * 48);
+                buttonCode.Name = "buttonLeft" + (i + 1).ToString();
+                buttonCode.Size = new Size(170, 42);
+                buttonCode.TabIndex = 0;
+                buttonCode.Text = buttonNameList[i];
+                buttonCode.UseVisualStyleBackColor = false;
+
+                if (tema[0].tema == "Koyu")
+                {
+                    buttonCode.BackColor = Color.LightGray;
+                }
+                else if (true)
+                {
+                    buttonCode.BackColor = Color.LightSeaGreen;
+                }
+
+
+                buttonLeftPanelList.Add(buttonCode);
             }
         }
+
+
+        public static Button buttonekle()
+        {
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+            Button buttonekle = new Button();
+            buttonekle.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            buttonekle.Location = new Point(100, 10);
+            buttonekle.Name = "buttonekle";
+            buttonekle.Size = new Size(200, 40);
+            buttonekle.FlatStyle = FlatStyle.Flat;
+            buttonekle.TabIndex = 0;
+            buttonekle.Text = "EKLE";
+            buttonekle.UseVisualStyleBackColor = true;
+
+            if (tema[0].tema == "Koyu")
+            {
+                buttonekle.BackColor = Color.LightGray;
+            }
+            else if (true)
+            {
+                buttonekle.BackColor = Color.LightSeaGreen;
+            }
+
+
+            return buttonekle;
+        }
+
+        public static Button buttonduzenle()
+        {
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+            Button buttonduzenle = new Button();
+            buttonduzenle.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            buttonduzenle.Location = new Point(400, 10);
+            buttonduzenle.Name = "buttonduzenle";
+            buttonduzenle.Size = new Size(200, 40);
+            buttonduzenle.FlatStyle = FlatStyle.Flat;
+            buttonduzenle.TabIndex = 0;
+            buttonduzenle.Text = "DUZENLE";
+            buttonduzenle.UseVisualStyleBackColor = true;
+
+            if (tema[0].tema == "Koyu")
+            {
+                buttonduzenle.BackColor = Color.LightGray;
+            }
+            else if (true)
+            {
+                buttonduzenle.BackColor = Color.LightSeaGreen;
+            }
+
+
+            return buttonduzenle;
+        }
+
+        public static Button buttonsil()
+        {
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+            Button buttonsil = new Button();
+            buttonsil.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            buttonsil.Location = new Point(700, 10);
+            buttonsil.Name = "buttonsil";
+            buttonsil.Size = new Size(200, 40);
+            buttonsil.TabIndex = 0;
+            buttonsil.FlatStyle = FlatStyle.Flat;
+            buttonsil.Text = "SIL";
+            buttonsil.UseVisualStyleBackColor = true;
+
+            if (tema[0].tema == "Koyu")
+            {
+                buttonsil.BackColor = Color.LightGray;
+            }
+            else if (true)
+            {
+                buttonsil.BackColor = Color.LightSeaGreen;
+            }
+
+
+            return buttonsil;
+        }
+
+
+
     }
 }

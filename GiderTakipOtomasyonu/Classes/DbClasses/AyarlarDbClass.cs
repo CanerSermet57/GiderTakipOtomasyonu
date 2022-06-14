@@ -12,8 +12,7 @@ namespace GiderTakipOtomasyonu
         public bool alarm { get; set; }
         public bool bildirim { get; set; }
 
-        public TemaDbClass tema { get; set; }
-        public int? temaId { get; set; } = 1;
+        public string tema { get; set; } = "Koyu";
         public bool boolDurum { get; set; } = true;
         public bool boolCuzdan { get; set; } = true;
         public bool boolBanka { get; set; } = true;

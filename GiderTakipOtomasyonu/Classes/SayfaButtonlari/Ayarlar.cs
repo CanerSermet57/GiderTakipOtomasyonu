@@ -218,7 +218,6 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
         public void groupBoxCreate()
         {
             groupBox = new GroupBox();
-            groupBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             groupBox.Location = new System.Drawing.Point(6, 200);
             groupBox.Name = "groupBox1";
@@ -226,6 +225,16 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             groupBox.TabIndex = 1;
             groupBox.TabStop = false;
             groupBox.Text = "Modüller";
+            gtoDbContext gtoDb = new gtoDbContext();
+            var tema = gtoDb.Ayarlar.ToList();
+            if (tema[0].tema == "Koyu")
+            {
+                groupBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            }
+            else if (true)
+            {
+                groupBox.BackColor = Color.LightSteelBlue;
+            }
         }
 
         public void buttonVeriSilCreate()

@@ -161,8 +161,8 @@ namespace GiderTakipOtomasyonu.Data
 
             //******************** TemaDbClass Tablo Test Verisi Ekleme İşlemleri ********************
 
-            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 1, adi = "Beyaz" });
-            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 2, adi = "Karanlık" });
+            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 1, adi = "Koyu" });
+            modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 2, adi = "Acik" });
             modelBuilder.Entity<TemaDbClass>().HasData(new TemaDbClass { id = 3, adi = "Renkli" });
 
             //******************** TemaDbClass Tablo Test Verisi Ekleme İşlemleri Bitişi ********************
@@ -347,10 +347,10 @@ namespace GiderTakipOtomasyonu.Data
             modelBuilder.Entity<AyarlarDbClass>().Property(x => x.bildirim)
                                                       .IsRequired()
                                                       .HasColumnName("Bildirim");
-            modelBuilder.Entity<AyarlarDbClass>().HasOne(x => x.tema)
-                                                  .WithMany(tema => tema.Ayarlar)
-                                                  .HasForeignKey(f => f.temaId)
-                                                  .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<AyarlarDbClass>().Property(x => x.tema)
+                                                      .IsRequired()
+                                                      .HasColumnName("Tema");
+
 
             //******************** AyarlarDbClass Tablo Oluşturma İşlemleri Bitişi ********************
 
