@@ -140,7 +140,8 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Name = "label9";
             label.Size = new System.Drawing.Size(211, 31);
             label.TabIndex = 26;
-            label.Text = "Vergi Dairesi No";
+            label.ForeColor = System.Drawing.Color.LightGray;
+            label.Text = kullaniciDetay[0].vergiDairesiNo;
             panelRight.Controls.Add(label);
             // 
             // label0
@@ -152,7 +153,8 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Name = "label0";
             label.Size = new System.Drawing.Size(169, 31);
             label.TabIndex = 24;
-            label.Text = "Vergi Dairesi";
+            label.ForeColor = System.Drawing.Color.LightGray;
+            label.Text = kullaniciDetay[0].vergiDairesi;
             panelRight.Controls.Add(label);
             // 
             // label1
@@ -164,7 +166,8 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Name = "label1";
             label.Size = new System.Drawing.Size(90, 31);
             label.TabIndex = 25;
-            label.Text = "E-mail";
+            label.ForeColor = System.Drawing.Color.LightGray;
+            label.Text =  kullanici[0].mail;
             panelRight.Controls.Add(label);
             // 
             // label
@@ -175,8 +178,9 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Location = new System.Drawing.Point(249, 364);
             label.Name = "label";
             label.Size = new System.Drawing.Size(53, 31);
+            label.ForeColor = System.Drawing.Color.LightGray;
             label.TabIndex = 23;
-            label.Text = "Adı";
+            label.Text = kullanici[0].adi;
             panelRight.Controls.Add(label);
         }
     }

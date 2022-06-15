@@ -200,6 +200,7 @@
     <Compile Include="Classes\SayfaButtonlari\Gider.cs" />
     <Compile Include="Classes\SayfaButtonlari\Kisiler.cs" />
     <Compile Include="Classes\SayfaButtonlari\Personel.cs" />
+    <Compile Include="Classes\SayfaButtonlari\Stok.cs" />
     <Compile Include="Classes\SayfaButtonlari\Urunler.cs" />
     <Compile Include="Data\gtoDbContext.cs" />
     <Compile Include="Data\KullaniciDbContext.cs" />

@@ -89,7 +89,7 @@ namespace GiderTakipOtomasyonu.Forms
                         PageDesign.buttonLeftPanelList[i].Click += CreatePersonelPage;
                         break;
 
-                    case "Fiyatlar":
+                    case "Stok":
                         PageDesign.buttonLeftPanelList[i].Click += CreateFiyatlarPage;
                         break;
 
@@ -139,7 +139,7 @@ namespace GiderTakipOtomasyonu.Forms
         }
         public void CreateFiyatlarPage(object sender, EventArgs e)
         {
-            SayfaButtonlari.Fiyatlar fiyatlar = new SayfaButtonlari.Fiyatlar(panelRight);
+            SayfaButtonlari.Stok fiyatlar = new SayfaButtonlari.Stok(panelRight);
         }
         public void CreateKarZararPage(object sender, EventArgs e)
         {

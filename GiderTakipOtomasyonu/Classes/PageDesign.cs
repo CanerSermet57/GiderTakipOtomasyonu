@@ -72,7 +72,6 @@ namespace GiderTakipOtomasyonu
 
             gtoDbContext gtoDb = new gtoDbContext();
             var ayarlar = gtoDb.Ayarlar.ToList();
-            bool result;
             if (ayarlar[0].boolDurum)
                 buttonNameList.Add("Durum");
             if (ayarlar[0].boolCuzdan)
@@ -90,7 +89,7 @@ namespace GiderTakipOtomasyonu
             if (ayarlar[0].boolPersonel)
                 buttonNameList.Add("Personel");
             if (ayarlar[0].boolFiyatlar)
-                buttonNameList.Add("Fiyatlar");
+                buttonNameList.Add("Stok");
             if (ayarlar[0].boolKarZarar)
                 buttonNameList.Add("Kar-Zarar");
             if (ayarlar[0].boolHammadde)
