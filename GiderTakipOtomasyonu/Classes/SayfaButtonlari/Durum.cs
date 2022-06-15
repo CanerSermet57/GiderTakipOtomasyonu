@@ -45,7 +45,7 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Name = "label3";
             label.Size = new System.Drawing.Size(147, 63);
             label.TabIndex = 17;
-            label.Text = "100€";
+            label.Text = "18,12 €";
             panelRight.Controls.Add(label);
             // 
             // label
@@ -57,7 +57,7 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Name = "label";
             label.Size = new System.Drawing.Size(147, 63);
             label.TabIndex = 16;
-            label.Text = "100$";
+            label.Text = "17,29 $";
             panelRight.Controls.Add(label);
             // 
             // label4
@@ -141,7 +141,7 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Size = new System.Drawing.Size(211, 31);
             label.TabIndex = 26;
             label.ForeColor = System.Drawing.Color.LightGray;
-            label.Text = kullaniciDetay[0].vergiDairesiNo;
+            label.Text = kullaniciDetay[Convert.ToInt32(gtoDbContext.staticdbname)-1].vergiDairesiNo;
             panelRight.Controls.Add(label);
             // 
             // label0
@@ -154,7 +154,7 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Size = new System.Drawing.Size(169, 31);
             label.TabIndex = 24;
             label.ForeColor = System.Drawing.Color.LightGray;
-            label.Text = kullaniciDetay[0].vergiDairesi;
+            label.Text = kullaniciDetay[Convert.ToInt32(gtoDbContext.staticdbname)-1].vergiDairesi;
             panelRight.Controls.Add(label);
             // 
             // label1
@@ -167,7 +167,7 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Size = new System.Drawing.Size(90, 31);
             label.TabIndex = 25;
             label.ForeColor = System.Drawing.Color.LightGray;
-            label.Text =  kullanici[0].mail;
+            label.Text =  kullanici[Convert.ToInt32(gtoDbContext.staticdbname)-1].mail;
             panelRight.Controls.Add(label);
             // 
             // label
@@ -180,7 +180,7 @@ namespace GiderTakipOtomasyonu.SayfaButtonlari
             label.Size = new System.Drawing.Size(53, 31);
             label.ForeColor = System.Drawing.Color.LightGray;
             label.TabIndex = 23;
-            label.Text = kullanici[0].adi;
+            label.Text = kullanici[Convert.ToInt32(gtoDbContext.staticdbname)-1].adi;
             panelRight.Controls.Add(label);
         }
     }
